@@ -1,0 +1,2478 @@
+﻿<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">
+<head>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+        HomeUrl: 'https://www.paymentlaunch.com/',
+        AccountUUID: '4925c9bb16d54f2099886513c6c331b8',
+        SystemID: 'US_DIRECT_PRODUCTION',
+        SiteAlias: '499b3704',
+        SiteType: atob('RFVEQU9ORQ=='),
+        PublicationDate: 'Thu Jan 18 12:05:23 UTC 2024',
+        ExternalUid: null,
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialDynamicItem: '',
+        DynamicPageInfo: {
+            isDynamicPage: false,
+            base64JsonRowData: 'null',
+        },
+        InitialPageAlias: 'contact',
+        InitialPageUuid: '36329bc26ac14c27b627d7fbe080fce3',
+        InitialPageId: '1134769577',
+        InitialEncodedPageAlias: 'Y29udGFjdA==',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: false,
+        AllowAjax: false,
+        AfterAjaxCommand: null,
+        HomeLinkText: 'Back To Home',
+        UseGalleryModule: false,
+        CurrentThemeName: 'Layout Theme',
+        ThemeVersion: '40980',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID: null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        IsBfs: true,
+        StorePageAlias: 'null',
+        StorePagesUrls: 'e30=',
+        IsNewStore: 'false',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        IsStoreSuspended: false,
+        NotificationSubDomain: 'paymentlaunch',
+        HasCustomDomain: true,
+        showCookieNotification: false,
+        cookiesNotificationMarkup: 'null',
+        translatedPageUrl: '',
+        isFastMigrationSite: false,
+        sidebarPosition: 'LEFT',
+        currentLanguage: 'en',
+        currentLocale: 'en',
+        NavItems: '{}',
+        errors: {
+            general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+            password: 'Incorrect name/password combination',
+            tryAgain: 'Try again'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: 4,
+            NavbarLiveHomePage: 'https://www.paymentlaunch.com/',
+            BlockContainerSelector: '.dmBody',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        hasCustomCode: true,
+        planID: '7',
+        customTemplateId: 'null',
+        siteTemplateId: 'null',
+        productId: 'DM_DIRECT',
+        disableTracking: false,
+        pageType: 'FROM_SCRATCH',
+        isRuntimeServer: true,
+        isInEditor: false,
+    };
+
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 6;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Injecting site-wide to the head -->
+
+<meta name="google-site-verification" content="0BVY3eGGYSvTv_TdnzvW-vt78o4HbYc2kBYQG99IA88" data-swh-uuid="dcf74ad80474415fbfbe59b62a3f7413">
+
+
+
+<!-- End Injecting site-wide to the head -->
+
+<!-- Inject secured cdn script -->
+
+
+<!-- ========= Meta Tags ========= -->
+<!-- PWA settings -->
+<script>
+    function toHash(str) {
+        var hash = 5381, i = str.length;
+        while (i) {
+            hash = hash * 33 ^ str.charCodeAt(--i)
+        }
+        return hash >>> 0
+    }
+</script>
+<script>
+    (function (global) {
+    //const cacheKey = global.cacheKey;
+    const isOffline = 'onLine' in navigator && navigator.onLine === false;
+    const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+    if (isOffline) {
+        console.log('offline mode');
+    }
+    if (!hasServiceWorkerSupport) {
+        console.log('service worker is not supported');
+    }
+    if (hasServiceWorkerSupport && !isOffline) {
+        window.addEventListener('load', function () {
+            const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+            navigator.serviceWorker
+                .register(serviceWorkerPath, { scope: './' })
+                .then(
+                    function (registration) {
+                        // Registration was successful
+                        console.log(
+                            'ServiceWorker registration successful with scope: ',
+                            registration.scope
+                        );
+                    },
+                    function (err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                )
+                .catch(function (err) {
+                    console.log(err);
+                });
+        });
+
+        // helper function to refresh the page
+        var refreshPage = (function () {
+            var refreshing;
+            return function () {
+                if (refreshing) return;
+                // prevent multiple refreshes
+                var refreshkey = 'refreshed' + location.href;
+                var prevRefresh = localStorage.getItem(refreshkey);
+                if (prevRefresh) {
+                    localStorage.removeItem(refreshkey);
+                    if (Date.now() - prevRefresh < 30000) {
+                        return; // dont go into a refresh loop
+                    }
+                }
+                refreshing = true;
+                localStorage.setItem(refreshkey, Date.now());
+                console.log('refereshing page');
+                window.location.reload();
+            };
+        })();
+
+        function messageServiceWorker(data) {
+            return new Promise(function (resolve, reject) {
+                if (navigator.serviceWorker.controller) {
+                    var worker = navigator.serviceWorker.controller;
+                    var messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = replyHandler;
+                    worker.postMessage(data, [messageChannel.port2]);
+                    function replyHandler(event) {
+                        resolve(event.data);
+                    }
+                } else {
+                    resolve();
+                }
+            });
+        }
+    }
+})(window);
+</script>
+<!-- Add manifest -->
+<!-- End PWA settings -->
+
+
+<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+<meta charset="utf-8">
+
+<link rel="canonical" href="contact.html">
+
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!--Add favorites icons-->
+
+<link rel="apple-touch-icon" href="499b3704/dms3rep/multi/Payment%20Launch-01.png">
+
+<link rel="icon" type="image/x-icon" href="499b3704/site_favicon_16_1627593728909.ico">
+
+<!-- End favorite icons -->
+<link rel="preconnect" href="https://lirp.cdn-website.com/">
+
+
+
+<!-- render the required CSS and JS in the head section -->
+<script>
+    window.SystemID = 'US_DIRECT_PRODUCTION';
+
+    if(!window.dmAPI) {
+        window.dmAPI = {
+            registerExternalRuntimeComponent: function() {
+            },
+            getCurrentDeviceType: function() {
+                return window._currentDevice;
+            }
+        };
+    }
+
+    if (!window.requestIdleCallback) {
+        window.requestIdleCallback = function (fn) {
+            setTimeout(fn, 0);
+        }
+    }
+</script>
+
+<!-- loadCSS function header.jsp-->
+
+    
+    
+    
+
+
+<script id="d-js-load-css">
+/**
+ * There are a few <link> tags with CSS resource in them that are preloaded in the page
+ * in each of those there is a "onload" handler which invokes the loadCSS callback
+ * defined here.
+ * We are monitoring 3 main CSS files - the runtime, the global and the page.
+ * When each load we check to see if we can append them all in a batch. If threre
+ * is no page css (which may happen on inner pages) then we do not wait for it
+ */
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+  
+    function checkCss() {
+      const pageCssLink = document.querySelector("[id*='CssLink']");
+
+        if (cssLinks && cssLinks.runtime && cssLinks.global && (!pageCssLink || cssLinks.page)) {
+            const storedRuntimeCssLink = cssLinks.runtime;
+            const storedPageCssLink = cssLinks.page;
+            const storedGlobalCssLink = cssLinks.global;
+
+            storedGlobalCssLink.disabled = true;
+            loadCssLink(storedGlobalCssLink);
+
+            if (storedPageCssLink) {
+                storedPageCssLink.disabled = true;
+                loadCssLink(storedPageCssLink);
+            }
+
+            storedRuntimeCssLink.disabled = true;
+            loadCssLink(storedRuntimeCssLink);
+
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    storedRuntimeCssLink.disabled = false;
+                    storedGlobalCssLink.disabled = false;
+                    if (storedPageCssLink) {
+                      storedPageCssLink.disabled = false;
+                    }
+                    // (SUP-4179) Clear the accumulated cssLinks only when we're
+                    // sure that the document has finished loading and the document 
+                    // has been parsed.
+                    if(document.readyState === 'interactive') {
+                      cssLinks = null;
+                    }
+                }, 0);
+            });
+        }
+    }
+  
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } 
+      
+      else if(link.id.includes("CssLink")) {
+        cssLinks.page = link;
+        checkCss();
+      }  
+      
+      else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      throw e
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+
+
+<script data-role="deferred-init" type="text/javascript">
+    /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+    function Def(){this.promise=new Promise((function(a,b){this.resolve=a,this.reject=b}).bind(this))}
+    const defs={};
+    window.getDeferred=function(a){return null==defs[a]&&(defs[a]=new Def),defs[a]}
+    window.waitForDeferred = function (b, a, c) {
+      let d = window?.getDeferred?.(b);
+      d
+        ? d.promise.then(a)
+        : c && ["complete", "interactive"].includes(document.readyState)
+        ? setTimeout(a, 1)
+        : c
+        ? document.addEventListener("DOMContentLoaded", a)
+        : console.error(`Deferred  does not exist`);
+    };
+</script>
+<style id="forceCssIncludes">
+    /* This file is auto-generated from a `scss` file with the same name */
+
+.videobgwrapper{overflow:hidden;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;pointer-events:none;border-radius:inherit}.videobgframe{position:absolute;width:101%;height:100%;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);object-fit:fill}#dm video.videobgframe{margin:0}@media (max-width:767px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}}@media (min-width:1025px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}#dm [data-show-on-page-only]{display:none!important}
+</style>
+<style id="cssVariables" type="text/css">
+    :root {
+  --color_1: rgba(245, 100, 47, 1);
+  --color_2: rgba(27, 29, 86, 1);
+  --color_3: rgba(14, 15, 17, 1);
+  --color_4: rgba(56, 56, 56, 1);
+}
+</style>
+
+
+<style id="hideAnimFix">
+  .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+    visibility: hidden;
+  }
+  .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+    visibility: hidden !important;
+  }
+</style>
+
+
+
+<style id="criticalCss">
+    @charset "UTF-8";.display_None,.dmPopupMask{display:none}#dm .dmInner .dmWidget,.clearfix:after,.dmRespDesignRow:after,.dmRespRow .dmRespRow:after,.dmRespRow:after,.dmSocialHub,.dmform,.dmform .dmWidgetClear,.dmforminput.newLine,DIV.dmBody{clear:both}@font-face{font-family:Ubuntu;font-style:normal;font-weight:300;font-display:swap;src:url(fonts/s/ubuntu/v20/4iCv6KVjbNBYlgoC1CzjsGyN.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Ubuntu;font-style:italic;font-weight:300;font-display:swap;src:url(fonts/s/ubuntu/v20/4iCp6KVjbNBYlgoKejZftVyPN4E.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:FontAwesome;font-display:block;src:url(fonts/fontawesome-webfont.eot);src:url(fonts/fontawesome-webfont-1.eot) format("embedded-opentype"),url(fonts/fontawesome-webfont.woff) format("woff"),url(fonts/fontawesome-webfont.ttf) format("truetype"),url(fonts/fontawesome-webfont.svg) format("svg");font-weight:400;font-style:normal}@font-face{font-family:Ubuntu;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/s/ubuntu/v20/4iCs6KVjbNBYlgoKfw72.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Ubuntu;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jsGyN.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Ubuntu;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjsGyN.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}:root{--color_1:rgba(245, 100, 47, 1);--color_2:rgba(27, 29, 86, 1);--color_3:rgba(14, 15, 17, 1);--color_4:rgba(56, 56, 56, 1)}.dmInner{min-height:100vh!important;position:relative;min-width:768px!important}.dmDisplay_None{display:none!important}.clearfix:after{visibility:hidden;line-height:0;height:0}.clearfix:after,.clearfix:before{content:' ';display:table}.clearfix{display:inline-block}#dm .dmWidget .icon{font-size:26px}body.dmRoot #dm .dmOuter .dmInner .dmWidget .icon.hasFontIcon{height:26px;margin-top:-13px;line-height:normal;text-align:center;background-image:none}.dmRoot .hasFontIcon,a span.socialHubIcon{background-image:none!important}.dmPopupMask{position:fixed;margin:0;width:10px;z-index:1000000999;top:0;left:0}#dmRoot .dmPopup,.dmPopup,.dmPopupClose:before,[data-display-type=block]{display:block}.dmPopup{padding:10px;text-align:left;position:fixed;margin:0 10px;top:10px;left:0;width:93%;z-index:1000009999!important;box-sizing:border-box;background:#f5f5f5;overflow-y:auto;height:100%}.dmPopup .dmPopupTitle{text-align:left;font:700 19px Helvetica,Arial;margin:20px 20px 35px;color:#999}#dmPopup{opacity:0}.dmPopupClose,.dmPopupClose:before{position:absolute;visibility:visible}.dmPopupClose{border-radius:25px;width:27px;height:27px;z-index:1;background-color:rgba(255,255,255,.4);top:12px;right:12px}.dmPopupClose:before{font-size:20px;color:#000;top:3px;right:3px}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar{width:5px;height:5px}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar-track{background:rgba(0,0,0,.1)}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar-thumb{background:#c8c8c8;box-shadow:inset 0 1px 2px #454545;border-radius:45px}.dmRespRow.fullBleedMode>.dmRespColsWrapper{width:100%!important;max-width:100%!important}.dmRespRow.fullBleedMode{padding-left:0!important;padding-right:0!important}#dm .dmRespRow .dmRespColsWrapper{display:flex}.pswp{display:none;z-index:9999999999!important}#dm .dmInner .dmWidget.align-center,.align-center{margin-left:auto;margin-right:auto}.text-align-center{text-align:center}body.fix-mobile-scrolling{overflow:initial}#hcontainer[has-shadow=true]{position:relative;z-index:1}#dmRoot{text-decoration-skip-ink:none}.dmform-title{padding-right:15px;padding-left:15px}body{-webkit-overflow-scrolling:touch}html{font-family:Source Sans Pro;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}hr{box-sizing:content-box;height:0}img{border:0;max-width:100%;-ms-interpolation-mode:bicubic;display:inline-block}svg:not(:root){overflow:hidden}button,input,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button{text-transform:none;-webkit-appearance:button}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top;height:auto;min-height:50px}*,:after,:before{box-sizing:border-box}.dmRespRow.dmRespRowNoPadding{padding:0}.dmRespDesignRow,.dmRespRow{padding-top:15px;padding-bottom:15px}.dmRespDesignRow:after,.dmRespDesignRow:before,.dmRespRow .dmRespRow:after,.dmRespRow .dmRespRow:before,.dmRespRow:after,.dmRespRow:before{content:' ';display:table}.dmRespDesignRow,.dmRespRow,.dmRespRow .dmRespColsWrapper{max-width:960px;position:relative;margin:0 auto;width:100%}@media screen and (min-width:1200px){.rows-1200 .dmRespDesignRow,.rows-1200 .dmRespRow:not(.fullBleedMode) .dmRespColsWrapper{max-width:1200px}}.dmHeader,.dmRespRow .dmRespCol>*{max-width:100%}.dmRespDesignRow .dmRespDesignCol,.dmRespRow .dmRespCol{position:relative;width:100%;display:inline-block;vertical-align:top;float:left}.dmRespRow .dmRespRow{width:auto;margin-top:0;margin-bottom:0;max-width:none}.dmDesktopBody .dmRespRow .large-2{position:relative;width:16.66667%}.dmDesktopBody .dmRespRow .large-3{position:relative;width:25%}.dmDesktopBody .dmRespRow .large-5{position:relative;width:41.66667%}.dmDesktopBody .dmRespRow .large-7{position:relative;width:58.33333%}.dmDesktopBody .dmRespRow .large-8{position:relative;width:66.66667%}.dmDesktopBody .dmRespRow .large-9{position:relative;width:75%}.dmDesktopBody .dmRespDesignRow .large-12,.dmDesktopBody .dmRespRow .large-12{position:relative;width:100%}.socialHubIcon,[class*=' dm-common-icons-'],[class*=' dm-social-icons-']{font-family:dm-social-icons!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.dm-social-icons-facebook:before{content:'\ea90'}.dm-social-icons-instagram:before{content:'\ea92'}.dm-social-icons-twitter:before{content:'\ea96'}[class*=' dm-common-icons-']{font-family:dm-common-icons!important}.dm-common-icons-close:before{content:'\e901'}#dm div.dmContent [class*=' icon-'],[class*=' icon-']{font-family:FontAwesome!important;font-weight:400;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased}[class*=' icon-']:before{text-decoration:none;display:inline-block;speak:none}a [class*=' icon-']{display:inline}[class*=' icon-']{display:inline;width:auto;height:auto;line-height:normal;vertical-align:baseline;background-image:none;background-position:0 0;background-repeat:repeat;margin-top:0}.icon-star:before{content:'\f005'}.icon-linkedin:before{content:'\f0e1'}.icon-angle-right:before{content:'\f105'}.icon-angle-down:before{content:'\f107'}.icon-apple:before{content:'\f179'}#dm .dmRespRow .dmRespCol>.dmWidget{overflow:initial}@media (min-width:768px){#dm .dmRespRow .dmRespCol>.dmWidget{width:280px;max-width:100%}#dm .dmRespRow .dmRespCol.large-2>.dmWidget{width:100%}}@media (max-width:767px){#dm .dmInner .dmWidget{width:100%}}#dm .dmInner .dmWidget:not(.displayNone){display:inline-block}#dm .dmInner .dmWidget:not(.displayNone)[data-display-type=block]{display:block}#dm .dmInner .dmWidget{text-decoration:none;margin:10px 0;position:relative;text-align:center;line-height:22px;box-shadow:none;background-image:none;padding:0;height:auto;border-style:solid;white-space:nowrap}#dm .dmInner .dmWidget:after{content:'';display:inline-block;height:100%;vertical-align:middle;width:0;margin-right:-.25em}#dm .dmInner .dmWidget .iconBg{position:absolute;left:0;width:50px;top:50%;margin-top:-13px}#dm .dmWidget .text{display:inline-block;vertical-align:middle;font-size:1.125em;line-height:normal;white-space:normal;padding:10px 7px;max-width:98%}p.rteBlock{margin:0}html:not(.ios-preview) #dm .hasStickyHeader .dmInner div.dmHeaderContainer{position:fixed!important;z-index:101;width:100%;min-width:768px}#innerBar,#iscrollBody,#site_content,.dmHeader{position:relative}.dmform .dmforminput label{display:block;overflow:hidden;text-overflow:ellipsis}.dmform .dmWidgetClear{display:block}.dmNewParagraph[data-version]{line-height:initial}.dmNewParagraph[data-version] .text-align-left{text-align:left!important}.dmNewParagraph[data-version] h3,.dmNewParagraph[data-version] h4,.dmNewParagraph[data-version] p{margin-top:0;margin-bottom:0}#dm .socialHubInnerDiv a:not(:last-child){margin-right:5px}.socialHubIcon{display:flex!important;align-items:center;justify-content:center}.imageWidget a{font-style:italic;text-align:center}.imageWidget img[width][height]{height:auto}.graphicWidget{width:200px;height:200px;margin:10px auto;text-align:center}.graphicWidget svg.svg{width:100%;height:100%;color:#000;fill:#000}img[width][height]{height:auto}*{border:0 solid #333;scrollbar-arrow-color:#fff;scrollbar-track-color:#F2F2F2;scrollbar-face-color:silver;scrollbar-highlight-color:silver;scrollbar-3dlight-color:silver;scrollbar-shadow-color:silver;scrollbar-darkshadow-color:silver;scrollbar-width:12px}body{width:100%;overflow:hidden;-webkit-text-size-adjust:100%!important;-ms-text-size-adjust:100%!important}A IMG{border:none}h3,h4,ul{margin-left:0;margin-right:0}.dmInner *{-webkit-font-smoothing:antialiased}span.oneIcon:before{display:inline-block}.clearfix,a,iframe,img,ul{vertical-align:top}.dmOuter{word-wrap:break-word}#dm .dmwidget-title,.innerPageTitle{white-space:nowrap;word-wrap:normal}.dmInner{font-size:16px;background:#fff;color:#666}.dmDesktopBody .dmInner{min-width:960px}.dmInner a{color:#463939}.dmInner ul:not(.defaultList){padding:0}.dmHeader{background:#68ccd1;color:#666;text-align:center;width:100%}#innerBar.lineInnerBar,.dmLargeBody .dmBody .dmRespRowsWrapper{background-color:transparent}DIV.dmBody{padding:0}.dmContent{margin:0;padding:0}#site_content ul:not(.defaultList){-webkit-padding-start:0;-moz-padding-start:0;list-style-position:inside}#innerBar{height:36px;width:100%;font-size:20px;margin:0;z-index:80}#dm .dmRespRow.dmRespRowNoPadding{padding:0}.dmRespRowsWrapper{max-width:960px;margin:0 auto}.dmRespCol>[dmle_extension]:not(:first-child){margin-top:10px}.dmLargeBody .imageWidget:not(.displayNone){display:inline-block;max-width:100%}.imageWidget:not(.displayNone) img{width:100%}h3{font-weight:400;font-size:23px}#dm .dmRespColsWrapper{display:block}.dmNewParagraph{text-align:left;margin:8px 0;padding:2px 0}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol,.dmLargeBody .fHeader .dmRespRow .dmRespCol{padding-left:.75%;padding-right:.75%}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:first-child,.dmLargeBody .fHeader .dmRespRow .dmRespCol:first-child{padding-left:0;padding-right:1.5%}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:last-child,.dmLargeBody .fHeader .dmRespRow .dmRespCol:last-child{padding-right:0;padding-left:1.5%}#innerBar.lineInnerBar{display:table;width:100%;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;font-size:20px;margin-top:30px;margin-bottom:30px;color:#666}.innerPageTitle{display:block;text-align:center;color:#f7f7f7;margin:3px 65px;padding:6px 0;overflow:hidden;text-overflow:ellipsis;box-sizing:border-box}#innerBar .titleLine{display:table-cell;vertical-align:middle;width:50%}.dmPageTitleRow:not(#innerBar){display:none}.titleLine hr{min-height:1px;background-color:rgba(102,102,102,.2)}.lineInnerBar .innerPageTitle{display:table-cell;vertical-align:middle;text-transform:capitalize;text-align:left;margin:0;padding:4px 15px 0;color:#666;font-family:inherit;white-space:nowrap}.dmStandardDesktop{display:block;margin:0 auto}.standardHeaderLayout .dmHeader{float:none;display:block;height:auto}#dm .p_hfcontainer a.u_1777873415,div.u_1793323351{float:none!important;top:0!important;left:0!important}.dmInner a{outline:0;vertical-align:inherit}#dm h3.dmwidget-title[hide=true]{display:none}#dm .dmwidget-title{margin:10px 0;font-size:23px;text-shadow:none;text-transform:capitalize;overflow:hidden;text-overflow:ellipsis}div.dmInner input[type=email],div.dmInner input[type=tel],div.dmInner input[type=text]{font-size:16px;background-color:rgba(102,102,102,.15);border:2px solid #fff;width:100%;margin:3px 0;height:40px;padding:0 10px}div.dmInner textarea{height:80px;width:100%;margin:3px 0;padding:10px;min-height:50px;font-size:16px;background-color:rgba(102,102,102,.15);border:2px solid #fff}.dmforminput{margin-top:10px;text-align:left;padding-left:.9375em;padding-right:.9375em}#dm .dmDivider{display:block;margin:10px 0}#dm .dmSocialHub a{display:inline-block;text-decoration:none;margin:0;vertical-align:bottom}.dmSocialHub>div{text-align:inherit}a span.socialHubIcon{width:36px;height:36px;font-size:31px;display:inline-block;text-align:center;margin-right:0;margin-bottom:5px;line-height:36px;box-sizing:content-box}.socialHubIcon.style8{font-size:24px;padding:4px;border-radius:50%;color:#fff;background:#000}#dm .dmSocialHub .socialHubWrapper{display:inline-block;max-width:100%}body{background-color:#eee}.dmDivider{min-height:2px;border:currentColor;color:grey;background:0 0}#dm .dmDividerWrapper{display:block}#dm .dmWidget:not([data-buttonstyle]) .iconBg,.main-navigation.unifiednav .unifiednav__container .unifiednav__item:not(.unifiednav__item_has-sub-nav) .icon{display:none}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL][data-show-vertical-sub-items=HOVER]>.unifiednav__container:not([data-depth])>.unifiednav__item-wrap .unifiednav__item.dmNavItemSelected>.nav-item-text .icon::before{transform:rotate(180deg)}#dm .dmBody .dmRespRowsWrapper{max-width:none;background-color:transparent}.dmLargeBody .dmRespRow{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:40px;padding-right:40px}.dmStandardDesktop .dmHeader{background-color:#68ccd1;max-width:100%}#dm div.dmRespCol>*{line-height:1.5}#dm div.dmContent h3{color:#666}#dm .dmform .dmforminput label,#dm div.dmInner,#dm div.dmInner .dmRespCol{color:rgba(72,102,126,1);font-weight:300;font-style:normal}#dm .dmNewParagraph,#dm .dmwidget-title,#dm .rteBlock,#dm h3,#dm h4{direction:ltr;text-align:left}.dmLargeBody .dm-layout-sec .dmBody .dmRespRowsWrapper,.dmLargeBody .dmBody .dmRespRowsWrapper{background-color:transparent}#dm .dmRespCol div.dmNewParagraph,#dm .dmform .dmforminput label,#dm div.dmInner,#dm div.dmInner .dmRespCol{color:var(--color_3);font-family:Ubuntu,"Ubuntu Fallback"}#dm div.dmContent h3,#dm div.dmContent h4{color:rgba(27,29,86,1)}#dm div.dmContent h3{color:var(--color_3);direction:ltr;font-family:Ubuntu,"Ubuntu Fallback";font-weight:700;font-style:normal;text-decoration:none}#dm div.dmContent h4,#dm div.dmNewParagraph p{color:var(--color_4);direction:ltr;font-family:Ubuntu,"Ubuntu Fallback";font-weight:400;font-style:normal}#dm div.dmContent .dmNewParagraph[data-version] h3{text-decoration:inherit}#dm div.dmContent .dmNewParagraph[data-version] h3 *,#dm div.dmContent h4{text-decoration:none}#dm div.dmContent .dmNewParagraph[data-version] h4{text-decoration:inherit}#dm div.dmContent .dmNewParagraph[data-version] h4 *{text-decoration:none}#dm DIV.dmOuter DIV.dmInner{background-color:rgba(255,255,255,1)}#dm .dmform .dmforminput label,#dm div.dmContent h4,#dm div.dmInner,#dm div.dmInner .dmRespCol{font-size:18px}#dm .dmform .dmforminput label,#dm div.dmInner,#dm div.dmInner .dmRespCol{font-size:16px}#dm .dmContent .dmRespRow{padding-top:15px}#dm div.dmNewParagraph p{text-decoration:none;line-height:2;font-size:18px}#dm .dmRespCol div.dmNewParagraph,#dm .dmform .dmforminput label,#dm div.dmInner,#dm div.dmInner .dmRespCol{font-size:48px}#dm div.dmContent h3{line-height:1.5;font-size:36px}#dm div.dmContent h4{line-height:2}@media all{:root{--btn-text-direction:ltr;--btn-border-r-color:var(--btn-border-color);--btn-border-l-color:var(--btn-border-color);--btn-border-b-width:var(--btn-border-width);--btn-border-width:2px;--btn-border-radius:6px;--btn-border-t-width:var(--btn-border-width);--btn-border-tl-radius:var(--btn-border-radius);--btn-border-br-radius:var(--btn-border-radius);--btn-border-bl-radius:var(--btn-border-radius);--btn-bg-color:rgba(57,60,137,1);--btn-border-color:rgba(57, 60, 137, 1);--btn-border-tr-radius:var(--btn-border-radius);--btn-border-r-width:var(--btn-border-width);--btn-border-b-color:var(--btn-border-color);--btn-border-l-width:var(--btn-border-width);--btn-border-t-color:var(--btn-border-color);--btn-text-align:center;--btn-text-color:rgba(255, 255, 255, 1);--btn-text-decoration:none;--btn-text-font-weight:700;--btn-text-font-family:Ubuntu,"Ubuntu Fallback";--btn-icon-color:rgb(0, 41, 112);--btn-icon-fill:rgb(0, 41, 112);--btn-icon-wrpr-display:none;--btn-hover-border-b-color:var(--btn-hover-border-color);--btn-hover-bg:rgba(27,29,86,1);--btn-hover-border-t-color:var(--btn-hover-border-color);--btn-hover-border-r-color:var(--btn-hover-border-color);--btn-hover-border-l-color:var(--btn-hover-border-color);--btn-hover-border-color:rgba(0, 0, 0, 0);--btn-hover-text-color:rgb(255, 255, 255);--btn-hover-text-font-weight:var(--btn-text-font-weight);--btn-hover-text-decoration:var(--btn-text-decoration);--btn-hover-text-font-style:var(--btn-text-font-style)}}@media (min-width:0px) and (max-width:767px){:root{--btn-text-font-size:14px}}#dm .dmWidget:not([data-buttonstyle]){border-radius:6px;overflow:initial;background-clip:border-box}#dm .dmWidget:not([data-buttonstyle]) .text{padding:10px 7px}#dm div.dmInner #site_content .dmWidget,#dm div.dmInner .dmHeader .dmWidget{background-color:var(--btn-bg-color);border-color:var(--btn-border-color);border-bottom-color:var(--btn-border-b-color);border-left-color:var(--btn-border-l-color);border-right-color:var(--btn-border-r-color);border-top-color:var(--btn-border-t-color);border-radius:var(--btn-border-radius);border-bottom-left-radius:var(--btn-border-bl-radius);border-bottom-right-radius:var(--btn-border-br-radius);border-top-left-radius:var(--btn-border-tl-radius);border-top-right-radius:var(--btn-border-tr-radius);border-width:var(--btn-border-width);border-bottom-width:var(--btn-border-b-width);border-left-width:var(--btn-border-l-width);border-right-width:var(--btn-border-r-width);border-top-width:var(--btn-border-t-width);direction:var(--btn-text-direction);text-align:var(--btn-text-align)}#dm div.dmInner #site_content .dmWidget span.text{color:var(--btn-text-color);font-family:var(--btn-text-font-family);font-size:var(--btn-text-font-size);font-weight:var(--btn-text-font-weight);text-decoration:var(--btn-text-decoration)}#dm div.dmInner #site_content .dmWidget span.icon,#dm div.dmInner .dmHeader .dmWidget span.icon{color:var(--btn-icon-color);fill:var(--btn-icon-fill)}#dm div.dmInner #site_content .dmWidget:not([data-buttonstyle]) .iconBg,#dm div.dmInner .dmHeader .dmWidget:not([data-buttonstyle]) .iconBg{display:var(--btn-icon-wrpr-display)}#dm .p_hfcontainer div.u_1739105633 img{border-radius:0!important;-moz-border-radius:0!important;-webkit-border-radius:0!important}#dm .p_hfcontainer .u_1793323351 .meganav-container__multi-sub-nav-icon{color:var(--color_1)!important}#dm .p_hfcontainer a.u_1639063776 .iconBg{display:none!important}#dm .dmInner div.dmHeader,#dm .dmInner div.dmHeader.u_hcontainer,#dm .dmInner div.u_hcontainer{border-style:solid!important;border-width:0!important;box-shadow:rgba(0,0,0,.1) 0 3px 11px 0!important;-moz-box-shadow:rgba(0,0,0,.1) 0 3px 11px 0!important;-webkit-box-shadow:rgba(0,0,0,.1) 0 3px 11px 0!important;border-color:rgba(57,181,74,1)!important;background-image:initial!important;background-color:rgba(255,255,255,1)!important}#dm .p_hfcontainer .u_1739105633{width:100%!important}#dm .p_hfcontainer div.u_1793323351 .widget-layout-result{background-color:rgba(255,255,255,1)!important}#dm .dmInner div.dmHeader.u_hcontainer{padding-top:10px!important;padding-bottom:17px!important}.stickyHeaderSpacer{height:126.69px!important}@media (min-width:1025px){:root{--btn-text-font-size:14px}.responsiveTablet .stickyHeaderSpacer{height:101.14px!important}}@media (min-width:768px) and (max-width:1024px){:root{--btn-text-font-size:14px}.responsiveTablet .stickyHeaderSpacer{height:105.25px!important}}#dm .dmInner div.u_hcontainer{padding:0!important}#dm .dmInner div.fHeader .dmHeader[freeheader=true]{padding:15px 0!important}.fHeader #hcontainer.dmHeader[freeheader=true]{padding-top:initial!important;padding-bottom:initial!important}#dm .p_hfcontainer div.u_1906820606{padding:0!important}div.u_1793323351{width:921.42px!important;position:relative!important;height:auto!important;max-width:100%!important;min-width:0!important;text-align:start!important;padding:0!important}#dm .p_hfcontainer a.u_1777873415{display:block!important;width:150px!important;position:relative!important;height:50px!important;max-width:calc(100% - 11px)!important;min-width:25px!important;text-align:center!important;margin:0 11.28px 0 11.27px!important;padding:0!important}#dm .p_hfcontainer div.u_1074917193,#dm .p_hfcontainer div.u_1739105633{float:none!important;top:0!important;left:0!important;position:relative!important;text-align:center!important;height:auto!important}#dm .p_hfcontainer div.u_1793323351,#dm .p_hfcontainer div.u_1895874711{padding:24px 0 0!important;margin:0!important}#dm .dmInner div.fHeader.dmHeaderContainer #hcontainer.dmHeader[freeheader=true]{margin:0!important;padding:0!important}#dm .p_hfcontainer div.u_1318947829{padding:0!important}#dm .p_hfcontainer div.u_1074917193{width:auto!important;max-width:100%!important;min-width:0!important;padding:0 50px!important;margin:0!important}#dm .p_hfcontainer div.u_1739105633{width:calc(100% - 0px)!important;max-width:101.14px!important;min-width:25px!important;display:block!important;important:true!important;padding:0!important;margin:0 72.67px 0 0!important}.responsiveTablet .stickyHeaderSpacer{height:101.14px!important}div.hiddenDiv{display:none!important}.widget-layout-result{display:flex;position:relative;box-sizing:border-box;width:100%;min-height:20px}.widget-layout-result div{text-align:left}.widget-layout-result.left{justify-content:flex-start}.meganav-container{display:flex;justify-content:flex-start;align-items:center;flex-wrap:wrap;position:relative;box-sizing:border-box;list-style-type:none;font-family:Arial,Helvetica,sans-serif;margin:0!important}.meganav-container__multi-sub-nav-wrapper{display:flex;position:relative;box-sizing:border-box;margin:0 0 15px;width:100%;height:auto;color:#323232;text-decoration:none}.meganav-container__multi-sub-nav-icon{color:#FFA300;display:flex;justify-content:center;align-items:center;position:relative;box-sizing:border-box;margin-right:10px;font-size:24px;width:36px}.meganav-container__contact-btn,.meganav-container__ctc-btn{text-align:center;height:50px;text-decoration:none;color:#323232;background-color:#FFD26E}.meganav-container__multi-sub-nav-wrapper:last-child{margin-bottom:0}.meganav-container__contact-btn{display:flex;justify-content:center;align-items:center;position:relative;box-sizing:border-box;width:200px;border-radius:5px}.meganav-container__ctc-description,.meganav-container__ctc-title{display:block;padding:0;position:relative;box-sizing:border-box}.meganav-container__ctc-title{font-weight:700}.meganav-container__ctc-btn{display:flex;justify-content:center;align-items:center;position:relative;box-sizing:border-box;width:170px;border-radius:5px}#dm .dmBody div.u_1024425048,#dm .dmBody div.u_1525083311{float:none!important;top:0!important;left:0!important;position:relative!important;height:auto!important}#dm .dmBody div.dmforminput textarea{color:#736f6f!important;font-size:15px!important}#dm .dmBody div.u_1448184864{background-color:rgba(255,255,255,1)!important;box-shadow:rgba(0,0,0,.25) 0 3px 11px 0!important;-moz-box-shadow:rgba(0,0,0,.25) 0 3px 11px 0!important;-webkit-box-shadow:rgba(0,0,0,.25) 0 3px 11px 0!important}#dm .dmBody div.u_1381132449 .dmforminput label{font-weight:400!important;color:rgba(1,8,71,1)!important;font-size:13px!important}#dm .dmBody div.u_1381132449 input:not([type=submit]),#dm .dmBody div.u_1381132449 textarea{border-bottom-width:0!important;border-bottom-style:solid!important;background-color:rgba(247,247,247,1)!important}#dm .dmBody div.u_1381132449 .dmforminput label:not(.for-checkable):not(.custom-contact-checkable){color:var(--color_3)!important}#dm .dmBody div.u_1381132449 .dmforminput input,#dm .dmBody div.u_1381132449 .dmforminput textarea{color:var(--color_4)!important}#dm .dmBody div.u_1116817473 hr{color:var(--color_1)!important;border-top-style:solid!important;border-top-width:4px!important}#dm .dmBody div.u_1035618616 .svg,#dm .dmBody div.u_1188455593 .svg,#dm .dmBody div.u_1647679861 .svg{color:var(--color_1)!important;fill:var(--color_1)!important}#dm .dmBody div.u_1269863770 .socialHubIcon{color:var(--color_4)!important;border-color:var(--color_4)!important;background-color:rgba(56,56,56,.1)!important}#dm .dmBody div.u_1351524662{background-image:url(https://lirp.cdn-website.com/499b3704/dms3rep/multi/opt/Contact+us+hero+bg-fbb9bb95.png),url(data:image/png-2880w;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9TpUUqHSwo4pChOlkQFemoVShChVArtOpgcukXNGlIUlwcBdeCgx+LVQcXZ10dXAVB8APEzc1J0UVK/F9aaBHjwXE/3t173L0DhEaFaVbPBKDptplOJsRsblUMvEJAGEEMIi4zy5iTpBQ8x9c9fHy9i/Es73N/jn41bzHAJxLPMsO0iTeIZzZtg/M+cYSVZJX4nHjcpAsSP3JdafEb56LLAs+MmJn0PHGEWCx2sdLFrGRqxNPEUVXTKV/ItljlvMVZq9RY+578haG8vrLMdZojSGIRS5AgQkENZVRgI0arToqFNO0nPPzDrl8il0KuMhg5FlCFBtn1g//B726twtRkKymUAHpfHOdjFAjsAs2643wfO07zBPA/A1d6x19tAPFP0usdLXoEhLeBi+uOpuwBlzvA0JMhm7Ir+WkKhQLwfkbflAMGboG+tVZv7X2cPgAZ6ip1AxwcAmNFyl73eHewu7d/z7T7+wFwJnKmZ9+MiwAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+UCDwksLkLIPkkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAC0lEQVQI12NgAAIAAAUAAeImBZsAAAAASUVORK5CYII=)!important;background-color:rgba(255,255,255,1)!important}#dm .d-page-1683814473 DIV.dmInner{background-repeat:no-repeat!important;background-image:none!important;background-size:cover!important;background-attachment:fixed!important;background-position:50% 0!important}#dm .dmBody div.u_1024425048{width:369px!important;max-width:calc(100% - 0px)!important;min-width:25px!important;padding:2px 0!important;margin:8px 0!important}#dm .dmBody div.u_1525083311{width:100%!important;max-width:none!important;min-width:0!important;text-align:center!important;padding:0!important;margin:14px auto 0!important}#dm .dmBody div.u_1035618616,#dm .dmBody div.u_1188455593,#dm .dmBody div.u_1647679861{width:50px!important;height:58px!important;max-width:100%!important;min-width:0!important;padding:0!important;float:none!important;top:0!important;left:0!important;position:relative!important;text-align:center!important;display:block!important}#dm .dmBody div.u_1188455593{margin:2px auto 10px!important}#dm .dmBody div.u_1647679861{margin:0 auto 10px!important}#dm .dmBody div.u_1070465291{padding:0!important;margin:0!important}#dm .dmBody div.u_1035618616{margin-top:0!important}#dm .dmBody .u_1269863770 .socialHubInnerDiv a:not(:last-child){margin-right:21px!important}#dm .dmBody div.u_1894793512{padding:0!important;margin:0!important}#dm .dmBody div.u_1083259322{float:none!important;top:0!important;left:0!important;width:289.19px!important;position:relative!important;height:auto!important;max-width:calc(100% - 35px)!important;min-width:25px!important;padding:2px 0!important;margin:8px auto!important}#dm .dmBody .u_1269863770 .socialHubIcon{width:23px!important;height:23px!important;font-size:15.33px!important;line-height:23px!important}#dm .dmBody .u_1269863770 .socialHubIcon:after{width:31px!important;height:23px!important}#dm .dmBody div.u_1766496735,#dm .dmBody div.u_1772451484{width:100%!important;padding:2px 0!important;min-width:25px!important}#dm .dmBody div.u_1116817473,#dm .dmBody div.u_1269863770,#dm .dmBody div.u_1351524662,#dm .dmBody div.u_1381132449,#dm .dmBody div.u_1766496735,#dm .dmBody div.u_1772451484{float:none!important;top:0!important;left:0!important;position:relative!important;height:auto!important}#dm .dmBody div.u_1766496735{max-width:calc(100% - 0px)!important;margin:15px 0 8px!important}#dm .dmBody div.u_1772451484{max-width:calc(100% - 0px)!important;margin:17px 0 8px!important}#dm .dmBody div.u_1157475361,#dm .dmBody div.u_1352743752,#dm .dmBody div.u_1359711772{padding:0!important;margin:0!important}#dm .dmBody div.u_1116817473{width:53px!important;max-width:calc(100% - 35px)!important;min-width:25px!important;text-align:center!important;padding:0!important;margin:0 0 0 35.14px!important}#dm .dmBody div.u_1351524662{width:auto!important;max-width:none!important;min-width:0!important;text-align:center!important;background-position:50% 100%!important;background-repeat:no-repeat!important;background-size:cover!important;padding:70px!important;margin:0!important}#dm .dmBody div.u_1269863770{display:block!important;width:calc(100% - 21px)!important;max-width:243px!important;min-width:25px!important;text-align:left!important;padding:0!important;margin:23px 97.84px 0 32px!important}#dm .dmBody div.u_1448184864{padding:50px 10px 0 0!important;margin:50px 50px 50px 0!important}#dm .dmBody div.u_1381132449{display:block!important;width:420px!important;max-width:calc(100% - 0px)!important;min-width:25px!important;text-align:center!important;padding:0!important;margin:13px 0 0!important}
+    .dmDesktopBody [data-anim-desktop]:not([data-anim-desktop='none']) {
+      visibility: hidden;
+    }
+    
+</style>
+
+
+
+<style id="fontFallbacks">
+    @font-face {
+  font-family: "Ubuntu Fallback";
+  src: local('Arial');
+  ascent-override: 90.8147%;
+  descent-override: 18.4163%;
+  line-gap-override: 2.7283%;
+  size-adjust: 102.6265%;
+}@font-face {
+  font-family: "Prata Fallback";
+  src: local('Arial');
+  ascent-override: 92.0833%;
+  descent-override: 33.5691%;
+  size-adjust: 107.8372%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Cardo Fallback";
+  src: local('Arial');
+  ascent-override: 103.8482%;
+  descent-override: 38.1494%;
+  size-adjust: 95.354%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Montserrat Fallback";
+  src: local('Arial');
+  ascent-override: 84.9466%;
+  descent-override: 22.0264%;
+  size-adjust: 113.954%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Poppins Fallback";
+  src: local('Arial');
+  ascent-override: 92.326%;
+  descent-override: 30.7753%;
+  line-gap-override: 8.793%;
+  size-adjust: 113.7274%;
+}@font-face {
+  font-family: "Lato Fallback";
+  src: local('Arial');
+  ascent-override: 101.3181%;
+  descent-override: 21.865%;
+  size-adjust: 97.4159%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Amiko Fallback";
+  src: local('Arial');
+  ascent-override: 82.254%;
+  descent-override: 35.9861%;
+  size-adjust: 112.8212%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Arial Fallback";
+  src: local('Arial');
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Open Sans Fallback";
+  src: local('Arial');
+  ascent-override: 101.1768%;
+  descent-override: 27.7323%;
+  size-adjust: 105.6416%;
+  line-gap-override: 0%;
+ }
+</style>
+
+
+<!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+
+
+
+  <link type="application/rss+xml" rel="alternate" href="feed/rss2">
+  <link type="application/atom+xml" rel="alternate" href="feed/atom">
+  <meta property="og:type" content="website">
+  <title>
+    
+    Merchant Services - Credit Card Processing
+  
+  </title>
+  <meta name="description" content="Looking for affordable merchant services for your small business? We offer credit card processing with low rates and no hidden fees. Contact us today!">
+  <!-- Global site tag (gtag.js) - Google Analytics -->  <script async="" src="gtag/js?id=UA-169425994-1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5f283fd49b7cf26e73c1e373/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+
+
+  
+
+  
+
+  
+
+  </script>
+  <!--End of Tawk.to Script-->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Merchant Services - Credit Card Processing">
+  <meta name="twitter:description" content="Looking for affordable merchant services for your small business? We offer credit card processing with low rates and no hidden fees. Contact us today!">
+  <meta name="twitter:image" content="https://lirp.cdn-website.com/499b3704/dms3rep/multi/opt/Payment+Launch-01-1920w.png">
+  <meta property="og:description" content="Looking for affordable merchant services for your small business? We offer credit card processing with low rates and no hidden fees. Contact us today!">
+  <meta property="og:title" content="Merchant Services - Credit Card Processing">
+  <meta property="og:image" content="https://lirp.cdn-website.com/499b3704/dms3rep/multi/opt/Payment+Launch-01-1920w.png">
+
+
+
+
+<!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" data-page-alias="contact" class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody responsiveTablet " style="padding:0;margin:0;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========= Site Content ========= -->
+<div id="dm" class='dmwr'>
+    
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+         <div dmwrapped="true" id="1582363842" themewaschanged="true"> <div dmtemplateid="StandardLayoutMultiD" class="standardHeaderLayout dm-bfs dm-layout-sec hasAnimations rows-1200 inMiniHeaderMode hasStickyHeader dmPageBody d-page-1683814473 dmFreeHeader" id="dm-outer-wrapper" data-page-class="1683814473" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div> <div id="iscrollBody"> <div id="site_content"> <div class="dmHeaderContainer fHeader d-header-wrapper"> <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer" freeheader="true" headerlayout="7f3c1de367df47d5b45ab63d33101c7b===header" layout="7f3c1de367df47d5b45ab63d33101c7b===header" data-scrollable-target="body" data-scrollable-target-threshold="1" data-scroll-responder-id="1" logo-size-target="100%" has-shadow="true"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="u_1074917193 dmRespRow dmDefaultListContentRow fullBleedChanged fullBleedMode" style="text-align:center" id="1074917193"> <div class="dmRespColsWrapper" id="1149167216"> <div class="u_1906820606 small-12 dmRespCol large-2 medium-2" id="1906820606"> <div class="u_1739105633 imageWidget align-center hasFullWidth" data-widget-type="image" id="1739105633" data-element-type="image"> <a href="index.htm" id="1600019840" file="false"><img src="499b3704/dms3rep/multi/opt/Paymentlauch%20logo-121w.png" id="1456970565" class="" data-dm-image-path="https://irp.cdn-website.com/499b3704/dms3rep/multi/Paymentlauch+logo.png" width="1920" height="1920" onerror="handleImageLoadError(this)"></a> 
+</div> 
+</div> 
+ <div class="u_1318947829 dmRespCol small-12 large-8 medium-8" id="1318947829"> <div class="u_1793323351 widget-7ebf92 dmCustomWidget" data-lazy-load="false" data-title="" id="1793323351" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="7ebf92fcfe734a44a1911cd164200ec0" data-widget-version="288" data-widget-config="eyJ1c2VEaXZpZGVyIjp0cnVlLCJzaG93SG9tZSI6dHJ1ZSwic2hvd1N1Yk5hdlRpdGxlIjp0cnVlLCJzaG93Q29tQXJyb3ciOnRydWUsImlzU3RpY2t5Ijp0cnVlLCJuYXZQb3MiOiJsZWZ0IiwibmF2SG92ZXIiOiJ0b3BCb3R0b21MaW5lIiwiZGl2aWRlclN0eWxlIjoic3BhY2UifQ=="> <div class="widget-layout-result left" lang="en"> <ul class="meganav-container"></ul> 
+ <div class="hiddenDiv meganav-container__ctc-title meganav-container__ctc-description meganav-container__ctc-btn meganav-container__contact-btn meganav-container__multi-sub-nav-wrapper meganav-container__multi-sub-nav-icon"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1895874711 dmRespCol small-12 large-2 medium-2" id="1895874711"> <a data-display-type="block" class="u_1777873415 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="contact.html" id="1777873415" data-element-type="dButtonLinkId"> <span class="iconBg" id="1052926558"> <span class="icon hasFontIcon icon-star" id="1250367579"></span> 
+</span> 
+ <span class="text" id="1673891225">Contact Us</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="stickyHeaderSpacer" id="stickyHeaderSpacer" data-new="true"></div> 
+ <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow "> <div class="dmRespColsWrapper"> <div class="large-12 dmRespCol"> <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None"> <div class="titleLine display_None"><hr></div> 
+<!-- Page title is hidden in css for new responsive sites. It is left here only so we don't break old sites. Don't copy it to new layouts --> <div id="pageTitleText"> <div class="innerPageTitle">CONTACT US</div> 
+</div> 
+ <div class="titleLine display_None"><hr></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div dmwrapped="true" id="dmFirstContainer" themewaschanged="true" class="dmBody u_dmStyle_template_contact"> <div id="allWrapper" class="allWrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent"> <div dm:templateorder="100" class="dmAboutusRespTmpl mainBorder" id="1683814473"> <div class="innerPageTmplBox dmRespRowsWrapper" id="1396310947"> <div class="u_1351524662 dmRespRow" style="text-align: center;" id="1351524662"> <div class="dmRespColsWrapper" id="1500663269"> <div class="u_1293764546 dmRespCol small-12 large-7 medium-7" id="1293764546"> <div class="dmNewParagraph" data-element-type="paragraph" id="1471098170" style="transition: opacity 1s ease-in-out 0s;" data-version="5"> <h3><span style="display: initial;">Contact Us</span></h3> 
+</div> <div class="u_1024425048 dmNewParagraph" data-element-type="paragraph" id="1024425048" style="transition: opacity 1s ease-in-out 0s;" data-version="5"><p class="text-align-left" style=""><span style="display: initial; background-color: transparent; color: var(--color_4);">We&rsquo;d love to hear from you. Choose the most convenient method and we&rsquo;ll get back to you as soon as we can.</span></p></div> <div class="u_1381132449 dmform default native-inputs" data-element-type="dContactUsRespId" id="1381132449" data-layout="layout-4" data-require-captcha="true" captcha="true"> <h3 class="dmform-title dmwidget-title" id="1815068324" hide="true">Contact Us</h3> 
+ <div class="dmform-wrapper" id="1982462415" captcha-lang="en"> <form method="post" class="dmRespDesignRow" locale="ENGLISH" id="1975778961"> <div class="dmforminput required  small-12 dmRespDesignCol medium-12 large-12" id="1942920064"> <label for="1524899336" id="1870801939" data-dm-for="dmform-0">NAME</label> 
+<input type="text" class="" name="dmform-0" id="1524899336"><input type="hidden" name="label-dmform-0" value="NAME" id="1734078277" class=""></div> 
+ <div class="dmforminput required  small-12 dmRespDesignCol medium-12 large-12" id="1777520301"> <label for="1318429270" id="1705676907" data-dm-for="dmform-1">EMAIL ADDRESS</label> 
+<input type="email" class="" name="dmform-1" id="1318429270"><input type="hidden" name="label-dmform-1" value="EMAIL ADDRESS" id="1021340116" class=""></div> 
+ <div class="dmforminput small-12 dmRespDesignCol medium-12 large-12" id="1821089429"> <label for="1104283100" id="1748698303" data-dm-for="dmform-4">PHONE NUMBER</label> 
+<input type="tel" name="dmform-4" placeholder="" id="1104283100"><input type="hidden" name="label-dmform-4" value="PHONE NUMBER" id="1469509054" class=""></div> 
+ <span id="1369674983" class="dmWidgetClear"></span> 
+ <div class="dmforminput small-12 dmRespDesignCol newLine medium-12 large-12" id="1198051605"> <label for="1807616759" id="1196620872" data-dm-for="dmform-5">BUSINESS NAME</label> 
+<input type="text" name="dmform-5" id="1807616759"><input type="hidden" name="label-dmform-5" value="BUSINESS NAME" id="1223113360" class=""></div> 
+ <div class="dmforminput large-12 medium-12 dmRespDesignCol small-12 required" id="1258375378"> <label for="1363632286" id="1499449101" data-dm-for="dmform-3">HOW CAN WE HELP YOUR BUSINESS</label> 
+ <textarea name="dmform-3" id="1363632286"></textarea> 
+<input type="hidden" name="label-dmform-3" value="HOW CAN WE HELP YOUR BUSINESS" id="1878788011" class=""></div> 
+ <div class="dmformsubmit dmWidget R" id="1010840221"><input class="" name="submit" type="submit" value="SUBMIT" id="1144614330"></div> 
+<input name="dmformsendto" type="hidden" value="O0wrseIfFLsJQF2CAW+bB0M1Pfxlx9SKjd8lzOAm0m0lEoDnLLBYHA9uc8uEKPjGsOyhCPFr0d8=" id="1471762093" class="" data-dec="true"><input class="dmActionInput" type="hidden" name="action" value="/_dm/s/rt/widgets/dmform.submit.jsp" id="1907092375"><input name="dmformsubject" type="hidden" value="Contact Us Main" id="1376270166" class="" data-email-subject="Contact Us Main"><input name="dmformsubmitparams" type="hidden" value="8mpKnCSiNQXK/d9M7IDrSxJJnhBlHGKy2hSjklAarAeHp8wXq1wil3QzMHUXlJfLHUvEGM7njP6EtUTrwkZdOtHMd8vQLiwQrQjWK4G11Nyiq7z994BZj6VDLNPQLAXr2oaHsKvp4ys2ITJj3mVQJDLcdxN/4Fs9K5ENL6KAq6KfgYQ8Fi+c43zJYKnfxyqk/YcbPq9+oGQg4dD3nztLYw==" data-dec="true"><input name="page_uuid" type="hidden" value="36329bc26ac14c27b627d7fbe080fce3"></form> 
+</div> 
+ <div class="dmform-success" style="display:none" id="1240516333"><p class="rteBlock">Thank you for contacting us.</p><p class="rteBlock">We will get back to you as soon as possible</p></div> 
+ <div class="dmform-error" style="display:none" id="1277266268"><p class="rteBlock">Oops, there was an error sending your message.</p><p class="rteBlock">Please try again later</p></div> 
+</div> 
+</div> 
+ <div class="u_1448184864 dmRespCol small-12 large-5 medium-5" id="1448184864"> <div class="u_1116817473 dmDividerWrapper clearfix" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1116817473"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1279853669"></div> 
+ <div class="u_1083259322 dmNewParagraph" data-element-type="paragraph" id="1083259322" style="transition: opacity 1s ease-in-out 0s;" data-version="5"> <h4 class="text-align-left" style=""><span style="display: initial; color: var(--color_3);">Don't be a stranger!</span></h4> 
+</div> <div class="u_1525083311 dmRespRow" id="1525083311"> <div class="dmRespColsWrapper" id="1473315226"> <div class="u_1359711772 dmRespCol small-12 large-3 medium-3" id="1359711772"> <div class="u_1188455593 graphicWidget" data-element-type="graphic" data-widget-type="graphic" id="1188455593"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" id="1323119619" class="svg u_1323119619" data-icon-name="li-map-marker"> <g id="1543461634"> <path d="M69.1,25.3C64,20.2,57.2,17.4,50,17.4c-7.2,0-14,2.8-19.1,7.9c-10.5,10.5-10.5,27.6,0,38.2L50,82.6l19.1-19.1
+		C79.6,53,79.6,35.8,69.1,25.3z M67.6,62L50,79.6L32.4,62c-9.7-9.7-9.7-25.5,0-35.2c4.7-4.7,11-7.3,17.6-7.3
+		c6.7,0,12.9,2.6,17.6,7.3C77.3,36.5,77.3,52.3,67.6,62z" id="1429242206"></path> 
+ <path d="M50,33c-6.3,0-11.4,5.1-11.4,11.4c0,6.3,5.1,11.4,11.4,11.4c6.3,0,11.4-5.1,11.4-11.4C61.4,38.1,56.3,33,50,33z M50,53.8
+		c-5.2,0-9.3-4.2-9.3-9.3c0-5.2,4.2-9.3,9.3-9.3c5.2,0,9.3,4.2,9.3,9.3C59.3,49.6,55.2,53.8,50,53.8z" id="1562021090"></path> 
+</g> 
+</svg> 
+</div> 
+</div> 
+ <div class="u_1681116900 dmRespCol small-12 large-9 medium-9" id="1681116900"> <div class="u_1693580473 dmNewParagraph" data-element-type="paragraph" id="1693580473" style="transition: opacity 1s ease-in-out 0s;" data-version="5"><p>Unite<span style="display: initial;">d States</span></p></div></div> 
+</div> 
+</div> 
+ <div class="u_1894793512 dmRespRow" id="1894793512"> <div class="dmRespColsWrapper" id="1830187402"> <div class="u_1157475361 dmRespCol small-12 large-3 medium-3" id="1157475361"> <div class="u_1647679861 graphicWidget" data-element-type="graphic" data-widget-type="graphic" id="1647679861"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 70 70" id="1995561456" class="svg u_1995561456" data-icon-name="wp-phone_thin"> <g id="1342654873"> <path d="M21,14h2.4l0,0c1,0,1.9,0.6,2.2,1.6l3,9.5c0.3,0.8,0,1.7-0.6,2.3l-3.5,3.5c-0.1,0.1-0.1,0.2-0.1,0.4c0.8,1.5,2.8,4.4,6.3,8
+		c3.5,3.5,6.5,5.5,8,6.3c0.1,0.1,0.3,0,0.4-0.1l3.5-3.5c0.6-0.6,1.5-0.8,2.3-0.6l9.5,3c1,0.3,1.6,1.2,1.6,2.2V49c0,2-6,7-10,7
+		c-2.3,0-10.8-0.8-21-11l0,0C14.8,34.8,14,26.3,14,24C14,20.1,18.9,14,21,14z M26.4,43.5L26.4,43.5C36.1,53.2,43.9,54,46,54
+		c3,0,7.6-3.9,8-5v-2.3c0-0.1-0.1-0.3-0.2-0.3l-9.5-3c-0.1,0-0.2,0-0.3,0.1L40.5,47c-0.7,0.7-1.9,0.9-2.8,0.4
+		c-1.5-0.9-4.7-2.9-8.4-6.6c-3.7-3.7-5.7-6.9-6.6-8.4c-0.5-0.9-0.4-2,0.4-2.8l3.5-3.5c0.1-0.1,0.1-0.2,0.1-0.3l-3-9.5
+		c0-0.1-0.2-0.2-0.3-0.2l0,0L21,16c-1.1,0.4-5,4.9-5,8C16,26.1,16.8,33.9,26.4,43.5z" id="1851668879"></path> 
+</g> 
+</svg> 
+</div> 
+</div> 
+ <div class="u_1919017687 dmRespCol small-12 large-9 medium-9" id="1919017687"> <div class="u_1772451484 dmNewParagraph" data-element-type="paragraph" id="1772451484" style="transition: none 0s ease 0s; display: block;" data-version="5"><p><span style="display: initial;">727-420-2198</span></p></div></div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1070465291" id="1070465291"> <div class="dmRespColsWrapper" id="1678789276"> <div class="u_1352743752 dmRespCol small-12 large-3 medium-3" id="1352743752"> <div class="u_1035618616 graphicWidget" data-element-type="graphic" data-widget-type="graphic" id="1035618616"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" id="1160397327" class="svg u_1160397327" data-icon-name="li-envelope"> <path d="M17.8,28.2v43.6h64.4V28.2H17.8z M77.7,30.3L50,48.8L22.3,30.3H77.7z M19.9,69.7V31.2L50,51.2l30.1-20.1v38.5H19.9z" id="1142907055"></path> 
+</svg> 
+</div> 
+</div> 
+ <div class="u_1051476678 dmRespCol small-12 large-9 medium-9" id="1051476678"> <div class="u_1766496735 dmNewParagraph" data-element-type="paragraph" id="1766496735" style="transition: opacity 1s ease-in-out 0s;" data-version="5"><p><span style="display: initial;">activate@paymentlaunch.com</span></p></div></div> 
+</div> 
+</div> 
+ <div class="u_1269863770 align-center text-align-center dmSocialHub" id="1269863770" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="http://linkedin.com/" target="_blank" dm_dont_rewrite_url="true" aria-label="linkedin" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Linkedin&apos;)"> <span class="dmSocialLinkedin icon-linkedin oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="float"></span> 
+</a> 
+ <a href="https://instagram.com/paymentlaunch" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="float"></span> 
+</a> 
+ <a href="https://facebook.com/" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="float"></span> 
+</a> 
+ <a href="https://twitter.com/" target="_blank" dm_dont_rewrite_url="true" aria-label="twitter" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Twitter&apos;)"> <span class="dmSocialTwitter dm-social-icons-twitter oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="float"></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1070291752 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1070291752"> <div class="dmRespColsWrapper" id="1824646011"> <div class="dmRespCol small-12 medium-6 large-6 u_1818113448" id="1818113448"> <div data-element-type="spacer" class="u_1566516446 dmSpacer" id="1566516446"></div> 
+</div> 
+ <div class="u_1509914424 dmRespCol small-12 medium-6 large-6" id="1509914424" data-anim-desktop="fadeIn"> <div class="u_1695774104 dmNewParagraph" data-element-type="paragraph" id="1695774104" style="transition:none;display:block;line-height:initial;" data-version="5"> <h3 class="m-size-29"><span class="m-font-size-29" style="display: initial;">Merchant Services&nbsp; For Your Business</span></h3> 
+</div> <div class="u_1033331211 dmNewParagraph" id="1033331211" style="transition:none;line-height:initial;" data-version="5"><p><span style="display: initial;">Introducing Payment Launch, your dedicated partner in driving business success. We are committed to delivering innovative tools, exceptional support, and unmatched service. Founded with the vision of empowering small business owners, our mission remains the same - to support your growth and prosperity.</span></p><p><span style="display: initial;"><br></span></p><p><span style="display: initial; font-weight: bold;">With Payment Launch, you can expect:</span></p><p><span style="display: initial;"><br></span></p><p><span style="display: initial; font-weight: bold;">Flexible month-to-month contracts:</span><span class="" style="display: initial;"> <span style="display: initial;">Evaluate our services and solutions at your convenience, with the freedom to adjust as your business evolves.</span></span></p><p><span style="display: initial;"><br></span></p><p><span class="" style="display: initial; font-weight: bold;"><span style="display: initial; font-weight: bold;">Exceptional customer support:</span> 
+</span><span style="display: initial;">Our friendly and knowledgeable team is committed to providing prompt assistance whenever you need it, ensuring you can focus on managing and expanding your small business.</span></p><p><span style="display: initial;"><br></span></p><p><span class="" style="display: initial; font-weight: bold;"><span style="display: initial; font-weight: bold;">Credit card processing:</span> 
+</span><span style="display: initial;">Accept payments from all major credit cards, allowing you to cater to a wide range of customers and maximize your sales potential.</span></p><p><span style="display: initial;"><br></span></p><p><span style="display: initial; font-weight: bold;">Cutting-edge terminals</span><span style="display: initial;">: Access state-of-the-art payment terminals that offer secure and seamless transactions, enhancing your customers' experience and instilling trust in your small business.</span></p><p><span style="display: initial;">Point of Sale (POS) systems: Choose from our range of innovative POS systems that streamline your operations, manage inventory, and simplify transactions, enabling you to run your business more efficiently.</span></p><p><span style="display: initial;"><br></span></p><p><span style="display: initial; font-weight: bold;">Range of payment solutions:</span><span class="" style="display: initial;"> <span style="display: initial;">Choose from a variety of options tailored to your specific requirements, including traditional payment processing, cutting-edge point-of-sale systems, and seamless online payment solutions.</span></span></p><p><span style="display: initial;"><br></span></p><p><span class="" style="display: initial; font-weight: bold;"><span style="display: initial; font-weight: bold;">Substantial savings:</span> 
+</span><span style="display: initial;">Partnering with Payment Launch can lead to average savings ranging from 10% to an impressive 100%, helping you optimize your merchant services processing costs.</span></p><p><span style="display: initial;">Innovative tools: Access state-of-the-art tools that streamline your business operations and enhance your customer experience.</span></p><p><span style="display: initial;"><br></span></p><p><span style="display: initial; font-weight: bold;">Unparalleled service:</span><span class="" style="display: initial;"> <span style="display: initial;">Experience unmatched service quality that goes above and beyond to meet your expectations and support your business growth.</span></span></p><p><span style="display: initial;"><br></span></p><p class="text-align-left"><span style="display: initial;">Ready to embark on a journey of business growth? Fill out the form today to receive comprehensive information about our programs. Discover how Payment Launch can equip your business with credit card processing, cutting-edge terminals, innovative tools, exceptional support, and the savings you deserve. Allow us to be your dedicated merchant services partner in achieving lasting success.</span></p></div></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="sticky-widgets-container-global" id="1742120456"></div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="dmRespRow fullBleedChanged fullBleedMode u_1534809366 mobile-columns-reversed" id="1534809366"> <div class="dmRespColsWrapper" id="1149782489"> <div class="u_1877932954 dmRespCol small-12 large-6 medium-6" id="1877932954"> <div class="u_1723669680 dmNewParagraph" data-element-type="paragraph" id="1723669680" style="transition:none 0s ease 0s;display:block;line-height:initial;" data-version="5"><p class="text-align-left size-16"><span class="font-size-16" style="color: var(--color_1); font-weight: 500; display: initial;">ー WE&rsquo;RE HERE TO HELP YOU</span></p></div> <div class="u_1753098379 dmNewParagraph" data-element-type="paragraph" id="1753098379" style="transition: none 0s ease 0s; display: block; line-height: initial;" data-version="5"> <h3 class="m-size-26 size-32"><span class="m-font-size-26 font-size-32" style="color: rgb(255, 255, 255); display: initial;">If you are new to accepting credit cards or are just looking for a partner you can trust, we are here for you</span></h3> 
+</div> <div class="dmNewParagraph u_1816532389" data-element-type="paragraph" id="1816532389" style="transition:opacity 1s ease-in-out 0s;line-height:initial;" data-version="5"><p><span style="display: initial; color: rgb(255, 255, 255);">Let's plan a time to discuss how we can help your business</span></p></div> 
+ <div class="u_1847520284 dmRespRow" id="1847520284"> <div class="dmRespColsWrapper" id="1185794754"> <div class="u_1653036637 dmRespCol small-12 medium-6 large-6" id="1653036637"> <a data-display-type="block" class="u_1639063776 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="contact.html" data-element-type="dButtonLinkId" id="1639063776" icon-name="icon-apple"> <span class="iconBg" id="1621167459"> <span class="icon hasFontIconstar hasFontIcon icon-apple" id="1902569746"></span> 
+</span> 
+ <span class="text" id="1534023726">Get a Free Consultation</span> 
+</a> 
+</div> 
+ <div class="u_1049909335 dmRespCol small-12 medium-6 large-6" id="1049909335"> <div data-element-type="spacer" class="dmSpacer" id="1589401095"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1777654510 dmRespCol small-12 large-6 medium-6" id="1777654510"> <div data-element-type="spacer" class="u_1649094084 dmSpacer" id="1649094084"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1399400778 dmRespRow dmSectionNoParallax" style="text-align: center;" id="1399400778" data-gallery-bg="eyJzbGlkZXMiOlsiaHR0cHM6Ly9pcnQtY2RuLm11bHRpc2NyZWVuc2l0ZS5jb20vbWQvdW5zcGxhc2gvZG1zM3JlcC9tdWx0aS9waG90by0xNTAyOTE5MDg4NzgzLTExYzg0NTQ1NWNiOS5qcGciXX0="> <div class="dmRespColsWrapper" id="1823567089"> <div class="u_1077024185 dmRespCol small-12 large-3 medium-3" id="1077024185"> <div class="u_1512076892 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1512076892"> <a href="index.htm" id="1469210321" file="false"><img src="499b3704/dms3rep/multi/opt/payment%20launch4-final-180w.png" id="1755597865" class="" data-dm-image-path="https://irp.cdn-website.com/499b3704/dms3rep/multi/payment+launch4-final.png" width="845" height="212" onerror="handleImageLoadError(this)"></a> 
+</div> 
+ <div class="u_1609226804 dmNewParagraph" data-element-type="paragraph" id="1609226804" style="transition:none;display:block;line-height:initial;" data-version="5"> <h5><span style="color: var(--color_3); display: initial;">Our expertise will help your business streamline all of your payment processing needs</span></h5> 
+ <h5 class="text-align-left"><span style="display: initial;"><br></span></h5> 
+</div></div> 
+ <div class="u_1992413430 dmRespCol small-12 large-3 medium-3" id="1992413430"> <div class="u_1484988018 dmNewParagraph" data-element-type="paragraph" id="1484988018" style="line-height:initial;" data-version="5"> <h5 class="text-align-left size-15"><span class="font-size-15" style="color: var(--color_4); font-weight: 700; display: initial;">Contact us</span><span style="display: initial;"><br></span></h5> 
+</div> <div class="u_1303702915 dmNewParagraph" data-element-type="paragraph" id="1303702915" style="transition:opacity 1s ease-in-out;line-height:initial;" data-version="5"> <h5 style="line-height: 2.4;"><span class="" style="display: initial; color: var(--color_3);"><span style="display: initial; color: var(--color_3);">Email:</span> 
+</span><a href="mailto:activate@paymentlaunch.com" runtime_url="mailto:activate@paymentlaunch.com" type="email" style="display: initial; color: var(--color_2);">activate@paymentlaunch.com</a><span class="m-font-size-13 font-size-16" style="display: initial; color: var(--color_3);"><br></span></h5> 
+ <h5 style="line-height: 2.4;"><span class="" style="display: initial; color: var(--color_3);"><span style="display: initial; color: var(--color_3);">Phone:</span> 
+</span><a href="tel:727-420-2198" runtime_url="tel:727-420-2198" type="call" style="display: initial; color: var(--color_2);">727-420-2198</a></h5> 
+ <h5 style="line-height: 2.4;"><span style="display: initial; color: var(--color_3);">United States</span></h5> 
+</div></div> 
+ <div class="u_1399642028 dmRespCol small-12 large-3 medium-3" id="1399642028"> <div class="dmNewParagraph" data-element-type="paragraph" id="1725422899" style="transition:opacity 1s ease-in-out;line-height:initial;" data-version="5"> <h5 class="size-15"><span class="font-size-15" style="display: initial; font-weight: 700; color: var(--color_3);">Menu</span><span style="display: initial;"><span class="ql-cursor">﻿</span></span></h5> 
+</div> <nav class="u_1787690367 unifiednav_vertical effect-text-fill main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_4" layout-sub="" data-show-vertical-sub-items="HOVER" id="1787690367" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://irp-cdn.multiscreensite.com/md/dmtmpl/5d5e38ed-97f3-47f1-87a8-5cdfcc6b6809/dms3rep/multi/desktop/logo-02.svg" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="index.htm" class="unifiednav__item  dmUDNavigationItem_010101845532  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         PAYMENT LAUNCH
+        " data-auto="page-text-style">PAYMENT LAUNCH<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="credit-card-processing.html" class="unifiednav__item  dmUDNavigationItem_010101723297  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         CREDIT CARD PROCESSING
+        " data-auto="page-text-style">CREDIT CARD PROCESSING<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="credit-card-processing/point-of-sale.html" class="unifiednav__item  dmUDNavigationItem_010101699637  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           POINT OF SALE
+          " data-auto="page-text-style">POINT OF SALE<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="credit-card-processing/hardware/terminals.html" class="unifiednav__item  dmUDNavigationItem_010101840258  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           TERMINALS
+          " data-auto="page-text-style">TERMINALS<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="accept-payments/virtual-terminal-for-credit-card-processing.html" class="unifiednav__item  dmUDNavigationItem_010101111442  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           PAYMENT GATEWAY
+          " data-auto="page-text-style">PAYMENT GATEWAY<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="accept-payments/invoice-payments.html" class="unifiednav__item  dmUDNavigationItem_010101542897  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           MOBILE
+          " data-auto="page-text-style">MOBILE<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="cash-discount-program.html" class="unifiednav__item  dmUDNavigationItem_010101767391  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         CASH DISCOUNT PROGRAM
+        " data-auto="page-text-style">CASH DISCOUNT PROGRAM<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="credit-card-updater.html" class="unifiednav__item  dmUDNavigationItem_01010139112  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         CREDIT CARD UPDATER
+        " data-auto="page-text-style">CREDIT CARD UPDATER<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="payment-processing-resources-credit-card-processing-ach-processing.html" class="unifiednav__item  dmUDNavigationItem_010101447605  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         RESOURCES
+        " data-auto="page-text-style">RESOURCES<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="contact.html" class="unifiednav__item  dmNavItemSelected  dmUDNavigationItem_010101567797  " target="" data-target-page-alias="" data-auto="selected-page"> <span class="nav-item-text " data-link-text="
+         CONTACT US
+        " data-auto="page-text-style">CONTACT US<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+ <div class="u_1386141616 dmRespCol small-12 large-3 medium-3" id="1386141616"> <div class="u_1131799532 align-center text-align-center dmSocialHub" id="1131799532" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="http://linkedin.com/" target="_blank" dm_dont_rewrite_url="true" aria-label="linkedin" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Linkedin&apos;)"> <span class="dmSocialLinkedin icon-linkedin oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="float"></span> 
+</a> 
+ <a href="https://instagram.com/paymentlaunch" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="float"></span> 
+</a> 
+ <a href="https://facebook.com/" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="float"></span> 
+</a> 
+ <a href="https://twitter.com/" target="_blank" dm_dont_rewrite_url="true" aria-label="twitter" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Twitter&apos;)"> <span class="dmSocialTwitter dm-social-icons-twitter oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="float"></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1530030108" style="text-align: center;" id="1530030108"> <div class="dmRespColsWrapper" id="1830376740"> <div class="dmRespCol small-12 medium-6 large-6" id="1751076525"> <div class="dmNewParagraph" data-element-type="paragraph" id="1160474855" style="transition:opacity 1s ease-in-out;line-height:initial;" data-version="5"> <h5 class="size-15 m-text-align-center"><span class="font-size-15" style="color: var(--color_4); font-weight: 300; display: initial;">&copy; All rights reserved</span></h5> 
+</div></div> 
+ <div class="dmRespCol small-12 medium-6 large-6" id="1829049469"> <div class="dmNewParagraph u_1239926040" data-element-type="paragraph" id="1239926040" style="transition: opacity 1s ease-in-out 0s; line-height: initial; text-align: right;" data-version="5"> <h5 class="text-align-right size-15 m-text-align-center"><span class="font-size-15" style="color: var(--color_4); font-weight: 300; display: initial;">Paymentlauch.com</span></h5> 
+</div></div> 
+</div> 
+</div> 
+</div> 
+ <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+    </div>
+</div>
+<!--  Add full CSS and Javascript before the close tag of the body if needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- loadCSS function fonts.jsp-->
+
+
+
+<link rel="preload" href="fonts/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Prata:ital,wght@0,400&family=Cardo:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Amiko:ital,wght@0,400;0,600;0,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;subset=latin-ext&amp;display=swap" as="style" fetchpriority="low" onload="loadCSS(this)">
+
+
+
+
+
+<!-- RT CSS Include d-css-runtime-desktop-one-package-structured-global-->
+<link rel="preload" as="style" fetchpriority="low" onload="loadCSS(this)" href="mnlt/production/4136/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-structured-global.min.css">
+
+<!-- End of RT CSS Include -->
+
+<link rel="preload" href="WIDGET_CSS/20697b229ee3f9f50d375d0d004d0739.css" id="widgetCSS" as="style" fetchpriority="low" onload="loadCSS(this)">
+
+<!-- Support `img` size attributes -->
+<style>img[width][height] {
+  height: auto;
+}</style>
+
+<!-- Support showing sticky element on page only -->
+<style>
+  body[data-page-alias="contact"] #dm [data-show-on-page-only="contact"] {
+    display: block !important;
+  }
+</style>
+
+<!-- This is populated in Ajax navigation -->
+<style id="pageAdditionalWidgetsCss" type="text/css">
+</style>
+
+
+
+
+<!-- Site CSS -->
+<link rel="preload" href="499b3704/files/499b3704_1.min.css?v=592" id="siteGlobalCss" as="style" fetchpriority="low" onload="loadCSS(this)">
+
+
+
+<style id="customWidgetStyle" type="text/css">
+
+</style>
+<style id="innerPagesStyle" type="text/css">
+    
+</style>
+
+
+<style id="additionalGlobalCss" type="text/css">
+</style>
+
+<style id="pagestyle" type="text/css">
+    *#dm *.dmBody div.dmforminput textarea{
+color:rgb(115,111,111) !important}
+*#dm *.dmBody div.dmforminput *.fileUploadLink{
+color:rgb(115,111,111) !important}
+*#dm *.dmBody div.checkboxwrapper span{
+color:rgb(115,111,111) !important}
+*#dm *.dmBody div.radiowrapper span{
+color:rgb(115,111,111) !important}
+*#dm *.dmBody div.u_1448184864{
+background-color:rgba(255,255,255,1) !important;
+box-shadow:rgba(0,0,0,0.25) 0 3px 11px 0 !important;
+-moz-box-shadow:rgba(0,0,0,0.25) 0 3px 11px 0 !important;
+-webkit-box-shadow:rgba(0,0,0,0.25) 0 3px 11px 0 !important}
+*#dm *.dmBody *.u_1381132449 *.dmformsubmit{
+float:LEFT !important}
+*#dm *.dmBody div.u_1381132449 *.dmforminput label{
+font-weight:normal !important;
+color:rgba(1,8,71,1) !important}
+*#dm *.dmBody div.u_1381132449 input:not([type="submit"]){
+border-bottom-width:0 !important;
+border-bottom-style:solid !important;
+background-color:rgba(247,247,247,1) !important}
+*#dm *.dmBody div.u_1381132449 textarea{
+border-bottom-width:0 !important;
+border-bottom-style:solid !important;
+background-color:rgba(247,247,247,1) !important}
+*#dm *.dmBody div.u_1381132449 select{
+border-bottom-width:0 !important;
+border-bottom-style:solid !important;
+background-color:rgba(247,247,247,1) !important}
+*#dm *.dmBody div.u_1381132449 .dmforminput label:not(.for-checkable):not(.custom-contact-checkable){
+color:var(--color_3) !important}
+*#dm *.dmBody div.u_1381132449 .m-recaptcha{
+color:var(--color_3) !important}
+*#dm *.dmBody div.u_1381132449 .dmforminput input{
+color:var(--color_4) !important}
+*#dm *.dmBody div.u_1381132449 .dmforminput textarea{
+color:var(--color_4) !important}
+*#dm *.dmBody div.u_1381132449 .dmforminput .fileUploadLink{
+color:var(--color_4) !important}
+*#dm *.dmBody div.u_1381132449 .checkboxwrapper span{
+color:var(--color_4) !important}
+*#dm *.dmBody div.u_1381132449 .radiowrapper span{
+color:var(--color_4) !important}
+*#dm *.dmBody div.u_1381132449 .optinwrapper div{
+color:var(--color_4) !important}
+*#dm *.dmBody div.u_1381132449 .freetextwrapper{
+color:var(--color_4) !important}
+*#dm *.dmBody div.u_1381132449 .dmforminput select{
+color:var(--color_4) !important}
+*#dm *.dmBody div.u_1381132449 .dmforminput option{
+color:var(--color_4) !important}
+*#dm *.dmBody div.u_1381132449 input::placeholder{
+color:rgba(112,112,112,1) !important}
+*#dm *.dmBody div.u_1381132449 input.placeholder{
+color:rgba(112,112,112,1) !important}
+*#dm *.dmBody div.u_1381132449 textarea::placeholder{
+color:rgba(112,112,112,1) !important}
+*#dm *.dmBody div.u_1381132449 textarea.placeholder{
+color:rgba(112,112,112,1) !important}
+*#dm *.dmBody div.u_1381132449 select::placeholder{
+color:rgba(112,112,112,1) !important}
+*#dm *.dmBody div.u_1381132449 select.placeholder{
+color:rgba(112,112,112,1) !important}
+*#dm *.dmBody div.u_1116817473 hr{
+color:var(--color_1) !important;
+border-top-style:solid !important;
+border-top-width:4px !important}
+*#dm *.dmBody div.u_1188455593 *.svg{
+color:var(--color_1) !important;
+fill:var(--color_1) !important}
+*#dm *.dmBody div.u_1647679861 *.svg{
+color:var(--color_1) !important;
+fill:var(--color_1) !important}
+*#dm *.dmBody div.u_1035618616 *.svg{
+color:var(--color_1) !important;
+fill:var(--color_1) !important}
+*#dm *.dmBody div.u_1269863770 *.socialHubIcon{
+color:var(--color_4) !important;
+border-color:var(--color_4) !important;
+background-color:rgba(56,56,56,0.1) !important}
+*#dm *.dmBody div.u_1351524662{
+background-repeat:no-repeat !important;
+background-image:url(499b3704/dms3rep/multi/opt/Contact us hero bg-fbb9bb95-2880w.png) !important;
+background-size:cover !important;
+background-color:rgba(255,255,255,1) !important}
+*#dm *.dmBody div.u_1070291752{
+background-color:rgba(255,255,255,1) !important}
+*#dm *.dmBody div.u_1695774104{
+line-height:initial !important}
+*#dm *.dmBody div.u_1033331211{
+line-height:1.5 !important}
+*#dm *.dmBody div.u_1509914424{
+background-color:rgba(255,255,255,1) !important;
+box-shadow:rgba(0,0,0,0.25) 0 3px 11px 0 !important;
+-moz-box-shadow:rgba(0,0,0,0.25) 0 3px 11px 0 !important;
+-webkit-box-shadow:rgba(0,0,0,0.25) 0 3px 11px 0 !important}
+*#dm *.dmBody div.u_1818113448{
+background-repeat:no-repeat !important;
+background-image:url(md/pexels/dms3rep/multi/opt/pexels-photo-1438081-2880w.jpeg) !important;
+background-size:cover !important}
+</style>
+
+<style id="pagestyleDevice" type="text/css">
+    *#dm *.d-page-1683814473 DIV.dmInner
+{
+	background-repeat:no-repeat !important;
+	background-image:none !important;
+	background-size:cover !important;
+	background-attachment:fixed !important;
+	background-position:50% 0 !important;
+}
+*#dm *.d-page-1683814473 DIV#dmSlideRightNavRight
+{
+	background-repeat:no-repeat !important;
+	background-image:none !important;
+	background-size:cover !important;
+	background-attachment:fixed !important;
+	background-position:50% 0 !important;
+}
+*#dm *.dmBody div.dmforminput textarea
+{
+	font-size:15px !important;
+}
+*#dm *.dmBody div.dmforminput *.fileUploadLink
+{
+	font-size:15px !important;
+}
+*#dm *.dmBody div.checkboxwrapper span
+{
+	font-size:15px !important;
+}
+*#dm *.dmBody div.radiowrapper span
+{
+	font-size:15px !important;
+}
+*#dm *.dmBody div.u_1381132449 *.dmformsubmit
+{
+	height:54px !important;
+}
+*#dm *.dmBody div.u_1381132449 *.dmforminput label
+{
+	font-size:13px !important;
+}
+*#dm *.dmBody div.u_1024425048
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:369px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	max-width:calc(100% - 0px) !important;
+	margin-top:8px !important;
+	margin-bottom:8px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+}
+*#dm *.dmBody div.u_1525083311
+{
+	padding-top:0 !important;
+	margin-left:auto !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-top:14px !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	margin-right:auto !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	max-width:none !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1188455593
+{
+	width:50px !important;
+	height:58px !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	position:relative !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:100% !important;
+	margin-top:2px !important;
+	margin-bottom:10px !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+	display:block !important;
+}
+*#dm *.dmBody div.u_1647679861
+{
+	width:50px !important;
+	height:58px !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	position:relative !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+	display:block !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	margin-top:0 !important;
+	margin-bottom:10px !important;
+}
+*#dm *.dmBody div.u_1070465291
+{
+	padding-top:0 !important;
+	margin-left:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	margin-right:0 !important;
+}
+*#dm *.dmBody div.u_1035618616
+{
+	width:50px !important;
+	height:58px !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	position:relative !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+	display:block !important;
+	margin-top:0 !important;
+}
+*#dm *.dmBody *.u_1269863770 *.socialHubInnerDiv a:not(:last-child)
+{
+	margin-right:21px !important;
+}
+*#dm *.dmBody div.u_1894793512
+{
+	padding-top:0 !important;
+	margin-left:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	margin-right:0 !important;
+}
+*#dm *.dmBody div.u_1083259322
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:289.188px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:calc(100% - 35px) !important;
+	margin-top:8px !important;
+	margin-bottom:8px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+}
+*#dm *.dmBody *.u_1269863770 *.socialHubIcon
+{
+	width:23px !important;
+	height:23px !important;
+	font-size:15.333333333333334px !important;
+	line-height:23px !important;
+}
+*#dm *.dmBody *.u_1269863770 *.socialHubIcon:after
+{
+	width:31px !important;
+	height:23px !important;
+}
+*#dm *.dmBody div.u_1766496735
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	max-width:calc(100% - 0px) !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	margin-top:15px !important;
+	margin-bottom:8px !important;
+}
+*#dm *.dmBody div.u_1772451484
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	max-width:calc(100% - 0px) !important;
+	margin-top:17px !important;
+	margin-bottom:8px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+}
+*#dm *.dmBody div.u_1352743752
+{
+	padding-top:0 !important;
+	margin-left:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	margin-right:0 !important;
+}
+*#dm *.dmBody div.u_1157475361
+{
+	padding-top:0 !important;
+	margin-left:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	margin-right:0 !important;
+}
+*#dm *.dmBody div.u_1359711772
+{
+	padding-top:0 !important;
+	margin-left:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	margin-right:0 !important;
+}
+*#dm *.dmBody div.u_1116817473
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:53px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:0 !important;
+	margin-left:35.1406px !important;
+	max-width:calc(100% - 35px) !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1818113448
+{
+	margin-left:0 !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	margin-right:0 !important;
+	background-position:50% 50% !important;
+}
+*#dm *.dmBody div.u_1509914424
+{
+	padding-top:45px !important;
+	padding-left:45px !important;
+	padding-right:45px !important;
+	padding-bottom:45px !important;
+	margin-right:80px !important;
+	margin-left:-45px !important;
+	margin-top:100px !important;
+	margin-bottom:100px !important;
+}
+*#dm *.dmBody div.u_1033331211
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:454px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:196.25px !important;
+	margin-left:0 !important;
+	max-width:calc(100% - 0px) !important;
+	margin-top:8px !important;
+	margin-bottom:8px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	display:block !important;
+}
+*#dm *.dmBody div.u_1070291752
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	max-width:none !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1351524662
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:70px !important;
+	padding-left:70px !important;
+	padding-bottom:70px !important;
+	margin-right:0px !important;
+	margin-left:0px !important;
+	max-width:none !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	padding-right:70px !important;
+	min-width:0 !important;
+	text-align:center !important;
+	background-position:50% 100% !important;
+	background-repeat:no-repeat !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_1269863770
+{
+	padding-top:0px !important;
+	display:block !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 21px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	margin-right:97.8438px !important;
+	margin-left:32px !important;
+	max-width:243px !important;
+	margin-top:23px !important;
+	margin-bottom:0px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	text-align:left !important;
+}
+*#dm *.dmBody div.u_1448184864
+{
+	padding-top:50px !important;
+	padding-left:0px !important;
+	margin-top:50px !important;
+	margin-right:50px !important;
+	margin-left:0px !important;
+	padding-bottom:0px !important;
+	padding-right:10px !important;
+	margin-bottom:50px !important;
+}
+*#dm *.dmBody div.u_1381132449
+{
+	display:block !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:420px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	margin-right:0px !important;
+	margin-left:0px !important;
+	max-width:calc(100% - 0px) !important;
+	margin-top:13px !important;
+	margin-bottom:0px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	text-align:center !important;
+}
+
+</style>
+
+<!-- Flex Sections CSS -->
+
+
+
+
+
+<style id="globalFontSizeStyle" type="text/css">
+    .font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-32, .size-32, .size-32 > font { font-size: 32px !important; }.font-size-15, .size-15, .size-15 > font { font-size: 15px !important; }
+</style>
+<style id="pageFontSizeStyle" type="text/css">
+</style>
+
+<!-- ========= JS Section ========= -->
+
+<script>
+    var isWLR = true;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "ENGLISH"
+    window.isSitePreview = false;
+</script>
+<script>
+    window.customWidgetsFunctions["7ebf92fcfe734a44a1911cd164200ec0~288"] = function (element, data, api) {
+        /* * Mega Menu
+
+* Aug 2020 
+* Version 1.0.2
+
+*Upon purchase of this widget, you acquire the right to use it; you're not actually 
+acquiring the widget itself.TheCamel.co is the owner of the intellectual property of this widget.
+The widget is for use only, it is not to be on sold, lent, rented, given away, gifted you can’t 
+even put it in your will. It is for use for your sites only on the dashboard we install the item in.
+
+*Kindly refer to our Terms and Conditions for more info - http://www.thecamel.co/terms-and-conditions
+*/
+
+const site_name = data.siteId;
+
+const widgetId = data.id;
+
+let showHome = data.config.showHome;
+let ComponentAppend = new ComponentStructure();
+let navPos = data.config.navPos;
+let useDivider = data.config.useDivider;
+let divideStyle = data.config.dividerStyle;
+
+let device = data.device;
+let showSubNavTitle = data.config.showSubNavTitle;
+let navHover = data.config.navHover;
+let isSticky = data.config.isSticky;
+let showComArrow = data.config.showComArrow;
+
+let isMultiLang = window.Parameters.IsSiteMultilingual;
+let current_lang = isMultiLang ? window.Parameters.translatedPageUrl:"";// ex: /fr-ca || /en || ""
+let is_main_lang = isMultiLang && window.Parameters.translatedPageUrl == "";
+let is_home = window.Parameters.InitialPageAlias == "home" || window.Parameters.InitialPageAlias == current_lang.split("/")[1];
+
+let current_language = window.Parameters.translatedPageUrl == "" ? "" : `${window.Parameters.translatedPageUrl.split("/")[1]}`;
+
+let markup = getMenu_[site_name](); //getMenu_[site_name](); // defaultNav
+
+createMegaMenu(markup);
+
+isSticky == true ? $(element).attr('data-element-type', 'onelinksmenu') : '';
+
+// treat the widget's row as a navigation row
+(isSticky) ? $(element).parents('.dmRespRow').toggleClass('mini-header-hide-row mini-header-show-row') : $(element).parents('.dmRespRow').removeClass('mini-header-show-row');
+
+function createMegaMenu(arrObj) { // DO NOT COPY FROM dashboard.js
+  if (!arrObj) {
+    $(element).find('.meganav-container').html(`<li class="nomarkup">Mega Menu Widget has been removed from the App Store.</li>`);
+    return
+  }
+  if (arrObj == "Click here to setup Mega Menu Widget" || arrObj == "Setup Mega Menu Widget") {
+    $(element).find('.meganav-container').html(`<div class="mega-menu-setup">${arrObj}</div>`);
+    return
+  }
+  let menuObj = typeof arrObj == "string" ? JSON.parse(arrObj) : arrObj;
+
+  $(element).find('.meganav-container').html("");
+  let navCreated = menuObj.map((obj, index) => {
+    let new_path;
+    let locale_url = obj['url'+current_language] || obj['url'+current_language] == "" ? obj['url'+current_language] : obj.url;
+
+    let itemLink = window.location.href.includes(data.siteId) && locale_url !== "" ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+    // https://webbuilder.localsearch.com.au/site/9c6609d8/residential?preview=true&insitepreview=true&dm_device=desktop
+    
+    let pathName = isActive(locale_url);
+    
+    let title_lang = obj['title'+current_language] ? obj['title'+current_language]:obj.title;
+    if (locale_url.includes("http") || locale_url == "") {
+      itemlink = locale_url;
+    } 
+    let isNoComponent = obj.components.length;
+    
+    
+    let navMenuStructure = `
+            ${useDivider && !showHome ? dividerStyle(divideStyle) : useDivider && showHome ? dividerStyle(divideStyle) : ''}
+            <li class="meganav-container__navlink-container ${isNoComponent == 0 ? 'noComponent' : 'hasComponent'} ${showComArrow ? "arrowShow" : ""}" data-menu="${index}">
+            ${locale_url !== "" ? `<a href="${itemLink}" class="meganav-container__navlink ${navHover} ${pathName ? 'activeNav' : ''}" target="${obj.newTab ? '_blank' : ''}">${title_lang}</a>` : `<span class="meganav-container__navlink ${pathName ? 'activeNav' : ''} ${navHover}">${title_lang}</span>`}
+                <div class="meganav-container__navlink-component-wrapper">
+                    <div class="meganav-container__navlink-component-container ${obj.orientation == 'Horizontal' ? obj.orientation : 'Vertical'} ${isNoComponent == 0 ? 'hidden' : ''}">
+                        ${ComponentAppend.structure(obj)}
+                    </div>
+                </div>
+            </li>`;
+    $(element).find('.meganav-container').append(navMenuStructure);
+    if (showHome) {
+      $(element).find('.meganav__divider:first-child').show();
+    } else {
+      $(element).find('.meganav__divider:first-child').hide();
+    }
+  });
+
+}
+
+function ComponentStructure() {
+    this.structure = function (data) {
+        return data.components.map((arr, compIndex) => {
+            let objKey = Object.keys(arr);
+            return this[objKey] === undefined ? this.empty_component() : this[objKey](arr[objKey], compIndex);
+        }).join("");
+    };
+    this.empty_component = function () {
+        return '';
+    };
+    this.componentTemplate = function (index, compIndex) {
+        let component = `
+        <div class="widget-builder__nav-components-wrapper widget-builder_links-list-card-theme" data-index="${index}">
+            <div class="widget-builder_nav-component-label widget-builder_links-list-title-theme">
+                <div class="widget-builder__accordion-btn" data-index="${index}" data-accordion="menu"></div>
+                <div class="widget-builder__accordion-icon-wrapper">
+                    <i class="fas fa-caret-right widget-builder__accordion-icon active"></i>
+                </div>
+                <div class="widget-builder__component-picker-wrapper">
+                    <select name="componentpicker" class="componentpicker widget-builder_input-title-field-theme" data-index="${index}" data-compindex="${compIndex}">
+                        <option value="free_text">Free Text</option>
+                        <option value="click_to_call">Click to Call</option>
+                        <option value="social_media">Social Media</option>
+                        <option value="contact_info">Contact Information</option>
+                        <option value="custom_button">Custom Buttons</option>
+                        <optgroup label="Multiple Sub Navigations">
+                            <option value="multi_sub_nav">Sub Navigation</option>
+                            <option value="ext_nav">Extended Sub Navigation</option>
+                            <option value="grid">Grid Columns</option>
+                        </optgroup>
+                        <optgroup label="Visual Media">
+                            <option value="thumbnail">Thumbnail</option>
+                            <option value="video">Video</option>
+                            <option value="stacked_images">Image Gallery</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="widget-builder__component-input-label">Component</div>
+                <div class="widget-builder_delete-navlink-btn-wrapper" title="Delete" data-accordion="comp">
+                    <i class="widget-builder_delete-navlink-btn fa fa-trash-alt" data-index="${index}" data-compindex="${compIndex}"></i>
+                </div>
+            </div>
+        </div>`;
+
+        return component;
+    };
+    this.free_text = function (text) {
+        let free_text = text['free_text' + current_language] ? text['free_text' + current_language] : text.free_text;
+        let textStructure = `
+            <div class="meganav-container__text meganav_container__component-spacing">
+                ${free_text}
+            </div>`;
+        return textStructure;
+    };
+    this.thumbnail = function (thumbnail) {
+        let locale_url = thumbnail['url'+current_language] ? thumbnail['url'+current_language] : `${thumbnail.url=="/home" ? "": `/${current_language}${thumbnail.url.replace(/_/g, "-")}`}`;
+        let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+        let link = `href="${itemLink || itemLink == "" ? itemLink : thumbnail.url}"`;
+        if (locale_url.includes("http") || thumbnail['url'+current_language] == "") {
+          link = `href="${thumbnail['url'+current_language] ? thumbnail['url'+current_language] : thumbnail.url}"`;
+        } 
+        let img_src = thumbnail['img_src' + current_language] ? thumbnail['img_src' + current_language] : thumbnail.img_src;
+        let alt = thumbnail['alt' + current_language] ? thumbnail['alt' + current_language] : thumbnail.alt;
+        let newTab = thumbnail['newTab' + current_language] ? thumbnail['newTab' + current_language] : thumbnail.newTab;
+        let thumbnailStructure = `
+            <div class="meganav-container__thumbnail-image meganav_container__component-spacing">
+                <a ${link !== 'href=""' ? link :""} class="meganav-container__thumbnail-image-wrapper" ${newTab == true ? 'target="_blank"' : ''}>             
+                    <img src="${img_src ? img_src : ""}" alt="${alt ? alt :""}">
+                </a>
+            </div>`;
+        return thumbnailStructure;
+    };
+    this.grid = function (items) {
+        let title_lang = items['title' + current_language] ? items['title' + current_language] : items.title;
+        let columnSize = items.columnSize;
+        let defaultWidth = items.defaultWidth;
+        let itemsList = items.grid_nav_list.map((i) => {
+            let title = i['title' + current_language] ? i['title' + current_language] : i.title;
+            let locale_url = i['url'+current_language] ? i['url'+current_language] : `${i.url=="/home" ? "": `/${current_language}${i.url.replace(/_/g, "-")}`}`;
+            
+            let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+            let link = `href="${itemLink || itemLink == "" ? itemLink : i.url}"`;
+            if (locale_url.includes("http") || i['url'+current_language] == "") {
+              link = `href="${i['url'+current_language] ? i['url'+current_language] : i.url}"`;
+            } 
+            let short_desc = i['short_desc' + current_language] ? i['short_desc' + current_language] : i.short_desc;
+            let icon = i['icon' + current_language] ? i['icon' + current_language] : i.icon;
+            return `
+                <a ${link !== 'href=""' ? link : ''} class="meganav-container__grid-sub-nav-wrapper horizontal" target="${i.newTab ? '_blank' : ''}">
+                    <div class="meganav-container__grid-sub-nav-icon">
+                        ${i.hideIcon ? '':`<img src="${icon ? icon : ""}" alt="">`}
+                        <div class="meganav-container__grid-sub-nav-link-title">${title ? title : ""}</div>
+                    </div>
+                    ${short_desc ? `<div class="meganav-container__grid-sub-nav-description">${short_desc}</div>` : ''}
+                </a>`;
+        }).join('');
+
+        let itemsNavStructure = `
+        <div class="meganav-container__grid-sub-nav-container meganav_container__component-spacing">
+            <div class="meganav-container__grid-sub-nav-title ${title_lang ? "" : "noTitle"}">${title_lang ? title_lang : 'Title'}</div>
+            <div class="meganav-container__grid-sub-nav-items ${items.topIcon ? 'meganav-container-grid-top-icons':''}" data-size="${columnSize}" style="width:${`${defaultWidth ? defaultWidth : 0}px`}">
+                ${itemsList}
+            </div>
+        </div>`;
+        return itemsNavStructure;
+    };
+    this.stacked_images = function (images) {
+        let title_lang = images['title' + current_language] ? images['title' + current_language] : images.title;
+        let defaultWidth = images.defaultWidth;
+
+        let imagesList = images.stack_nav_list.map((i) => {
+            let title = i['title' + current_language] ? i['title' + current_language] : i.title;
+            let locale_url = i['url'+current_language] ? i['url'+current_language] : `${i.url=="/home" ? "": `/${current_language}${i.url.replace(/_/g, "-")}`}`;
+            let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+            let link = `href="${itemLink || itemLink == "" ? itemLink : i.url}"`;
+            if (locale_url.includes("http") || i['url'+current_language] == "") {
+              link = `href="${i['url'+current_language] ? i['url'+current_language] : i.url}"`;
+            } 
+            let img_src = `${i['img_src' + current_language] ? i['img_src' + current_language] : i.img_src}"`;
+            let short_desc = i['short_desc' + current_language] ? i['short_desc' + current_language] : i.short_desc;
+            let imageNavListStructure = `
+                <a ${link !== 'href=""' ? link : ''} class="meganav-container__stack-sub-nav-wrapper horizontal ${i.topImage ? "meganav-container__stack-sub-nav-wrapper-topimage":""}" target="${i.newTab ? '_blank' : ''}">
+                    ${!i.hideIcon ? `<div class="meganav-container__stack-sub-nav-image">${img_src ? `<img src="${img_src}" alt="${title}">` : ''}</div>` : ""}
+                    <div class="meganav-container__services-content meganav-container__stack-sub-nav-content">
+                        <div class="meganav-container__stack-sub-nav-link-title">${title ? title : ''}</div>
+                        ${short_desc ? `<div class="meganav-container__stack-sub-nav-description">${short_desc}</div>` : ''}
+                    </div>
+                </a>`;
+            return imageNavListStructure;
+        }).join('');
+        let imageNavStructure = `
+        <div class="meganav-container__stack-sub-nav-container meganav_container__component-spacing" style="width:${`${defaultWidth}px`}">
+            <div class="meganav-container__stack-sub-nav-title ${title_lang ? "" : "noTitle"}">${title_lang ? title_lang: 'Title'}</div>
+            ${imagesList}
+        </div>`;
+        return imageNavStructure;
+    };
+    this.multi_sub_nav = function (subNav) {
+        let title_lang = subNav['title' + current_language] ? subNav['title' + current_language] : subNav.title;
+        let subnavList = subNav.nav_list.map((i) => {
+            let title = i['title' + current_language] ? i['title' + current_language] : i.title;
+            let locale_url = i['url'+current_language] ? i['url'+current_language] : `${i.url=="/home" ? "": `/${current_language}${i.url.replace(/_/g, "-")}`}`;
+            let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+            let link = `href="${itemLink || itemLink == "" ? itemLink : i.url}"`;
+            if (locale_url.includes("http") || i['url'+current_language] == "") {
+              link = `href="${i['url'+current_language] ? i['url'+current_language] : i.url}"`;
+            } 
+            let icon = i['icon' + current_language] ? i['icon' + current_language] : i.icon;
+            let short_desc = i['short_desc' + current_language] ? i['short_desc' + current_language] : i.short_desc;
+            let navListStructure = `
+                <a ${link !== 'href=""' ? link : ''} class="meganav-container__multi-sub-nav-wrapper horizontal" target="${i.newTab ? '_blank' : ''}">
+                    ${!i.hideIcon ? `<div class="meganav-container__multi-sub-nav-icon">${icon.includes("http") ? `<img src="${icon}" alt="">` : icon}</div>` : ""}
+                    <div class="meganav-container__services-content meganav-container__multi-sub-nav-content">
+                        <div class="meganav-container__multi-sub-nav-link-title">${title ? title : ''}</div>
+                        ${short_desc? `<div class="meganav-container__multi-sub-nav-description">${short_desc}</div>` : ''}
+                    </div>
+                    <div class="meganav-container__inner-sub-nav-content"  style='display:${i.inner_nav ? "block":"none"}'>
+                        ${i.inner_nav ? createInnerNav(i.inner_nav) : ''}
+                    </div>
+                </a>`;
+            return navListStructure;
+        }).join('');
+
+        function createInnerNav(innerNav) {
+            return '';
+            // TODO
+            // return innerNav.map(i => {
+            //     return `<a href="${i.link}">${i.title}</a>`;
+            // }).join('');
+        }
+        let subNavStructure = `
+        <div class="meganav-container__multi-sub-nav-container meganav_container__component-spacing">
+            <div class="meganav-container__multi-sub-nav-title ${title_lang ? "" : "noTitle"}">${title_lang ? title_lang : 'Title'}</div>
+            ${subnavList}
+        </div>`;
+        return subNavStructure;
+    };
+    this.ext_nav = function (extNav) {
+        let title_lang = extNav['title' + current_language] ? extNav['title' + current_language] : extNav.title;
+        let img_src = extNav['img_src' + current_language] ? extNav['img_src' + current_language] : extNav.img_src;
+        let alt = extNav['alt' + current_language] ? extNav['alt' + current_language] : extNav.alt;
+        let order = extNav.order;
+        let extNavList = extNav.ext_nav_list.map((i) => {
+            let title = i['title' + current_language] ? i['title' + current_language] : i.title;
+            let locale_url = i['url'+current_language] ? i['url'+current_language] : `${i.url=="/home" ? "": `/${current_language}${i.url.replace(/_/g, "-")}`}`;
+            let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+            let link = `href="${itemLink || itemLink == "" ? itemLink : i.url}"`;
+            if (locale_url.includes("http") || i['url'+current_language] == "") {
+              link = `href="${i['url'+current_language] ? i['url'+current_language] : i.url}"`;
+            } 
+            let icon = i['icon' + current_language] ? i['icon' + current_language] : i.icon;
+            let img_src = i['img_src' + current_language] ? i['img_src' + current_language] : i.img_src;
+            let short_desc = i['short_desc' + current_language] ? i['short_desc' + current_language] : i.short_desc;
+            let navListStructure = `            
+            <a ${link !== 'href=""' ?link : ''} class="meganav-container__ext-nav-wrapper horizontal" data-img="${img_src ?img_src : extNav.img_src}" target="${i.newTab ? '_blank' : ''}">
+                ${!i.hideIcon ? `<div class="meganav-container__ext-nav-icon">${icon.includes("http") ? `<img src="${icon}" alt="">` : icon}</div>` : ""}
+                <div class="meganav-container__services-content meganav-container__ext-nav-content">
+                    <div class="meganav-container__ext-nav-link-title">${title ? title :""}</div>
+                    ${short_desc ? `<div class="meganav-container__ext-nav-description">${short_desc}</div>` : ''}
+                </div>
+            </a>`;
+            return navListStructure;
+        }).join('');
+        let extNavStructure = `
+        <div class="meganav-container__ext-nav-main-container meganav_container__component-spacing ${order}">
+            <div class="meganav-container__ext-nav-image meganav_container__ext-nav-inner-spacing">
+                <img src="${img_src}" alt="${alt}">
+            </div>
+            <div class="meganav-container__ext-nav-container meganav_container__ext-nav-inner-spacing">
+                <div class="meganav-container__ext-nav-title">${title_lang ? title_lang :""}</div>
+                ${extNavList}
+            </div>
+        </div>`;
+        return extNavStructure;
+    };
+    this.social_media = function (social) {
+        let title_lang = social['title' + current_language] ? social['title' + current_language] : social.title;
+        let orientation = social['orientation' + current_language] ? social['orientation' + current_language] : social.orientation;
+        let socialList = social.social_lists.map((i) => {
+            let locale_url = i['url'+current_language] ? i['url'+current_language] : `${i.url=="/home" ? "": `/${current_language}${i.url.replace(/_/g, "-")}`}`;
+            let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+            let link = `href="${itemLink|| itemLink == "" ? itemLink : i.url}"`;
+            if (locale_url.includes("http") || i['url'+current_language] == "") {
+              link = `href="${i['url'+current_language] ? i['url'+current_language] : i.url}"`;
+            } 
+            let social_type = `${i['social_type' + current_language] ? i['social_type' + current_language] : i.social_type}`;
+            let socialListStructure = `
+                    <a ${link!== "" ? link:""} class="meganav-container__contact-social-list" target="${i.newTab ? '_blank' : ''}">
+                        ${socialIcon(social_type)}
+                    </a>`;
+            return socialListStructure;
+        }).join('');
+        let socialStructure = `
+            <div class="meganav-container__contact-social-media meganav_container__component-spacing ${orientation == "Horizontal" ?orientation : "Vertical"}">
+                <div class="meganav-container__contact-social-title">
+                    ${title_lang ? title_lang : ''}
+                </div>
+                <div class="meganav-container__contact-social-list">
+                    ${socialList}
+                </div>
+            </div>`;
+        return socialStructure;
+    };
+    this.contact_info = function (contactInfo) {
+        let title_lang = contactInfo['title' + current_language] ? contactInfo['title' + current_language] : contactInfo.title;
+        let phone = contactInfo['phone' + current_language] ? contactInfo['phone' + current_language] : contactInfo.phone;
+        let address = contactInfo['address' + current_language] ? contactInfo['address' + current_language] : contactInfo.address;
+        let email = contactInfo['email' + current_language] ? contactInfo['email' + current_language] : contactInfo.email;
+        let contactInfoStructure = `
+            <div class="meganav-container__contact-info-wrapper meganav_container__component-spacing">
+                    <div class="meganav-container__contact-title">
+                       ${title_lang ? title_lang : ''}
+                    </div>
+                    ${address ? `<a href="https://www.google.com/maps?q=${address.split(' ').join('+')}" class="meganav-container__contact-location" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i>
+                        ${address}</a>` : ''}
+                     ${phone ? `<a href="tel:${phone}" class="meganav-container__contact-phone">
+                        <i class="fas fa-phone-alt"></i>${phone}</a>`: ''}
+                    ${email ?`<a href="mailto:${email}" class="meganav-container__contact-email">
+                        <i class="far fa-envelope"></i>${email}</a>`: ''}
+                </div>`;
+        return contactInfoStructure;
+    };
+    this.custom_button = function (customBtn) {
+        let title_lang = customBtn['label' + current_language] ? customBtn['label' + current_language] : customBtn.label;
+        let locale_url = customBtn['url'+current_language] ? customBtn['url'+current_language] : `${customBtn.url=="/home" ? "": `/${current_language}${customBtn.url.replace(/_/g, "-")}`}`;
+        let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+        let link = `href="${itemLink || itemLink == ""? itemLink : customBtn.url}"`;
+        if (locale_url.includes("http") || customBtn['url'+current_language] == "") {
+          link = `href="${customBtn['url'+current_language] ? customBtn['url'+current_language] : customBtn.url}"`;
+        } 
+        let buttonStructure = `
+        <a ${link !== 'href=""' ? link : ""} class="meganav-container__contact-btn meganav_container__component-spacing" target="${customBtn.newTab ? '_blank' : ''}">
+            ${title_lang ? title_lang : ''}
+        </a>`;
+        return buttonStructure;
+    };
+    this.video = function (video) {
+        let video_src = video['vid_src' + current_language] ? video['vid_src' + current_language] : video.vid_src;
+        let img_src = video['img_src' + current_language] ? video['img_src' + current_language] : video.img_src;
+        let popup = video.popup;
+        let vidSrc = video_src.substr(video_src.indexOf("v=") + 2);
+        let videoStructure = `<div class="meganav-container__video-container meganav_container__component-spacing">
+                                <div class="meganav-container__video-wrapper ${popup ? 'videoPopup' : ''}" target="_blank">
+                                    <img src="${img_src ? img_src : ""}" class="meganav-container__video-thumbnail">
+                                    <iframe src="https://www.youtube.com/embed/${vidSrc}?rel=0&amp;showinfo=0" frameborder="0"
+                                        allow="autoplay; encrypted-media" allowfullscreen class="meganav-container__video"></iframe>
+                                </div>
+                            </div>`;
+        return videoStructure;
+    };
+    this.click_to_call = function (ctc) {
+        let title_lang = ctc['title' + current_language] ? ctc['title' + current_language] : ctc.title;
+        let desc = ctc['description' + current_language] ? ctc['description' + current_language] : ctc.description;
+        let label = ctc['btn_label' + current_language] ? ctc['btn_label' + current_language] : ctc.btn_label;
+        let locale_url = ctc['btn_url'+current_language] ? ctc['btn_url'+current_language] : `${ctc.btn_url=="/home" ? "": `/${current_language}${ctc.btn_url.replace(/_/g, "-")}`}`;
+        let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+        let link = `href="${itemLink ? itemLink : ctc.btn_url}"`;
+        if (locale_url.includes("http") || ctc['url'+current_language] == "") {
+          link = `href="${ctc['btn_url'+current_language] ? ctc['btn_url'+current_language] : ctc.btn_url}"`;
+        } 
+        let ctcStructure = `
+            <div class="meganav-container__ctc-container meganav_container__component-spacing">
+                ${title_lang ? `<span class="meganav-container__ctc-title meganav-container__ctc-wrapper">${title_lang}</span>` : ''}
+                ${desc ? `<span class="meganav-container__ctc-description meganav-container__ctc-wrapper">${desc}</span>` : ''}
+                ${label ? `<a ${link !== "" ? link :""} class="meganav-container__ctc-btn meganav-container__ctc-wrapper">${label}</a>` : ''}
+            </div>`;
+        return ctcStructure;
+    };
+}
+
+// ? Hover Behavior - Front End JS
+$('.widget-layout-result').on('mouseenter', '.meganav-container__navlink-container', function () {
+
+  $('.meganav-container__navlink-component-container').stop().hide();
+  let elem = $(this).find(".meganav-container__navlink-component-container");
+  elem.fadeIn(0, function () {
+    if (elem.hasClass('Horizontal')) {
+      elem.css('display', 'flex');
+    }
+  });
+
+  let rect = this.getBoundingClientRect();
+  let windowWidth = $(window).outerWidth();
+  let excess = (rect.left + (elem.outerWidth() / 2)) - windowWidth;
+  let isOverFlow = (rect.left + (elem.outerWidth() / 2)) > windowWidth;
+  let left = !isOverFlow ? `-${(elem.outerWidth() / 2)}px` : `-${(elem.outerWidth() / 2) + (excess * 2)}px`;
+
+
+  elem.css("margin-left", left);
+  $(this).find(".meganav-container__navlink-component-container.Vertical").css({
+    "left": `${left}`,
+    "margin-left": "50%"
+  });
+
+  let isShort = $(this).find(".meganav-container__navlink-component-container").offset().left < 0;
+  if (isShort) {
+    left = "-" + rect.left + "px";
+    elem.css("margin-left", left);
+    $(this).find(".meganav-container__navlink-component-container.Vertical").css({
+      "left": `${left}`,
+      "margin-left": "50%"
+    });
+  }
+
+}).on('mouseleave', '.meganav-container__navlink-container', function () {
+  $('.meganav-container__navlink-component-container').stop().hide();
+});
+
+$('.widget-layout-result .meganav-container__navlink-container').on('mouseleave', function () {
+  $(this).find('.meganav-container__navlink-component-wrapper').css({ 'pointer-events': 'none' });
+});
+
+$('.widget-layout-result .meganav-container__navlink-container').on('mouseenter', function () {
+  $(this).find('.meganav-container__navlink-component-wrapper').css({ 'pointer-events': 'auto' });
+});
+
+// Extended Sub Navigation Hover
+$(element).find(".widget-layout-result").on("mouseenter", ".meganav-container__ext-nav-wrapper", function () {
+  let elem = $(this);
+  let imgElem = $(this).parent().parent().find(".meganav-container__ext-nav-image img");
+  let storeDefaultImg = $(this).parent().parent().find(".meganav-container__ext-nav-image img").attr("src");
+  imgElem.attr("data-default", storeDefaultImg);
+  let newImageSrc = elem.attr("data-img");
+  imgElem.attr("src", newImageSrc && newImageSrc !== "" ? newImageSrc : storeDefaultImg);
+}).on("mouseleave", ".meganav-container__ext-nav-wrapper", function () {
+  let imgElem = $(this).parent().parent().find(".meganav-container__ext-nav-image img");
+  let defaultImg = $(this).parent().parent().find(".meganav-container__ext-nav-image img").attr("data-default");
+  imgElem.attr("src", defaultImg);
+});
+
+// ? Open Video Popup
+$(element).find('.widget-layout-result').on('click', '.meganav-container__video-wrapper.videoPopup', function () {
+  let videourl = $(this).find("iframe").attr("src");
+  let video = videourl.substr(videourl.indexOf('?v=') + 3)
+  let popupStructure = `
+    <div class="meganav-container__video-popup-container">
+        <div class="meganav-container__video-popup-wrapper">
+            <div class="meganav-container__video-popup-close-btn"><i class="far fa-times-circle"></i></div>
+            <iframe src="https://www.youtube.com/embed/${video}?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="meganav-container__video-popup"></iframe>
+        </div>
+    </div>`;
+  $(element).find('.widget-layout-result').append(popupStructure);
+  $('html').css({ 'overflow': 'hidden' });
+});
+
+// ? Close Video Popup
+$(element).find('.widget-layout-result').on('click', '.meganav-container__video-popup-close-btn', function () {
+  $(element).find('.meganav-container__video-popup-container').remove();
+  $('html').css({ 'overflow': 'auto' });
+});
+
+function socialIcon(socialType) {
+  if (socialType === 'Instagram') {
+    return '<i class="fab fa-instagram"></i>';
+  }
+  if (socialType === 'Facebook') {
+    return '<i class="fab fa-facebook-square"></i>';
+  }
+  if (socialType === 'Twitter') {
+    return '<i class="fab fa-twitter-square"></i>';
+  }
+  if (socialType === 'Youtube') {
+    return '<i class="fab fa-youtube"></i>';
+  }
+  if (socialType === 'Pinterest') {
+    return '<i class="fab fa-pinterest"></i>';
+  }
+  if (socialType === 'Vimeo') {
+    return '<i class="fab fa-vimeo-v"></i>';
+  }
+  if (socialType === 'Linkedin') {
+    return '<i class="fab fa-linkedin-in"></i>';
+  }
+  if (socialType === 'Reddit') {
+    return '<i class="fab fa-reddit-square"></i>';
+  }
+  if (socialType === 'Snapchat') {
+    return '<i class="fab fa-snapchat-ghost"></i>';
+  }
+  if (socialType === 'Tripadvisor') {
+    return '<i class="fab fa-tripadvisor"></i>';
+  }
+}
+
+function isActive(url) { //     /tr/reviews
+    if(url == "") return false;
+    let sitePathName = window.location.pathname.replace(`/site/${data.siteId}`, '').split('/'); // /home ---> ["/home"]
+    let path = sitePathName[1] ? sitePathName[1] : "home"; // home /nl
+    let url_link = url.split('/')[1] ? url.split('/')[1] : "home"; // home
+    if(!is_main_lang && isMultiLang && !is_home){
+        path = sitePathName[2] ? sitePathName[2] : current_language; // tr
+        url_link = url.split('/')[2] ? url.split('/')[2] : current_language; // tr
+    }
+    if(!is_main_lang && sitePathName.length !== 2 && url === "/"+current_language) return false;
+    return path == url_link// /tr/about-us, /tr/services, /tr/services/investments
+}
+
+function dividerStyle(style) {
+  if (style == "slash") {
+    return `<li class="meganav__divider">/</li>`;
+  }
+  if (style == "pipe") {
+    return `<li class="meganav__divider">|</li>`;
+  }
+  if (style == "colon") {
+    return `<li class="meganav__divider">:</li>`;
+  }
+  if (style == "middot") {
+    return `<li class="meganav__divider">·</li>`;
+  }
+  if (style == "space") {
+    return `<li class="meganav__divider"> </li>`;
+  }
+}
+
+function doAjax(settings) {
+  return new Promise((res, rej) => $.ajax(settings).done(a => res(a)))
+}
+
+
+const cssId = 'fontAwesomeSource';
+if (!document.getElementById(cssId)) {
+  var head = document.getElementsByTagName('head')[0];
+  var link = document.createElement('link');
+  link.id = 'fontAwesomeSource';
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css';
+  link.integrity = 'sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==';
+  link.crossOrigin = 'anonymous';
+  head.appendChild(link);
+}
+
+    };
+</script>
+<script type="text/javascript">
+
+    var d_version = "production_4136";
+    var build = "2024-02-01T07_49_42";
+    window['v' + 'ersion'] = d_version;
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        window.assetsCacheQueryParam = "?version=2024-02-01T07_49_42";
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            } else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+</script>
+
+<!-- Load jQuery -->
+    <script type="text/javascript" id='d-js-jquery' src="libs/jquery/jquery-3.7.0.min.js"></script>
+    <!-- End Load jQuery -->
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+
+
+<script>
+    var _jquery = window.$;
+
+    var jqueryAliases = ['$', 'jquery', 'jQuery'];
+
+    jqueryAliases.forEach((alias) => {
+        Object.defineProperty(window, alias, {
+            get() {
+                return _jquery;
+            },
+            set() {
+                console.warn("Trying to over-write the global jquery object!");
+            }
+        });
+    });
+    window.jQuery.migrateMute = true;
+</script>
+<script>
+    window.cookiesNotificationMarkupPreview = 'null';
+</script>
+
+<!-- HEAD RT JS Include -->
+<script id='d-js-params'>
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.opencage.token"] = '319e14f32bcce967ba55cd263478796d';
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] =false;
+    rtCommonProps["common.resources.dist.cdn"] =true;
+    rtCommonProps["common.build.dist.folder"] = 'production/4136';
+    rtCommonProps["common.resources.cdn.host"] = 'https://static.cdn-website.com';
+    rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/4136';
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] =true;
+    rtCommonProps["feature.flag.runtime.photoswipe.fix"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.respectCssAnimationProps.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"] =true;
+    rtCommonProps["feature.flag.runOnReadyNewTask"] =true;
+
+    
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'here';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] =160;
+    rtCommonProps["images.sizes.mobile"] =640;
+    rtCommonProps["images.sizes.tablet"] =1280;
+    rtCommonProps["images.sizes.desktop"] =1920;
+    rtCommonProps["modules.resources.cdn"] =true;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+    rtCommonProps["facebook.api.version"] = '7.0';
+    rtCommonProps["feature.flag.runtime.inp.threshold"] =150;
+    rtCommonProps["feature.flag.performance.logs"] =true;
+    rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+    rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+
+    // feature flags that's used out of runtime module (in  legacy files)
+    rtCommonProps["site.runtime.video.background.ssr"] =true;
+
+    // no usages
+    rtCommonProps["run.imageCount.script.enabled"] =false;
+
+    window.rtFlags = {};
+    rtFlags["unsuspendEcwidStoreOnRuntime.enabled"] =true;
+    rtFlags["keyboard.navigation.enabled"] =true;
+    rtFlags["scripts.widgetCount.enabled"] =true;
+    rtFlags["maps.cookiebot.enabled"] =true;
+    rtFlags["ecom.ecwid.categoryPage.modifyLinks"] = true;
+    rtFlags["ecom.ecwidNewUrlStructure.enabled"] = false;
+    rtFlags["ecom.ecwid.old.store.fix.scrolling.enabled"] = true;
+    rtFlags["ecom.ecwid.old.store.fix.facebook.share"] = true;
+    rtFlags["ecom.ecwid.fallBackInCaseLinksNotFound.enabled"] = true;
+    rtFlags["feature.flag.photo.gallery.exact.size"] =false;
+    rtFlags["new.store.fix.ecwid.back.bug"] =true;
+    rtFlags["facebook.runtime.widgets.upgrade"] =true;
+    rtFlags["ecom.ecwid.solve.url.modifications"] = true;
+    rtFlags["ecom.ecwid.configOptions"] = true;
+    rtFlags["geocode.search.localize"] =false;
+    rtFlags["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] =false;
+    rtFlags["site.contact.form.fix.for.attribute"] =true;
+    rtFlags["contact.form.date.format.enabled"] = true;
+    rtFlags["twitter.heightLimit.enabled"] = true;
+</script>
+<script src="mnlt/production/4136/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js" id="d-js-core"></script>
+<!-- End of HEAD RT JS Include -->
+<script src="mnlt/production/4136/_dm/s/rt/dist/scripts/d-js-jquery-migrate.min.js"></script>
+<script>
+
+$(window).bind("orientationchange", function (e) {
+    $.layoutManager.initLayout();
+    
+});
+$(document).resize(function () {
+    
+});
+</script>
+<script type="text/javascript" id="d_track_campaign">
+(function() {
+ 	var campaign = (/utm_campaign=([^&]*)/).exec(window.location.search);
+
+ 	if (campaign && campaign != null && campaign.length > 1) {
+ 		campaign = campaign[1];
+ 		document.cookie = "_dm_rt_campaign=" + campaign + ";expires=" + new Date().getTime() + 24*60*60*1000 + ";domain=" + window.location.hostname + ";path=/";
+ 	}
+}());
+</script>
+<script type="text/javascript">
+  var _dm_gaq = {};
+  var _gaq = _gaq || [];
+  var _dm_insite = [];
+</script>
+
+  <script async="" src="gtag/js-1?id=G-V8XJYYNPS3"></script>
+	<script type="text/javascript" id="d_track_ga">
+	  _dm_gaq.siteAlias = '499b3704';
+	  _dm_gaq.systemAggregatedGaqID = '';
+	  _dm_gaq.externalGaqID = 'G-V8XJYYNPS3';
+	  _dm_gaq.gaAggregatedEventAttributes = {
+		  'site_alias':  _dm_gaq.siteAlias,
+		  'product': 'DM_DIRECT',
+		  'plan': 'BUSINESS_PLUS',
+		  'dfooter': 'false',
+		  'sitetype': '1',
+		  'pwaEnabled': 'true'
+	  }
+
+	  _dm_gaq.pushEvent = function(trackingId, event, category, label, value, additionalParams = {}) {
+	  	  const eventProps = {
+			  send_to: trackingId,
+			  event_category: category,
+			  event_label: label,
+			  value,
+			  ...additionalParams,
+			  ...(trackingId === _dm_gaq.systemAggregatedGaqID
+					  ? _dm_gaq.gaAggregatedEventAttributes : {})
+		  };
+		  gtag('event', event, eventProps);
+	  }
+
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+	  function pushInsiteImpressions(id) {
+		  _dm_insite.forEach((rule) => {
+			  _dm_gaq.pushEvent(id, 'insite_impression', 'insite', rule.ruleType + '__' + rule.ruleId);
+		  });
+	  }
+
+	if(_dm_gaq.systemAggregatedGaqID){
+		// track aggregated account
+		gtag('config', '', {
+			'send_page_view': false,
+			'anonymize_ip': true,
+			'transport_type': 'beacon',
+			'custom_map': {'dimension1': 'site_alias', 'dimension2': 'product', 'dimension3': 'dFooter', 'dimension4': 'sitetype'}
+		});
+		gtag('set', 'developer_id.dMDU5Nj', true);
+
+		_dm_gaq.pushEvent('', 'page_view');
+		pushInsiteImpressions(_dm_gaq.systemAggregatedGaqID);
+	}
+
+	if(_dm_gaq.externalGaqID && _dm_gaq.externalGaqID!= '') {
+		gtag('config', 'G-V8XJYYNPS3', {
+			'send_page_view': false,
+			'anonymize_ip': true,
+			'transport_type': 'beacon',
+			'linker': {
+				'domains': ['paymentlaunch.com']
+			}
+		});
+		_dm_gaq.pushEvent('G-V8XJYYNPS3', 'page_view');
+		pushInsiteImpressions(_dm_gaq.externalGaqID);
+	}
+
+  </script>
+<script type="text/javascript" id="d_track_sp">
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+window.dmsnowplow  = window.snowplow;
+
+dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+  appId: '499b3704'
+});
+
+dmsnowplow('trackPageView');
+_dm_insite.forEach((rule) => {
+	// Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+	// the tracking is in popup.js
+	if (rule.actionName !== "popup") {
+		dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+	}
+	window?.waitForDeferred?.('dmAjax', () => {
+		$.DM.events.trigger('event-ruleTriggered', {value: rule});
+	});
+});
+</script>
+   <div style="display:none;" id="P6iryBW0Wu"></div>
+
+<!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="fb-root" data-locale="en"></div>
+<!-- Alias: 499b3704 -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization">
+	window?.waitForDeferred?.('dmAjax', () => {
+		// Collects client data and updates cookies used by smart sites
+		window.expireDays = 365;
+		window.visitLength = 30 * 60000;
+		$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), window.expireDays);
+			setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+	});
+</script>
+<script type="text/javascript">
+    
+    Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+    
+    Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+    Parameters.HomeLinkText = 'Home';
+    </script>
+<!--  End Script tags -->
+
+<!--  Begin Body End Markup -->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5f283fd49b7cf26e73c1e373/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+<!--End of Tawk.to Script--></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDVCJCH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><!--  End Body End Markup -->
+
+<!--  Site Wide Html Markup -->
+<div id="swh-bd98317512a147f996089c64b770a2ec"><div data-wrapper-source="appstore"> <!-- Squeaky Tracking Code for https://www.paymentlaunch.com -->
+<script>
+  (function(s,q,u,e,a,k,y){s._sqSettings={site_id:'499b3704'};
+    e=q.getElementsByTagName('head')[0];
+    a=q.createElement('script');
+    a.src=u+s._sqSettings.site_id;
+    e.appendChild(a);
+  })(window,document,'https://cdn.squeaky.ai/g/1.0.0/script.js?');
+</script>
+ </div></div>
+<div id="swh-ea3bb8ec4f8e49b383bbedcf5a7046b1"><div data-wrapper-source="appstore"> <script>
+(function(d) {
+  if(self != parent) {
+    var $el = d.createElement('script')
+    $el.setAttribute('src', 'https://siteseer.io/widget/websitebuilder.js')
+    $el.setAttribute('defer', true)
+    d.body.appendChild($el)
+  }
+})(document)
+</script> </div></div>
+<div id="swh-90037ec29d34424297e1f94f46e7d7cd">
+                            <script>
+                                const getMenu_ = {};
+                                getMenu_['499b3704'] = function(){
+                                    return [{"title":"Card Updater","url":"/credit-card-updater","orientation":"Horizontal","newTab":false,"type":"blank","components":[]},{"title":"Credit Card Processing","url":"/credit-card-processing","orientation":"Horizontal","newTab":false,"type":"blank","components":[{"grid":{"name":"Grid Columns","title":"","defaultWidth":"600","columnSize":2,"topIcon":false,"orientation":"Vertical","grid_nav_list":[{"hideIcon":false,"icon":"https://lirp.cdn-website.com/499b3704/dms3rep/multi/opt/Point-of-sale-640w.png","title":"Point of Sale","url":"/credit-card-processing/point-of-sale","newTab":false,"short_desc":"Discover our unique solutions, transparent pricing, and customer-first approach tailored for all business needs"},{"hideIcon":false,"icon":"https://lirp.cdn-website.com/499b3704/dms3rep/multi/opt/Credit-Card-Terminal-640w.png","title":"Terminals","url":"/credit-card-processing/hardware/terminals","newTab":false,"short_desc":"Discover our unique solutions, transparent pricing, and customer-first approach tailored for all business needs"},{"hideIcon":false,"icon":"https://lirp.cdn-website.com/499b3704/dms3rep/multi/opt/Credit-Card-640w.png","title":"Payment Gateway","url":"/accept-payments/virtual-terminal-for-credit-card-processing","newTab":false,"short_desc":"Discover our unique solutions, transparent pricing, and customer-first approach tailored for all business needs"},{"hideIcon":false,"icon":"https://lirp.cdn-website.com/499b3704/dms3rep/multi/opt/Capital-640w.png","title":"Mobile","url":"/accept-payments/invoice-payments","newTab":false,"short_desc":"Discover our unique solutions, transparent pricing, and customer-first approach tailored for all business needs"}]}}]},{"title":"Cash Discount Program","url":"/cash-discount-program","orientation":"Horizontal","newTab":false,"type":"blank","components":[]}]
+                                }
+                            </script></div>
+<div id="swh-9a411deff3e34ec59383a9a61e01924a"><script>dmAPI.loadScript('https://analytics.sitewit.com/ddmarketing-plugin.js?klid=1036671495');</script></div><!--  Site Wide Html Markup -->
+</body>
+</html>

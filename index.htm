@@ -1,0 +1,2607 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">
+<head>
+    
+<script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+        HomeUrl: 'https://www.paymentlaunch.com/',
+        AccountUUID: '4925c9bb16d54f2099886513c6c331b8',
+        SystemID: 'US_DIRECT_PRODUCTION',
+        SiteAlias: '499b3704',
+        SiteType: atob('RFVEQU9ORQ=='),
+        PublicationDate: 'Thu Jan 18 12:05:23 UTC 2024',
+        ExternalUid: null,
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialDynamicItem: '',
+        DynamicPageInfo: {
+            isDynamicPage: false,
+            base64JsonRowData: 'null',
+        },
+        InitialPageAlias: 'home',
+        InitialPageUuid: '99bfbb0a45a44fbaaf671bd64f40e87e',
+        InitialPageId: '1142265509',
+        InitialEncodedPageAlias: 'aG9tZQ==',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: true,
+        AllowAjax: false,
+        AfterAjaxCommand: null,
+        HomeLinkText: 'Back To Home',
+        UseGalleryModule: false,
+        CurrentThemeName: 'Layout Theme',
+        ThemeVersion: '40980',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID: null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        IsBfs: true,
+        StorePageAlias: 'null',
+        StorePagesUrls: 'e30=',
+        IsNewStore: 'false',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        IsStoreSuspended: false,
+        NotificationSubDomain: 'paymentlaunch',
+        HasCustomDomain: true,
+        showCookieNotification: false,
+        cookiesNotificationMarkup: 'null',
+        translatedPageUrl: '',
+        isFastMigrationSite: false,
+        sidebarPosition: 'LEFT',
+        currentLanguage: 'en',
+        currentLocale: 'en',
+        NavItems: '{}',
+        errors: {
+            general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+            password: 'Incorrect name/password combination',
+            tryAgain: 'Try again'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: 4,
+            NavbarLiveHomePage: 'https://www.paymentlaunch.com/',
+            BlockContainerSelector: '.dmBody',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        hasCustomCode: true,
+        planID: '7',
+        customTemplateId: 'null',
+        siteTemplateId: 'null',
+        productId: 'DM_DIRECT',
+        disableTracking: false,
+        pageType: 'FROM_SCRATCH',
+        isRuntimeServer: true,
+        isInEditor: false,
+    };
+
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 6;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script><!-- Injecting site-wide to the head -->
+
+<meta name="google-site-verification" content="0BVY3eGGYSvTv_TdnzvW-vt78o4HbYc2kBYQG99IA88" data-swh-uuid="dcf74ad80474415fbfbe59b62a3f7413">
+
+
+
+<!-- End Injecting site-wide to the head -->
+
+<!-- Inject secured cdn script -->
+
+
+<!-- ========= Meta Tags ========= -->
+<!-- PWA settings -->
+<script>
+    function toHash(str) {
+        var hash = 5381, i = str.length;
+        while (i) {
+            hash = hash * 33 ^ str.charCodeAt(--i)
+        }
+        return hash >>> 0
+    }
+</script>
+<script>
+    (function (global) {
+    //const cacheKey = global.cacheKey;
+    const isOffline = 'onLine' in navigator && navigator.onLine === false;
+    const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+    if (isOffline) {
+        console.log('offline mode');
+    }
+    if (!hasServiceWorkerSupport) {
+        console.log('service worker is not supported');
+    }
+    if (hasServiceWorkerSupport && !isOffline) {
+        window.addEventListener('load', function () {
+            const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+            navigator.serviceWorker
+                .register(serviceWorkerPath, { scope: './' })
+                .then(
+                    function (registration) {
+                        // Registration was successful
+                        console.log(
+                            'ServiceWorker registration successful with scope: ',
+                            registration.scope
+                        );
+                    },
+                    function (err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                )
+                .catch(function (err) {
+                    console.log(err);
+                });
+        });
+
+        // helper function to refresh the page
+        var refreshPage = (function () {
+            var refreshing;
+            return function () {
+                if (refreshing) return;
+                // prevent multiple refreshes
+                var refreshkey = 'refreshed' + location.href;
+                var prevRefresh = localStorage.getItem(refreshkey);
+                if (prevRefresh) {
+                    localStorage.removeItem(refreshkey);
+                    if (Date.now() - prevRefresh < 30000) {
+                        return; // dont go into a refresh loop
+                    }
+                }
+                refreshing = true;
+                localStorage.setItem(refreshkey, Date.now());
+                console.log('refereshing page');
+                window.location.reload();
+            };
+        })();
+
+        function messageServiceWorker(data) {
+            return new Promise(function (resolve, reject) {
+                if (navigator.serviceWorker.controller) {
+                    var worker = navigator.serviceWorker.controller;
+                    var messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = replyHandler;
+                    worker.postMessage(data, [messageChannel.port2]);
+                    function replyHandler(event) {
+                        resolve(event.data);
+                    }
+                } else {
+                    resolve();
+                }
+            });
+        }
+    }
+})(window);
+</script>
+<!-- Add manifest -->
+<!-- End PWA settings -->
+
+
+<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+<meta charset="utf-8">
+
+<link rel="canonical" href="index.htm">
+
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!--Add favorites icons-->
+
+<link rel="apple-touch-icon" href="499b3704/dms3rep/multi/Payment%20Launch-01.png">
+
+<link rel="icon" type="image/x-icon" href="499b3704/site_favicon_16_1627593728909.ico">
+
+<!-- End favorite icons -->
+<link rel="preconnect" href="https://lirp.cdn-website.com/">
+
+
+
+<!-- render the required CSS and JS in the head section -->
+<script>
+    window.SystemID = 'US_DIRECT_PRODUCTION';
+
+    if(!window.dmAPI) {
+        window.dmAPI = {
+            registerExternalRuntimeComponent: function() {
+            },
+            getCurrentDeviceType: function() {
+                return window._currentDevice;
+            }
+        };
+    }
+
+    if (!window.requestIdleCallback) {
+        window.requestIdleCallback = function (fn) {
+            setTimeout(fn, 0);
+        }
+    }
+</script>
+
+<!-- loadCSS function header.jsp-->
+
+    
+    
+    
+
+
+<script id="d-js-load-css">
+/**
+ * There are a few <link> tags with CSS resource in them that are preloaded in the page
+ * in each of those there is a "onload" handler which invokes the loadCSS callback
+ * defined here.
+ * We are monitoring 3 main CSS files - the runtime, the global and the page.
+ * When each load we check to see if we can append them all in a batch. If threre
+ * is no page css (which may happen on inner pages) then we do not wait for it
+ */
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+  
+    function checkCss() {
+      const pageCssLink = document.querySelector("[id*='CssLink']");
+
+        if (cssLinks && cssLinks.runtime && cssLinks.global && (!pageCssLink || cssLinks.page)) {
+            const storedRuntimeCssLink = cssLinks.runtime;
+            const storedPageCssLink = cssLinks.page;
+            const storedGlobalCssLink = cssLinks.global;
+
+            storedGlobalCssLink.disabled = true;
+            loadCssLink(storedGlobalCssLink);
+
+            if (storedPageCssLink) {
+                storedPageCssLink.disabled = true;
+                loadCssLink(storedPageCssLink);
+            }
+
+            storedRuntimeCssLink.disabled = true;
+            loadCssLink(storedRuntimeCssLink);
+
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    storedRuntimeCssLink.disabled = false;
+                    storedGlobalCssLink.disabled = false;
+                    if (storedPageCssLink) {
+                      storedPageCssLink.disabled = false;
+                    }
+                    // (SUP-4179) Clear the accumulated cssLinks only when we're
+                    // sure that the document has finished loading and the document 
+                    // has been parsed.
+                    if(document.readyState === 'interactive') {
+                      cssLinks = null;
+                    }
+                }, 0);
+            });
+        }
+    }
+  
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } 
+      
+      else if(link.id.includes("CssLink")) {
+        cssLinks.page = link;
+        checkCss();
+      }  
+      
+      else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      throw e
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+
+<script data-role="deferred-init" type="text/javascript">
+    /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+    function Def(){this.promise=new Promise((function(a,b){this.resolve=a,this.reject=b}).bind(this))}
+    const defs={};
+    window.getDeferred=function(a){return null==defs[a]&&(defs[a]=new Def),defs[a]}
+    window.waitForDeferred = function (b, a, c) {
+      let d = window?.getDeferred?.(b);
+      d
+        ? d.promise.then(a)
+        : c && ["complete", "interactive"].includes(document.readyState)
+        ? setTimeout(a, 1)
+        : c
+        ? document.addEventListener("DOMContentLoaded", a)
+        : console.error(`Deferred  does not exist`);
+    };
+</script>
+<style id="forceCssIncludes">
+    /* This file is auto-generated from a `scss` file with the same name */
+
+.videobgwrapper{overflow:hidden;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;pointer-events:none;border-radius:inherit}.videobgframe{position:absolute;width:101%;height:100%;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);object-fit:fill}#dm video.videobgframe{margin:0}@media (max-width:767px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}}@media (min-width:1025px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}#dm [data-show-on-page-only]{display:none!important}
+</style>
+<style id="cssVariables" type="text/css">
+    :root {
+  --color_1: rgba(245, 100, 47, 1);
+  --color_2: rgba(27, 29, 86, 1);
+  --color_3: rgba(14, 15, 17, 1);
+  --color_4: rgba(56, 56, 56, 1);
+}
+</style>
+
+
+<style id="hideAnimFix">
+  .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+    visibility: hidden;
+  }
+  .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+    visibility: hidden !important;
+  }
+</style>
+
+
+
+<style id="criticalCss">
+    @charset "UTF-8";.display_None,.dmPopupMask{display:none}@font-face{font-family:Ubuntu;font-style:normal;font-weight:300;font-display:swap;src:url(fonts/s/ubuntu/v20/4iCv6KVjbNBYlgoC1CzjsGyN.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Ubuntu;font-style:italic;font-weight:300;font-display:swap;src:url(fonts/s/ubuntu/v20/4iCp6KVjbNBYlgoKejZftVyPN4E.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:FontAwesome;font-display:block;src:url(fonts/fontawesome-webfont.eot);src:url(fonts/fontawesome-webfont-1.eot) format("embedded-opentype"),url(fonts/fontawesome-webfont.woff) format("woff"),url(fonts/fontawesome-webfont.ttf) format("truetype"),url(fonts/fontawesome-webfont.svg) format("svg");font-weight:400;font-style:normal}@font-face{font-family:Ubuntu;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/s/ubuntu/v20/4iCs6KVjbNBYlgoKfw72.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Ubuntu;font-style:italic;font-weight:400;font-display:swap;src:url(fonts/s/ubuntu/v20/4iCu6KVjbNBYlgoKej70l0k.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Ubuntu;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jsGyN.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Ubuntu;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjsGyN.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}:root{--color_1:rgba(245, 100, 47, 1);--color_2:rgba(27, 29, 86, 1);--color_3:rgba(14, 15, 17, 1);--color_4:rgba(56, 56, 56, 1)}.dmInner{min-height:100vh!important;position:relative;min-width:768px!important}.dmDisplay_None{display:none!important}#dm .dmWidget .icon{font-size:26px}body.dmRoot #dm .dmOuter .dmInner .dmWidget .icon.hasFontIcon{height:26px;margin-top:-13px;line-height:normal;text-align:center;background-image:none}.dmRoot .hasFontIcon{background-image:none!important}.dmPopupMask{position:fixed;margin:0;width:10px;z-index:1000000999;top:0;left:0}#dmRoot .dmPopup,.dmPopup,.dmPopupClose:before,[data-display-type=block]{display:block}.dmPopup{padding:10px;text-align:left;position:fixed;margin:0 10px;top:10px;left:0;width:93%;z-index:1000009999!important;box-sizing:border-box;background:#f5f5f5;overflow-y:auto;height:100%}.dmPopup .dmPopupTitle{text-align:left;font:700 19px Helvetica,Arial;margin:20px 20px 35px;color:#999}#dmPopup{opacity:0}.dmPopupClose,.dmPopupClose:before{position:absolute;visibility:visible}.dmPopupClose{border-radius:25px;width:27px;height:27px;z-index:1;background-color:rgba(255,255,255,.4);top:12px;right:12px}.dmPopupClose:before{font-size:20px;color:#000;top:3px;right:3px}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar{width:5px;height:5px}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar-track{background:rgba(0,0,0,.1)}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar-thumb{background:#c8c8c8;box-shadow:inset 0 1px 2px #454545;border-radius:45px}.dmRespRow.fullBleedMode>.dmRespColsWrapper{width:100%!important;max-width:100%!important}.dmRespRow.fullBleedMode{padding-left:0!important;padding-right:0!important}#dm .dmRespRow .dmRespColsWrapper{display:flex}.pswp{display:none;z-index:9999999999!important}#dm .dmInner .dmWidget.align-center,.align-center{margin-left:auto;margin-right:auto}.text-align-center{text-align:center}body.fix-mobile-scrolling{overflow:initial}#hcontainer[has-shadow=true]{position:relative;z-index:1}#dmRoot{text-decoration-skip-ink:none}body{-webkit-overflow-scrolling:touch}html{font-family:Source Sans Pro;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}img{border:0;max-width:100%;-ms-interpolation-mode:bicubic;display:inline-block}button,input{font-family:inherit;font-size:100%;margin:0;line-height:normal}button{text-transform:none;-webkit-appearance:button}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}*,:after,:before{box-sizing:border-box}.dmRespRow.dmRespRowNoPadding{padding:0}#dm .dmContent .dmRespRow,.dmRespRow{padding-top:15px}.dmRespRow{padding-bottom:15px}.dmRespRow .dmRespRow:after,.dmRespRow .dmRespRow:before,.dmRespRow:after,.dmRespRow:before{content:' ';display:table}.dmRespRow .dmRespRow:after,.dmRespRow:after{clear:both}.dmRespRow,.dmRespRow .dmRespColsWrapper{max-width:960px;position:relative;margin:0 auto;width:100%}@media screen and (min-width:1200px){.rows-1200 .dmRespRow:not(.fullBleedMode) .dmRespColsWrapper{max-width:1200px}}.dmRespRow .dmRespCol{position:relative;width:100%;display:inline-block;vertical-align:top;float:left}.dmRespRow .dmRespCol>*{max-width:100%}.dmRespRow .dmRespRow{width:auto;margin-top:0;margin-bottom:0;max-width:none}.dmDesktopBody .dmRespRow .large-2{position:relative;width:16.66667%}.dmDesktopBody .dmRespRow .large-3{position:relative;width:25%}.dmDesktopBody .dmRespRow .large-4{position:relative;width:33.33333%}.dmDesktopBody .dmRespRow .large-8{position:relative;width:66.66667%}.dmDesktopBody .dmRespRow .large-12{position:relative;width:100%}[class*=' dm-common-icons-']{speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:dm-common-icons!important}.dm-common-icons-close:before{content:'\e901'}#dm div.dmContent [class*=' icon-'],[class*=' icon-']{font-family:FontAwesome!important;font-weight:400;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased}[class*=' icon-']:before{text-decoration:none;display:inline-block;speak:none}a [class*=' icon-']{display:inline}[class*=' icon-']{display:inline;width:auto;height:auto;line-height:normal;vertical-align:baseline;background-image:none;background-position:0 0;background-repeat:repeat;margin-top:0}.icon-star:before{content:'\f005'}.icon-angle-right:before{content:'\f105'}.icon-angle-down:before{content:'\f107'}.icon-apple:before{content:'\f179'}#dm .dmRespRow .dmRespCol>.dmWidget{overflow:initial}@media (min-width:768px){#dm .dmRespRow .dmRespCol>.dmWidget{width:280px;max-width:100%}#dm .dmRespRow .dmRespCol.large-2>.dmWidget{width:100%}}@media (max-width:767px){#dm .dmInner .dmWidget{width:100%}}#dm .dmInner .dmWidget:not(.displayNone){display:inline-block}#dm .dmInner .dmWidget:not(.displayNone)[data-display-type=block]{display:block}#dm .dmInner .dmWidget{text-decoration:none;margin:10px 0;clear:both;position:relative;text-align:center;line-height:22px;box-shadow:none;background-image:none;padding:0;height:auto;border-style:solid;white-space:nowrap}#dm .dmInner .dmWidget:after{content:'';display:inline-block;height:100%;vertical-align:middle;width:0;margin-right:-.25em}#dm .dmInner .dmWidget .iconBg{position:absolute;left:0;width:50px;top:50%;margin-top:-13px}#dm .dmWidget .text{display:inline-block;vertical-align:middle;font-size:1.125em;line-height:normal;white-space:normal;padding:10px 7px;max-width:98%}#dm .dmRespRow.dmRespRowNoPadding,.dmContent,.dmInner ul:not(.defaultList),DIV.dmBody{padding:0}p.rteBlock{margin:0}html:not(.ios-preview) #dm .hasStickyHeader .dmInner div.dmHeaderContainer{position:fixed!important;z-index:101;width:100%;min-width:768px}#innerBar,#iscrollBody,#site_content,.dmHeader{position:relative}#dm div.dmInner .dmform[data-layout=layout-3] .dmforminput>:not(label):not(div):not(small):not(.frc-banner){background:0;border:0;border-radius:0;-webkit-appearance:none;border-bottom:1px solid;height:30px}.imageWidget img[width][height],img[width][height]{height:auto}#dm div.dmInner .dmform .dmforminput label[hide=true]{display:none}.dmform .dmforminput label{display:block;overflow:hidden;text-overflow:ellipsis}.imageWidget a{font-style:italic;text-align:center}.dmNewParagraph[data-version]{line-height:initial}.dmNewParagraph[data-version] .text-align-left{text-align:left!important}.dmNewParagraph[data-version] .text-align-center{text-align:center!important}.dmNewParagraph[data-version] h1,.dmNewParagraph[data-version] h2,.dmNewParagraph[data-version] h3,.dmNewParagraph[data-version] p{margin-top:0;margin-bottom:0}*{border:0 solid #333;scrollbar-arrow-color:#fff;scrollbar-track-color:#F2F2F2;scrollbar-face-color:silver;scrollbar-highlight-color:silver;scrollbar-3dlight-color:silver;scrollbar-shadow-color:silver;scrollbar-darkshadow-color:silver;scrollbar-width:12px}body{width:100%;overflow:hidden;-webkit-text-size-adjust:100%!important;-ms-text-size-adjust:100%!important}A IMG{border:none}h1,h2,h3,ul{margin-left:0;margin-right:0}.dmInner *{-webkit-font-smoothing:antialiased}a,iframe,img,ul{vertical-align:top}.dmOuter{word-wrap:break-word}.dmInner{font-size:16px;background:#fff;color:#666}.dmDesktopBody .dmInner{min-width:960px}.dmInner a{color:#463939}#dm div.dmContent h1,#dm div.dmContent h3,#innerBar.lineInnerBar,.dmHeader{color:#666}.dmHeader{background:#68ccd1;text-align:center;width:100%;max-width:100%}DIV.dmBody{clear:both}.dmContent{margin:0}#site_content ul:not(.defaultList){-webkit-padding-start:0;-moz-padding-start:0;list-style-position:inside}#innerBar{height:36px;width:100%;font-size:20px;margin:0;z-index:80}.dmRespRowsWrapper{max-width:960px;margin:0 auto}.dmLargeBody .imageWidget:not(.displayNone){display:inline-block;max-width:100%}.imageWidget:not(.displayNone) img{width:100%}h3{font-weight:400;font-size:23px}#dm .dmRespColsWrapper{display:block}.dmNewParagraph{text-align:left;margin:8px 0;padding:2px 0}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol,.dmLargeBody .fHeader .dmRespRow .dmRespCol{padding-left:.75%;padding-right:.75%}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:first-child,.dmLargeBody .fHeader .dmRespRow .dmRespCol:first-child{padding-left:0;padding-right:1.5%}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:last-child,.dmLargeBody .fHeader .dmRespRow .dmRespCol:last-child{padding-right:0;padding-left:1.5%}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:only-child{padding-left:0;padding-right:0}#innerBar.lineInnerBar{display:table;width:100%;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;font-size:20px;margin-top:30px;margin-bottom:30px;background-color:transparent}#innerBar .titleLine{display:table-cell;vertical-align:middle;width:50%}.dmPageTitleRow:not(#innerBar){display:none}.titleLine hr{min-height:1px;background-color:rgba(102,102,102,.2)}.dmStandardDesktop{display:block;margin:0 auto}.standardHeaderLayout .dmHeader{float:none;display:block;height:auto}#dm .dmWidget:not([data-buttonstyle]) .iconBg,.main-navigation.unifiednav .unifiednav__container .unifiednav__item:not(.unifiednav__item_has-sub-nav) .icon{display:none}.dmInner a{outline:0;vertical-align:inherit}.dmSpacer{border:0;height:15px}body{background-color:#eee}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL][data-show-vertical-sub-items=HOVER]>.unifiednav__container:not([data-depth])>.unifiednav__item-wrap .unifiednav__item.dmNavItemSelected>.nav-item-text .icon::before{transform:rotate(180deg)}#dm .dmBody .dmRespRowsWrapper{max-width:none;background-color:transparent}.dmLargeBody .dmRespRow{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:40px;padding-right:40px}.dm-bfs.dm-layout-home div.dmInner{background-color:#fff}.dmStandardDesktop .dmHeader{background-color:#68ccd1;max-width:100%}#dm div.dmRespCol>*{line-height:1.5}#dm .dmform .dmforminput label,#dm div.dmInner,#dm div.dmInner .dmRespCol{color:rgba(72,102,126,1);font-weight:300;font-style:normal;font-size:16px}#dm .dmNewParagraph,#dm .rteBlock,#dm h1,#dm h2,#dm h3{direction:ltr;text-align:left}.dmLargeBody .dmBody .dmRespRowsWrapper{background-color:transparent}#dm .dmRespCol div.dmNewParagraph,#dm .dmform .dmforminput label,#dm div.dmInner,#dm div.dmInner .dmRespCol{color:var(--color_3);font-family:Ubuntu,"Ubuntu Fallback"}#dm div.dmContent h1,#dm div.dmContent h2,#dm div.dmContent h3{color:rgba(27,29,86,1);color:var(--color_3);direction:ltr;font-family:Ubuntu,"Ubuntu Fallback";font-style:normal;font-weight:700}#dm div.dmContent h1{text-decoration:none}#dm div.dmContent .dmNewParagraph[data-version] h1{text-decoration:inherit}#dm div.dmContent .dmNewParagraph[data-version] h1 *,#dm div.dmContent h2{text-decoration:none}#dm div.dmContent .dmNewParagraph[data-version] h2{text-decoration:inherit}#dm div.dmContent .dmNewParagraph[data-version] h2 *,#dm div.dmContent h3{text-decoration:none}#dm div.dmContent .dmNewParagraph[data-version] h3{text-decoration:inherit}#dm div.dmContent .dmNewParagraph[data-version] h3 *{text-decoration:none}#dm DIV.dmOuter DIV.dmInner{background-color:rgba(255,255,255,1)}#dm div.dmNewParagraph p{color:var(--color_4);direction:ltr;font-family:Ubuntu,"Ubuntu Fallback";font-weight:400;font-style:normal;text-decoration:none;line-height:2;font-size:18px}#dm .dmRespCol div.dmNewParagraph,#dm .dmform .dmforminput label,#dm div.dmInner,#dm div.dmInner .dmRespCol{font-size:48px}#dm div.dmContent h1,#dm div.dmContent h2{font-size:48px;line-height:1.5}#dm div.dmContent h3{line-height:1.5;font-size:36px}@media all{:root{--btn-text-direction:ltr;--btn-border-r-color:var(--btn-border-color);--btn-border-l-color:var(--btn-border-color);--btn-border-b-width:var(--btn-border-width);--btn-border-width:2px;--btn-border-radius:6px;--btn-border-t-width:var(--btn-border-width);--btn-border-tl-radius:var(--btn-border-radius);--btn-border-br-radius:var(--btn-border-radius);--btn-border-bl-radius:var(--btn-border-radius);--btn-bg-color:rgba(57,60,137,1);--btn-border-color:rgba(57, 60, 137, 1);--btn-border-tr-radius:var(--btn-border-radius);--btn-border-r-width:var(--btn-border-width);--btn-border-b-color:var(--btn-border-color);--btn-border-l-width:var(--btn-border-width);--btn-border-t-color:var(--btn-border-color);--btn-text-align:center;--btn-text-color:rgba(255, 255, 255, 1);--btn-text-decoration:none;--btn-text-font-weight:700;--btn-text-font-family:Ubuntu,"Ubuntu Fallback";--btn-icon-color:rgb(0, 41, 112);--btn-icon-fill:rgb(0, 41, 112);--btn-icon-wrpr-display:none;--btn-hover-border-b-color:var(--btn-hover-border-color);--btn-hover-bg:rgba(27,29,86,1);--btn-hover-border-t-color:var(--btn-hover-border-color);--btn-hover-border-r-color:var(--btn-hover-border-color);--btn-hover-border-l-color:var(--btn-hover-border-color);--btn-hover-border-color:rgba(0, 0, 0, 0);--btn-hover-text-color:rgb(255, 255, 255);--btn-hover-text-font-weight:var(--btn-text-font-weight);--btn-hover-text-decoration:var(--btn-text-decoration);--btn-hover-text-font-style:var(--btn-text-font-style)}}@media (min-width:0px) and (max-width:767px){:root{--btn-text-font-size:14px}}#dm .dmWidget:not([data-buttonstyle]){border-radius:6px;overflow:initial;background-clip:border-box}#dm .dmWidget:not([data-buttonstyle]) .text{padding:10px 7px}#dm div.dmInner #site_content .dmWidget,#dm div.dmInner .dmHeader .dmWidget{background-color:var(--btn-bg-color);border-color:var(--btn-border-color);border-bottom-color:var(--btn-border-b-color);border-left-color:var(--btn-border-l-color);border-right-color:var(--btn-border-r-color);border-top-color:var(--btn-border-t-color);border-radius:var(--btn-border-radius);border-bottom-left-radius:var(--btn-border-bl-radius);border-bottom-right-radius:var(--btn-border-br-radius);border-top-left-radius:var(--btn-border-tl-radius);border-top-right-radius:var(--btn-border-tr-radius);border-width:var(--btn-border-width);border-bottom-width:var(--btn-border-b-width);border-left-width:var(--btn-border-l-width);border-right-width:var(--btn-border-r-width);border-top-width:var(--btn-border-t-width);direction:var(--btn-text-direction);text-align:var(--btn-text-align)}#dm div.dmInner #site_content .dmWidget span.text{color:var(--btn-text-color);font-family:var(--btn-text-font-family);font-size:var(--btn-text-font-size);font-weight:var(--btn-text-font-weight);text-decoration:var(--btn-text-decoration)}#dm div.dmInner #site_content .dmWidget span.icon,#dm div.dmInner .dmHeader .dmWidget span.icon{color:var(--btn-icon-color);fill:var(--btn-icon-fill)}#dm div.dmInner #site_content .dmWidget:not([data-buttonstyle]) .iconBg,#dm div.dmInner .dmHeader .dmWidget:not([data-buttonstyle]) .iconBg{display:var(--btn-icon-wrpr-display)}#dm .p_hfcontainer div.u_1739105633 img{border-radius:0!important;-moz-border-radius:0!important;-webkit-border-radius:0!important}#dm .p_hfcontainer .u_1793323351 .meganav-container__multi-sub-nav-icon{color:var(--color_1)!important}#dm .p_hfcontainer a.u_1639063776 .iconBg{display:none!important}#dm .dmInner div.dmHeader,#dm .dmInner div.dmHeader.u_hcontainer,#dm .dmInner div.u_hcontainer{border-style:solid!important;border-width:0!important;box-shadow:rgba(0,0,0,.1) 0 3px 11px 0!important;-moz-box-shadow:rgba(0,0,0,.1) 0 3px 11px 0!important;-webkit-box-shadow:rgba(0,0,0,.1) 0 3px 11px 0!important;border-color:rgba(57,181,74,1)!important;background-image:initial!important;background-color:rgba(255,255,255,1)!important}#dm .p_hfcontainer .u_1739105633{width:100%!important}#dm .p_hfcontainer div.u_1793323351 .widget-layout-result{background-color:rgba(255,255,255,1)!important}#dm .dmInner div.dmHeader.u_hcontainer{padding-top:10px!important;padding-bottom:17px!important}.stickyHeaderSpacer{height:126.69px!important}@media (min-width:1025px){:root{--btn-text-font-size:14px}.responsiveTablet .stickyHeaderSpacer{height:101.14px!important}}@media (min-width:768px) and (max-width:1024px){:root{--btn-text-font-size:14px}.responsiveTablet .stickyHeaderSpacer{height:105.25px!important}}#dm .dmInner div.u_hcontainer{padding:0!important}#dm .dmInner div.fHeader .dmHeader[freeheader=true]{padding:15px 0!important}.fHeader #hcontainer.dmHeader[freeheader=true]{padding-top:initial!important;padding-bottom:initial!important}#dm .p_hfcontainer div.u_1906820606{padding:0!important}div.u_1793323351{float:none!important;top:0!important;left:0!important;width:921.42px!important;position:relative!important;height:auto!important;max-width:100%!important;min-width:0!important;text-align:start!important;padding:0!important}#dm .p_hfcontainer a.u_1777873415{display:block!important;float:none!important;top:0!important;left:0!important;width:150px!important;position:relative!important;height:50px!important;max-width:calc(100% - 11px)!important;min-width:25px!important;text-align:center!important;margin:0 11.28px 0 11.27px!important;padding:0!important}#dm .p_hfcontainer div.u_1074917193,#dm .p_hfcontainer div.u_1739105633{height:auto!important;float:none!important;top:0!important;left:0!important;position:relative!important}#dm .dmBody div.u_1419514929,#dm .dmBody div.u_1819477660,#dm .p_hfcontainer div.u_1074917193{min-width:0!important;text-align:center!important}#dm .p_hfcontainer div.u_1793323351,#dm .p_hfcontainer div.u_1895874711{padding:24px 0 0!important;margin:0!important}#dm .dmInner div.fHeader.dmHeaderContainer #hcontainer.dmHeader[freeheader=true]{margin:0!important;padding:0!important}#dm .p_hfcontainer div.u_1318947829{padding:0!important}#dm .p_hfcontainer div.u_1074917193{width:auto!important;max-width:100%!important;padding:0 50px!important;margin:0!important}#dm .p_hfcontainer div.u_1739105633{width:calc(100% - 0px)!important;max-width:101.14px!important;min-width:25px!important;text-align:center!important;display:block!important;important:true!important;padding:0!important;margin:0 72.67px 0 0!important}.responsiveTablet .stickyHeaderSpacer{height:101.14px!important}div.hiddenDiv{display:none!important}.meganav-container,.meganav-container__multi-sub-nav-wrapper,.widget-layout-result{display:flex;position:relative;box-sizing:border-box}.widget-layout-result{width:100%;min-height:20px}.widget-layout-result div{text-align:left}.widget-layout-result.left{justify-content:flex-start}.meganav-container{justify-content:flex-start;align-items:center;flex-wrap:wrap;list-style-type:none;font-family:Arial,Helvetica,sans-serif;margin:0!important}.meganav-container__multi-sub-nav-wrapper{margin:0 0 15px;width:100%;height:auto;color:#323232;text-decoration:none}.meganav-container__multi-sub-nav-icon{color:#FFA300;display:flex;justify-content:center;align-items:center;position:relative;box-sizing:border-box;margin-right:10px;font-size:24px;width:36px}.meganav-container__contact-btn,.meganav-container__ctc-btn{display:flex;text-align:center;height:50px;color:#323232;background-color:#FFD26E;text-decoration:none;border-radius:5px}.meganav-container__multi-sub-nav-wrapper:last-child{margin-bottom:0}.meganav-container__contact-btn{justify-content:center;align-items:center;position:relative;box-sizing:border-box;width:200px}.meganav-container__ctc-description,.meganav-container__ctc-title{display:block;position:relative;padding:0;box-sizing:border-box}.meganav-container__ctc-title{font-weight:700}.meganav-container__ctc-btn{justify-content:center;align-items:center;position:relative;box-sizing:border-box;width:170px}.gr-Main-Container,.gr-Main-Container div,.gr-Main-Container img{position:relative;display:block;width:100%;height:auto;padding:0;margin:0;text-align:left;line-height:1.5em;text-decoration:none;box-sizing:border-box;-webkit-touch-callout:none}#dm .dmBody .u_1586359937 .dmform-success,#dm .dmBody .u_1586359937 .dmform-success .rteBlock,#dm .dmBody .u_1586359937 .dmforminput input{text-align:LEFT!important}div.gr-Header-Section{display:flex;flex-direction:row;flex-wrap:wrap;align-content:flex-start;justify-content:space-between;align-items:center;margin-bottom:30px;padding:18px 24px 24px;border-radius:5px;background-color:rgba(17,17,17,.05)}#dm .dmBody div.u_1419514929,#dm .dmBody div.u_1576601305,#dm .dmBody div.u_1907185865{background-color:rgba(255,255,255,1)!important}div.gr-Title-Column{width:50%}div.gr-Image-Wrapper{display:flex;flex-direction:row;flex-wrap:nowrap;align-content:center;justify-content:flex-start;align-items:center}div.gr-Image-Wrapper img{width:auto;height:40px;margin-right:10px}div.gr-Image-Wrapper span{font-size:30px;line-height:2em}div.gr-Button-Column{width:50%;display:flex;justify-content:flex-end}div.swiper-wrapper{display:flex}#dm .dmBody a.u_1869199146,#dm .dmBody div.u_1499986904,#dm .dmBody div.u_1946905839{display:block!important;min-width:25px!important}#dm .dmBody div.dmform-error{font-style:normal!important}#dm .dmBody div.u_1586359937 .dmform-success,#dm .dmBody div.u_1586359937 .dmform-success .rteBlock,#dm .dmBody div.u_1586359937 .dmforminput input,#dm .dmBody div.u_1586359937 .dmforminput label:not(.for-checkable):not(.custom-contact-checkable){color:rgba(255,255,255,1)!important}#dm .dmBody div.u_1946905839{line-height:2!important}#dm .dmBody .u_1142333873,#dm .dmBody .u_1430155482,#dm .dmBody .u_1805030916,#dm .dmBody .u_1908240257{width:100%!important}#dm .d-page-1716942098 DIV.dmInner{background-repeat:no-repeat!important;background-size:cover!important;background-attachment:fixed!important;background-position:50% 50%!important}#dm .dmBody div.u_1586359937 .dmforminput input{font-size:18px!important}#dm .dmBody div.u_1974326774 div.gr-Title-Ratings{color:rgba(0,0,0,1)!important;font-size:36px!important}#dm .dmBody div.u_1946905839{float:none!important;top:0!important;left:0!important;width:calc(100% - 0px)!important;position:relative!important;height:auto!important;max-width:591px!important;text-align:left!important;padding:2px 0!important;margin:8px 150px 8px 0!important}#dm .dmBody div.u_1499986904,#dm .dmBody div.u_1819477660{max-width:100%!important;height:auto!important;float:none!important;top:0!important;left:0!important;position:relative!important}#dm .dmBody div.u_1499986904{line-height:normal!important;width:calc(100% - 0px)!important;padding:2px 0!important;margin:0 373px 0 0!important}#dm .dmBody div.u_1819477660{width:auto!important;padding:0!important;margin:18px 0 0!important}#dm .dmBody div.u_1419514929{float:none!important;top:0!important;left:0!important;width:100%!important;position:relative!important;height:auto!important;max-width:none!important;padding:40px 0 0!important}#dm .dmBody div.u_1110921144{float:none!important;top:0!important;left:0!important;width:calc(100% - 29px)!important;position:relative!important;height:268px!important;max-width:445.03px!important;min-width:25px!important;text-align:center!important;padding:0!important;margin:0 auto!important}#dm .dmBody div.u_1687032584{padding:40px 20px 70px 70px!important}#dm .dmBody div.u_1836906454{background-image:url(499b3704/dms3rep/multi/opt/Clover Flex -1920w.jpeg),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9TpUUqHSwo4pChOlkQFemoVShChVArtOpgcukXNGlIUlwcBdeCgx+LVQcXZ10dXAVB8APEzc1J0UVK/F9aaBHjwXE/3t173L0DhEaFaVbPBKDptplOJsRsblUMvEJAGEEMIi4zy5iTpBQ8x9c9fHy9i/Es73N/jn41bzHAJxLPMsO0iTeIZzZtg/M+cYSVZJX4nHjcpAsSP3JdafEb56LLAs+MmJn0PHGEWCx2sdLFrGRqxNPEUVXTKV/ItljlvMVZq9RY+578haG8vrLMdZojSGIRS5AgQkENZVRgI0arToqFNO0nPPzDrl8il0KuMhg5FlCFBtn1g//B726twtRkKymUAHpfHOdjFAjsAs2643wfO07zBPA/A1d6x19tAPFP0usdLXoEhLeBi+uOpuwBlzvA0JMhm7Ir+WkKhQLwfkbflAMGboG+tVZv7X2cPgAZ6ip1AxwcAmNFyl73eHewu7d/z7T7+wFwJnKmZ9+MiwAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+UCDwksLkLIPkkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAC0lEQVQI12NgAAIAAAUAAeImBZsAAAAASUVORK5CYII=)!important;background-repeat:no-repeat!important;background-size:contain!important;background-position:50% 100%!important;padding:0!important;margin:0!important}#dm .dmBody a.u_1869199146{float:none!important;top:0!important;left:0!important;width:calc(100% - 0px)!important;position:relative!important;height:54px!important;max-width:275.26px!important;text-align:center!important;padding:0!important;margin:0 31.16px 0 0!important}#dm .dmBody div.u_1540751710,#dm .dmBody div.u_1907185865{float:none!important;top:0!important;left:0!important;width:100%!important;position:relative!important;height:auto!important}#dm .dmBody div.u_1270942008{padding:0 5px 0 0!important;margin:0!important}#dm .dmBody div.u_1114151239,#dm .dmBody div.u_1192155487,#dm .dmBody div.u_1502567217,#dm .dmBody div.u_1830817940{padding-right:10px!important;padding-left:10px!important}#dm .dmBody div.u_1576601305{padding-top:80px!important;padding-bottom:30px!important}#dm .dmBody div.u_1907185865{max-width:none!important;min-width:0!important;text-align:center!important;padding:40px 40px 80px!important;margin:0 auto!important}#dm .dmBody div.u_1540751710{line-height:normal!important;max-width:calc(100% - 0px)!important;min-width:25px!important;padding:2px 0!important;margin:0 auto!important}#dm .dmBody div.u_1430155482,#dm .dmBody div.u_1908240257{text-align:center!important;padding:0!important;margin:0 auto!important;float:none!important;top:0!important;left:0!important;width:calc(100% - 0px)!important;position:relative!important;height:auto!important;min-width:25px!important}#dm .dmBody div.u_1430155482{max-width:104.23px!important;justify-content:normal!important;align-items:normal!important}#dm .dmBody div.u_1908240257{max-width:110.68px!important;justify-content:normal!important;align-items:normal!important}#dm .dmBody div.u_1302721461{float:none!important;top:0!important;left:0!important;width:calc(100% - 0px)!important;position:relative!important;height:auto!important;max-width:100%!important;min-width:25px!important;padding:2px 0!important;margin:1.56px auto 8px!important}#dm .dmBody div.u_1142333873,#dm .dmBody div.u_1805030916{float:none!important;top:0!important;left:0!important;width:calc(100% - 0px)!important;position:relative!important;min-width:25px!important;text-align:center!important;height:auto!important;padding:0!important;margin:0 auto!important}#dm .dmBody div.u_1805030916{max-width:103.69px!important}#dm .dmBody div.u_1142333873{max-width:104.25px!important}#dm .dmBody div.u_1641565702,#dm .dmBody div.u_1829334665{float:none!important;top:0!important;left:0!important;width:calc(100% - 0px)!important;position:relative!important;height:auto!important;max-width:100%!important;min-width:25px!important;padding:2px 0!important}#dm .dmBody div.u_1641565702{margin:8.57px auto 8px!important}#dm .dmBody div.u_1829334665{margin:8px auto!important}.font-size-36,.size-36{font-size:36px!important}.font-size-16,.size-16{font-size:16px!important}.font-size-30,.size-30{font-size:30px!important}.font-size-24,.size-24{font-size:24px!important}
+    .dmDesktopBody [data-anim-desktop]:not([data-anim-desktop='none']) {
+      visibility: hidden;
+    }
+    
+</style>
+
+
+
+<style id="fontFallbacks">
+    @font-face {
+  font-family: "Ubuntu Fallback";
+  src: local('Arial');
+  ascent-override: 90.8147%;
+  descent-override: 18.4163%;
+  line-gap-override: 2.7283%;
+  size-adjust: 102.6265%;
+}@font-face {
+  font-family: "Prata Fallback";
+  src: local('Arial');
+  ascent-override: 92.0833%;
+  descent-override: 33.5691%;
+  size-adjust: 107.8372%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Cardo Fallback";
+  src: local('Arial');
+  ascent-override: 103.8482%;
+  descent-override: 38.1494%;
+  size-adjust: 95.354%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Montserrat Fallback";
+  src: local('Arial');
+  ascent-override: 84.9466%;
+  descent-override: 22.0264%;
+  size-adjust: 113.954%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Poppins Fallback";
+  src: local('Arial');
+  ascent-override: 92.326%;
+  descent-override: 30.7753%;
+  line-gap-override: 8.793%;
+  size-adjust: 113.7274%;
+}@font-face {
+  font-family: "Lato Fallback";
+  src: local('Arial');
+  ascent-override: 101.3181%;
+  descent-override: 21.865%;
+  size-adjust: 97.4159%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Amiko Fallback";
+  src: local('Arial');
+  ascent-override: 82.254%;
+  descent-override: 35.9861%;
+  size-adjust: 112.8212%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Arial Fallback";
+  src: local('Arial');
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Open Sans Fallback";
+  src: local('Arial');
+  ascent-override: 101.1768%;
+  descent-override: 27.7323%;
+  size-adjust: 105.6416%;
+  line-gap-override: 0%;
+ }
+</style>
+
+
+<!-- End render the required css and JS in the head section -->
+
+
+
+  <link type="application/rss+xml" rel="alternate" href="feed/rss2">
+  <link type="application/atom+xml" rel="alternate" href="feed/atom">
+  <meta property="og:type" content="website">
+ 
+  <title>
+    
+    Simplified Merchant Services &amp; Credit Card Processing
+  
+  </title>
+  <meta name="description" content="Cutting-edge merchant services accounts and solutions for small businesses. Transparent credit card processing rates &amp; fees, pos solutions, and seamless setup.">
+  <!-- Global site tag (gtag.js) - Google Analytics -->  <script async="" src="gtag/js?id=UA-169425994-1">
+
+
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5f283fd49b7cf26e73c1e373/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+  </script>
+  <!--End of Tawk.to Script-->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Simplified Merchant Services &amp; Credit Card Processing">
+  <meta name="twitter:description" content="Cutting-edge merchant services accounts and solutions for small businesses. Transparent credit card processing rates &amp; fees, pos solutions, and seamless setup.">
+  <meta name="twitter:image" content="https://lirp.cdn-website.com/499b3704/dms3rep/multi/opt/Payment+Launch-01-1920w.png">
+  <meta property="og:description" content="Cutting-edge merchant services accounts and solutions for small businesses. Transparent credit card processing rates &amp; fees, pos solutions, and seamless setup.">
+  <meta property="og:title" content="Simplified Merchant Services &amp; Credit Card Processing">
+  <meta property="og:image" content="https://lirp.cdn-website.com/499b3704/dms3rep/multi/opt/Payment+Launch-01-1920w.png">
+
+
+
+
+<!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+
+
+
+
+<body id="dmRoot" data-page-alias="home" class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody responsiveTablet " style="padding:0;margin:0;">
+<!-- ========= Site Content ========= -->
+<div id="dm" class='dmwr'>
+    
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+         <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true"> <div dmtemplateid="StandardLayoutMultiD" class="standardHeaderLayout dm-bfs dm-layout-home hasAnimations rows-1200 inMiniHeaderMode hasStickyHeader dmPageBody d-page-1716942098 dmFreeHeader" id="dm-outer-wrapper" data-page-class="1716942098" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div> <div id="iscrollBody"> <div id="site_content"> <div class="dmHeaderContainer fHeader d-header-wrapper"> <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer" freeheader="true" headerlayout="7f3c1de367df47d5b45ab63d33101c7b===header" layout="7f3c1de367df47d5b45ab63d33101c7b===header" data-scrollable-target="body" data-scrollable-target-threshold="1" data-scroll-responder-id="1" logo-size-target="100%" has-shadow="true"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="u_1074917193 dmRespRow dmDefaultListContentRow fullBleedChanged fullBleedMode" style="text-align:center" id="1074917193"> <div class="dmRespColsWrapper" id="1149167216"> <div class="u_1906820606 small-12 dmRespCol large-2 medium-2" id="1906820606"> <div class="u_1739105633 imageWidget align-center hasFullWidth" data-widget-type="image" id="1739105633" data-element-type="image"> <a href="index.htm" id="1600019840" file="false"><img src="499b3704/dms3rep/multi/opt/Paymentlauch%20logo-121w.png" id="1456970565" class="" data-dm-image-path="https://irp.cdn-website.com/499b3704/dms3rep/multi/Paymentlauch+logo.png" width="1920" height="1920" onerror="handleImageLoadError(this)"></a> 
+</div> 
+</div> 
+ <div class="u_1318947829 dmRespCol small-12 large-8 medium-8" id="1318947829"> <div class="u_1793323351 widget-7ebf92 dmCustomWidget" data-lazy-load="false" data-title="" id="1793323351" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="7ebf92fcfe734a44a1911cd164200ec0" data-widget-version="288" data-widget-config="eyJ1c2VEaXZpZGVyIjp0cnVlLCJzaG93SG9tZSI6dHJ1ZSwic2hvd1N1Yk5hdlRpdGxlIjp0cnVlLCJzaG93Q29tQXJyb3ciOnRydWUsImlzU3RpY2t5Ijp0cnVlLCJuYXZQb3MiOiJsZWZ0IiwibmF2SG92ZXIiOiJ0b3BCb3R0b21MaW5lIiwiZGl2aWRlclN0eWxlIjoic3BhY2UifQ=="> <div class="widget-layout-result left" lang="en"> <ul class="meganav-container"></ul> 
+ <div class="hiddenDiv meganav-container__ctc-title meganav-container__ctc-description meganav-container__ctc-btn meganav-container__contact-btn meganav-container__multi-sub-nav-wrapper meganav-container__multi-sub-nav-icon"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1895874711 dmRespCol small-12 large-2 medium-2" id="1895874711"> <a data-display-type="block" class="u_1777873415 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="contact.html" id="1777873415" data-element-type="dButtonLinkId"> <span class="iconBg" id="1052926558"> <span class="icon hasFontIcon icon-star" id="1250367579"></span> 
+</span> 
+ <span class="text" id="1673891225">Contact Us</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="stickyHeaderSpacer" id="stickyHeaderSpacer" data-new="true"></div> 
+ <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow "> <div class="dmRespColsWrapper"> <div class="large-12 dmRespCol"> <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None"> <div class="titleLine display_None"><hr></div> 
+<!-- Page title is hidden in css for new responsive sites. It is left here only so we don't break old sites. Don't copy it to new layouts --> <div id="pageTitleText"></div> 
+ <div class="titleLine display_None"><hr></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_home dm-home-page" themewaschanged="true"> <div id="allWrapper" class="allWrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl" id="1716942098"> <div class="u_1419514929 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1419514929"> <div class="dmRespColsWrapper" id="1196409000"> <div class="u_1687032584 dmRespCol small-12 large-8 medium-8" id="1687032584"> <span id="1698228019"></span> 
+ <div class="u_1499986904 dmNewParagraph" data-element-type="paragraph" id="1499986904" style="transition:none 0s ease 0s;display:block;line-height:initial;" data-version="5"> <h1 class="text-align-left size-36 m-size-29"><span class="font-size-36 m-font-size-29" style="color: rgb(0, 0, 0); font-weight: 800; display: initial;">Tailored merchant services to meet the specific needs of your business.</span></h1> 
+</div> <div class="u_1946905839 dmNewParagraph" data-element-type="paragraph" id="1946905839" style="transition:none 0s ease 0s;display:block;line-height:initial;" data-version="5"><p class="text-align-left size-16 m-size-13"><span class="font-size-16 m-font-size-13" style="font-weight: normal; display: initial; font-style: normal;">Selecting a merchant services provider can impact your finances, operations, and customer service. With competitive rates and fees, along with comprehensive POS hardware, software, and services, we aid businesses in efficient payment management and risk mitigation</span></p></div> <div class="u_1819477660 dmRespRow" id="1819477660"> <div class="dmRespColsWrapper" id="1137734956"> <div class="u_1270942008 dmRespCol small-12 medium-12 large-12" id="1270942008"> <a data-display-type="block" class="u_1869199146 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="contact.html" id="1869199146" data-element-type="dButtonLinkId"> <span class="iconBg" id="1093555118"> <span class="icon hasFontIcon icon-star" id="1404629839"></span> 
+</span> 
+ <span class="text" id="1743364507">Contact Us</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1836906454 dmRespCol small-12 large-4 medium-4" id="1836906454"> <div data-element-type="spacer" class="u_1110921144 dmSpacer" id="1110921144"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1576601305" style="text-align: center;" id="1576601305"> <div class="dmRespColsWrapper" id="1492132875"> <div class="dmRespCol small-12 medium-12 large-12" id="1565658676"> <div class="u_1540751710 dmNewParagraph" id="1540751710" style="transition: opacity 1s ease-in-out;" data-element-type="paragraph" data-version="5"> <h2 class="m-size-24 text-align-center size-30"><span style="display: initial; font-weight: bold;" class="m-font-size-24 font-size-30">Discover the distinctive features that set our merchant services apart</span><span style="display: initial;"><br></span></h2> 
+</div></div> 
+</div> 
+</div> 
+ <div class="u_1907185865 dmRespRow" style="text-align: center;" id="1907185865"> <div class="dmRespColsWrapper" id="1322817621"> <div class="dmRespCol small-12 u_1502567217 medium-3 large-3" id="1502567217"> <span id="1872626940"></span> 
+ <div class="u_1430155482 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1430155482"><img src="499b3704/dms3rep/multi/opt/Gift-Cards-125w.png" alt="" id="1916751273" class="" data-dm-image-path="https://irp.cdn-website.com/499b3704/dms3rep/multi/Gift-Cards.png" width="200" height="200" onerror="handleImageLoadError(this)"></div> 
+ <div class="u_1794246769 dmNewParagraph" id="1794246769" style="display: block;" data-element-type="paragraph" data-version="5"> <h3 style="line-height: 1.1; letter-spacing: 0.2px;" class="m-size-19 text-align-center size-24"><span style="display: initial; font-weight: 700;" class="m-font-size-19 font-size-24">Rates &amp; Fees</span></h3> 
+</div> <div class="dmNewParagraph u_1652316975" id="1652316975" style="transition: opacity 1s ease-in-out; display: block;" data-version="5"><p><span style="display: initial;">Experience transparency with our merchant services rates and fees &ndash; no contracts, no early termination fees, and no annual fees. Simple, straightforward, and fair.</span></p></div></div> 
+ <div class="dmRespCol small-12 u_1830817940 medium-3 large-3" id="1830817940"> <span id="1790028106"></span> 
+ <div class="u_1908240257 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1908240257"><img src="499b3704/dms3rep/multi/opt/Ecommerce-0e79515e-132w.png" alt="" id="1307665281" class="" data-dm-image-path="https://irp.cdn-website.com/499b3704/dms3rep/multi/Ecommerce-0e79515e.png" width="200" height="200" onerror="handleImageLoadError(this)"></div> 
+ <div class="u_1302721461 dmNewParagraph" id="1302721461" style="display:block;line-height:initial;" data-element-type="paragraph" data-version="5"> <h3 style="letter-spacing: 0.2px; line-height: 1.1;" class="m-size-19 text-align-center size-24"><span style="font-weight: 700; display: initial;" class="m-font-size-19 font-size-24">Customer Service</span></h3> 
+</div> <div class="dmNewParagraph u_1660986201" id="1660986201" style="transition: opacity 1s ease-in-out; display: block;" data-version="5"><p><span style="display: initial;">Exceptional customer service without the hassle of 1-800 numbers. Enjoy direct support and a family-like approach, making business owners feel valued with our merchant services.</span></p></div></div> 
+ <div class="dmRespCol small-12 u_1114151239 medium-3 large-3" id="1114151239"> <span id="1161290498"></span> 
+ <div class="u_1805030916 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1805030916"><img src="499b3704/dms3rep/multi/opt/Credit-Card-Terminal-124w.png" alt="" id="1247172939" class="" data-dm-image-path="https://irp.cdn-website.com/499b3704/dms3rep/multi/Credit-Card-Terminal.png" width="200" height="200" onerror="handleImageLoadError(this)"></div> 
+ <div class="u_1641565702 dmNewParagraph" id="1641565702" style="display:block;line-height:initial;" data-element-type="paragraph" data-version="5"> <h3 style="letter-spacing: 0.2px; line-height: 1.1;" class="m-size-19 text-align-center size-24"><span style="font-weight: 700; display: initial;" class="m-font-size-19 font-size-24">Reliability</span><span style="display: initial;"><br></span></h3> 
+</div> <div class="dmNewParagraph u_1120726688" id="1120726688" style="transition: opacity 1s ease-in-out; display: block;" data-version="5"><p><span style="display: initial;">Businesses prioritize reliable merchant services for seamless credit card transactions. Next day or same day funding options enhance cash flow, providing quick access to funds.</span></p></div></div> 
+ <div class="dmRespCol small-12 u_1192155487 medium-3 large-3" id="1192155487"> <span id="1039952212"></span> 
+ <div class="u_1142333873 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1142333873"><img src="499b3704/dms3rep/multi/opt/Free-Training-5cee0b7d-125w.png" alt="" id="1036326013" class="" data-dm-image-path="https://irp.cdn-website.com/499b3704/dms3rep/multi/Free-Training-5cee0b7d.png" width="200" height="200" onerror="handleImageLoadError(this)"></div> 
+ <div class="u_1829334665 dmNewParagraph" id="1829334665" style="display:block;line-height:initial;" data-element-type="paragraph" data-version="5"> <h3 style="line-height: 1.1; letter-spacing: 0.2px;" class="m-size-19 text-align-center size-24"><span style="font-weight: 700; display: initial;" class="font-size-24 m-font-size-19">Security</span></h3> 
+</div> <div class="dmNewParagraph u_1328423707" id="1328423707" style="transition: opacity 1s ease-in-out; display: block;" data-version="5"><p><span style="display: initial;">Ensuring security is paramount within our merchant services. We prioritize security features, adhere to industry standards like PCI compliance, and provide assistance for robust protection against fraud.</span></p></div></div> 
+</div> 
+</div> 
+ <div class="u_1112335288 dmRespRow" style="text-align: center;" id="1112335288"> <div class="dmRespColsWrapper" id="1034745541"> <div class="dmRespCol small-12 medium-12 large-12 u_1945964875" id="1945964875"> <span id="1170450142"></span> 
+ <div class="u_1431435714 dmNewParagraph" data-element-type="paragraph" id="1431435714" data-version="5" data-styletopreserve="{" background-image":""}"=""> <h2 class="text-align-center m-size-24 size-30"><span class="font-size-30 m-font-size-24" style="color: var(--color_2); display: initial;">Straightforward Pricing.</span></h2> 
+ <h2 class="text-align-center m-size-24 size-30"><span class="font-size-30 m-font-size-24" style="color: var(--color_2); display: initial;">Effortless Decisions.</span></h2> 
+</div> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1046612764" style="transition: opacity 1s ease-in-out 0s;"><p class="text-align-center" style="line-height: 1.75;"><span style="display: unset;">Whether you sell in-person, online, or on-the-go, Payment Launch is committed to providing comprehensive merchant service solutions tailored to suit your business needs.</span></p></div> 
+ <div class="u_1641645690 dmRespRow" id="1641645690"> <div class="dmRespColsWrapper" id="1007860207"> <div class="u_1857830618 dmRespCol small-12 hasBackgroundOverlay medium-6 large-6" id="1857830618" data-anim-extended="eyJkZXNrdG9wIjp7InRyaWdnZXIiOiJlbnRyYW5jZSIsImFuaW1hdGlvbiI6InNsaWRlSW5Db21ibyIsImR1cmF0aW9uIjoxLCJkZWxheSI6MCwiaW50ZW5zaXR5IjoxLCJkaXIiOiJsZWZ0In19" data-anim-desktop="slideInCombo"> <div class="u_1212203029 dmNewParagraph" data-element-type="paragraph" id="1212203029" style="transition: opacity 1s ease-in-out 0s; line-height: initial; text-align: center;" data-version="5"><p style="line-height: 1.75;"><span style="color: var(--color_2); font-weight: bold; display: initial;">Tailor Your Payment Experience</span></p></div> <div class="u_1414476762 dmNewParagraph" data-element-type="paragraph" id="1414476762" style="transition:none 0s ease 0s;display:block;line-height:initial;" data-version="5"><p class="text-align-center"><span style="font-weight: 400; display: initial;">Explore our merchant services with flexible programs, supported by transparent pricing, making it easy for your small business to accept payments seamlessly.</span></p></div> <a data-display-type="block" class="u_1211921662 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="index.htm" data-element-type="dButtonLinkId" id="1211921662"> <span class="iconBg" id="1366406940"> <span class="icon hasFontIcon icon-star" id="1069476124"></span> 
+</span> 
+ <span class="text" id="1820356444">Get more details &rarr;</span> 
+</a> 
+</div> 
+ <div class="u_1651702143 dmRespCol small-12 hasBackgroundOverlay medium-6 large-6" id="1651702143" data-anim-extended="eyJkZXNrdG9wIjp7InRyaWdnZXIiOiJlbnRyYW5jZSIsImFuaW1hdGlvbiI6InNsaWRlSW5Db21ibyIsImRpciI6InJpZ2h0In19" data-anim-desktop="slideInCombo"> <div class="u_1872001703 dmNewParagraph" data-element-type="paragraph" id="1872001703" style="transition: none 0s ease 0s; text-align: center; display: block;" data-version="5"><p class="m-size-14 size-18" style="line-height: 1.75;"><span class="font-size-18 m-font-size-14" style="font-weight: 700; display: initial; color: var(--color_2);">Innovative Technology for Your Business</span></p></div> <div class="u_1177286982 dmNewParagraph" data-element-type="paragraph" id="1177286982" style="transition: none 0s ease 0s; display: block; text-align: center;" data-version="5"><p class="text-align-center"><span style="display: initial; font-weight: 400;">Streamline operations with innovative technology, specifically designed to run and grow your business effortlessly. Comprehensive merchant services for enhanced efficiency.</span></p></div> <a data-display-type="block" class="u_1277996242 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="index.htm" data-element-type="dButtonLinkId" id="1277996242"> <span class="iconBg" id="1613462778"> <span class="icon hasFontIcon icon-star" id="1226496516"></span> 
+</span> 
+ <span class="text" id="1678408996">Get more details &rarr;</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1644436161" id="1644436161"> <div class="dmRespColsWrapper" id="1447335075"> <div class="dmRespCol large-12 medium-12 small-12" id="1730230008"> <div class="u_1139428276 dmNewParagraph" data-element-type="paragraph" id="1139428276" style="transition: opacity 1s ease-in-out 0s; line-height: initial; text-align: center;" data-version="5"> <h2><span style="color: var(--color_3); display: initial;">Everything you need, all in one place</span></h2> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1155941366 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1155941366"> <div class="dmRespColsWrapper" id="1925767465"> <div class="u_1582353204 dmRespCol small-12 large-2 medium-2" id="1582353204"> <div data-element-type="spacer" class="dmSpacer" id="1682722469"></div> 
+</div> 
+ <div class="u_1643055572 dmRespCol small-12 large-5 medium-5" id="1643055572"> <div class="u_1565233720 imageWidget align-center hasFullWidth" data-element-type="image" data-widget-type="image" id="1565233720"> <a id="1824105913"><img src="md/dmtmpl/dms3rep/multi/smiling_confident_woman_green_shirt.png" alt="" id="1604914998" class="" data-dm-image-path="https://irt-cdn.multiscreensite.com/md/dmtmpl/dms3rep/multi/smiling_confident_woman_green_shirt.png" onerror="handleImageLoadError(this)" height="441.90625" width="480.0"></a> 
+</div> 
+</div> 
+ <div class="u_1581323770 dmRespCol small-12 large-5 medium-5" id="1581323770"> <div class="dmRespRow u_1866282750" id="1866282750"> <div class="dmRespColsWrapper" id="1422111307"> <div class="u_1034464556 dmRespCol small-12 large-2 medium-2" id="1034464556"> <div class="u_1603541363 graphicWidget" data-element-type="graphic" data-widget-type="graphic" id="1603541363" data-layout="graphic-style-3"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" id="1414523317" class="svg u_1414523317" data-icon-name="li_rocket"> <g> <path d="M50.8,67.5c-0.5-0.4-1.2-0.4-1.6,0c-2.9,2.6-4.5,6.3-4.5,10.1c0,3.8,1.7,7.5,4.5,10.1c0.2,0.2,0.5,0.3,0.8,0.3
+		c0.3,0,0.6-0.1,0.8-0.3c2.9-2.6,4.5-6.3,4.5-10.1C55.4,73.8,53.7,70.1,50.8,67.5z M50,85.1c-1.9-2-2.9-4.7-2.9-7.5
+		c0-2.8,1-5.4,2.9-7.5c1.9,2,2.9,4.7,2.9,7.5C52.9,80.4,51.9,83.1,50,85.1z"></path> 
+ <path d="M75.4,61.4L63.5,49.5v-24c0-7.4-6.1-13.5-13.5-13.5c-7.4,0-13.5,6.1-13.5,13.5v24L24.6,61.4c-0.3,0.4-0.5,0.9-0.3,1.3
+		c0.2,0.5,0.6,0.8,1.1,0.8h49.1c0.5,0,0.9-0.3,1.1-0.8C75.9,62.3,75.8,61.8,75.4,61.4z M51.2,61.1V50c0-0.7-0.5-1.2-1.2-1.2
+		c-0.7,0-1.2,0.5-1.2,1.2v11.1H28.4l10.2-10.2c0.2-0.2,0.4-0.5,0.4-0.9V25.4c0-6.1,5-11,11.1-11s11.1,5,11.1,11V50
+		c0,0.3,0.1,0.6,0.4,0.9l10.2,10.2H51.2z"></path> 
+ <path d="M50,24.2c-2.4,0-4.3,1.9-4.3,4.3c0,2.4,1.9,4.3,4.3,4.3c2.4,0,4.3-1.9,4.3-4.3C54.3,26.1,52.4,24.2,50,24.2z M50,30.4
+		c-1,0-1.8-0.8-1.8-1.8c0-1,0.8-1.8,1.8-1.8c1,0,1.8,0.8,1.8,1.8C51.8,29.5,51,30.4,50,30.4z"></path> 
+ <path d="M50,36.5c-2.4,0-4.3,1.9-4.3,4.3c0,2.4,1.9,4.3,4.3,4.3c2.4,0,4.3-1.9,4.3-4.3C54.3,38.4,52.4,36.5,50,36.5z M50,42.6
+		c-1,0-1.8-0.8-1.8-1.8c0-1,0.8-1.8,1.8-1.8c1,0,1.8,0.8,1.8,1.8C51.8,41.8,51,42.6,50,42.6z"></path> 
+</g> 
+</svg> 
+</div> 
+</div> 
+ <div class="u_1233607279 dmRespCol small-12 large-10 medium-10" id="1233607279"> <div class="u_1686850593 dmNewParagraph" data-element-type="paragraph" id="1686850593" style="transition:opacity 1s ease-in-out 0s;line-height:initial;" data-version="5"> <h4 class="size-18" style=""><span class="font-size-18" style="display: initial; color: var(--color_3); font-weight: bold;">Cutting-Edge Technology</span></h4> 
+</div> 
+ <div class="u_1243730126 dmNewParagraph" data-element-type="paragraph" id="1243730126" style="transition: none 0s ease 0s; display: block;" data-version="5"><p class="text-align-left size-15"><span class="font-size-15" style="color: var(--color_4); display: initial;">Streamline operations with innovative technology designed to run and grow your business with ease.</span></p></div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1697103244" id="1697103244"> <div class="dmRespColsWrapper" id="1604648648"> <div class="u_1309797609 dmRespCol small-12 large-2 medium-2" id="1309797609"> <div class="u_1679243328 graphicWidget" data-element-type="graphic" data-widget-type="graphic" id="1679243328" data-layout="graphic-style-3"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" id="1899708144" class="svg u_1899708144" data-icon-name="payment_mobile_device_credit_card"> <path d="M24.9,20.69H53.33a.88.88,0,1,0,0-1.75H24.9a.88.88,0,0,0,0,1.75Z"></path> 
+ <path d="M52.45,12.78H25.78a5.33,5.33,0,0,0-5.33,5.33V67.76a5.33,5.33,0,0,0,5.33,5.33h6.27V74a5.18,5.18,0,0,0,5.17,5.17h2.86v4.62a3.41,3.41,0,0,0,3.41,3.41H76.13a3.41,3.41,0,0,0,3.41-3.41V65.34a3.41,3.41,0,0,0-3.41-3.41H71.51V59.08a5.18,5.18,0,0,0-5.17-5.17H57.77V18.11A5.33,5.33,0,0,0,52.45,12.78ZM25.78,71.34a3.58,3.58,0,0,1-3.58-3.58V18.11a3.58,3.58,0,0,1,3.58-3.58H52.45A3.58,3.58,0,0,1,56,18.11V53.9H37.23a5.18,5.18,0,0,0-5.17,5.17v2.51H24.9a.88.88,0,0,0,0,1.75h7.15v8ZM76.13,85.47H43.49a1.66,1.66,0,0,1-1.66-1.66v-.06h36v.06A1.66,1.66,0,0,1,76.13,85.47Zm0-21.78a1.66,1.66,0,0,1,1.66,1.66V82h-36V79.18h24.5A5.18,5.18,0,0,0,71.51,74V63.69Zm-6.38-4.61V74a3.43,3.43,0,0,1-3.42,3.42H37.23A3.43,3.43,0,0,1,33.81,74V59.08a3.43,3.43,0,0,1,3.42-3.42H66.34A3.43,3.43,0,0,1,69.76,59.08Z"></path> 
+ <path d="M35.59,17.65h7a.88.88,0,1,0,0-1.75h-7a.88.88,0,1,0,0,1.75Z"></path> 
+ <path d="M39.79,57A3.26,3.26,0,1,0,43,60.22,3.26,3.26,0,0,0,39.79,57Zm0,4.76a1.51,1.51,0,1,1,1.51-1.51A1.51,1.51,0,0,1,39.79,61.72Z"></path> 
+ <path d="M49.14,60.22A3.26,3.26,0,0,0,45.89,57a3.22,3.22,0,0,0-1.4.32.88.88,0,0,0,.75,1.58,1.48,1.48,0,0,1,.64-.15,1.51,1.51,0,1,1,0,3,1.49,1.49,0,0,1-.64-.15.88.88,0,1,0-.75,1.58,3.25,3.25,0,0,0,4.65-2.94Z"></path> 
+ <path d="M41.65,71.87H37.31a.88.88,0,0,0,0,1.75h4.33a.88.88,0,1,0,0-1.75Z"></path> 
+ <path d="M49.85,71.87H45.51a.88.88,0,0,0,0,1.75h4.33a.88.88,0,0,0,0-1.75Z"></path> 
+ <path d="M52.84,72.75a.88.88,0,0,0,.88.88H58a.88.88,0,1,0,0-1.75H53.71A.88.88,0,0,0,52.84,72.75Z"></path> 
+ <path d="M66.25,71.87H61.92a.88.88,0,1,0,0,1.75h4.33a.88.88,0,0,0,0-1.75Z"></path> 
+ <path d="M61.43,63.47h3.23A2.48,2.48,0,0,0,67.13,61V59.43A2.48,2.48,0,0,0,64.65,57H61.43A2.48,2.48,0,0,0,59,59.43V61A2.48,2.48,0,0,0,61.43,63.47Zm-.72-4a.72.72,0,0,1,.72-.72h3.23a.72.72,0,0,1,.72.72V61a.72.72,0,0,1-.72.72H61.43A.72.72,0,0,1,60.7,61Z"></path> 
+ <path d="M34.52,37.26a1.61,1.61,0,0,0-.43-.39,2.46,2.46,0,0,0-.54-.24,3.31,3.31,0,0,0-.61-.13,6,6,0,0,0-.65,0H29.73v6.6h1.42V40.68h1.19a2.94,2.94,0,0,0,1.9-.54,2,2,0,0,0,.66-1.61,2.35,2.35,0,0,0-.1-.72A1.77,1.77,0,0,0,34.52,37.26ZM33.39,38.9a.57.57,0,0,1-.18.24.89.89,0,0,1-.33.16,2.09,2.09,0,0,1-.53.06H31.15V37.8h1.18a3.24,3.24,0,0,1,.45,0,1,1,0,0,1,.35.11.59.59,0,0,1,.23.22.74.74,0,0,1,.08.38A1,1,0,0,1,33.39,38.9Z"></path> 
+ <path d="M38.42,36.47l-2.53,6.6H37.4l.66-1.82h2.06l.69,1.82H42.4l-2.69-6.6ZM38.51,40l.56-1.55L39.67,40Z"></path> 
+ <polygon points="45.9 38.95 44.28 36.47 42.56 36.47 45.18 40.31 45.18 43.07 46.61 43.07 46.61 40.31 49.23 36.47 47.51 36.47 45.9 38.95"></polygon> 
+</svg> 
+</div> 
+</div> 
+ <div class="u_1828267617 dmRespCol small-12 large-10 medium-10" id="1828267617"> <div class="u_1761982448 dmNewParagraph" data-element-type="paragraph" id="1761982448" style="transition:opacity 1s ease-in-out 0s;line-height:initial;" data-version="5"> <h4 class="size-18"><span class="font-size-18" style="display: initial; color: var(--color_3); font-weight: bold;">Accept Payments Your Way</span></h4> 
+</div> 
+ <div class="u_1949778420 dmNewParagraph" data-element-type="paragraph" id="1949778420" style="transition:none 0s ease 0s;display:block;line-height:initial;" data-version="5"><p class="text-align-left size-15"><span class="font-size-15" style="display: initial; color: var(--color_4);">We offer flexible programs, backed by transparent pricing, making it simple to accept payments at your small business.</span></p></div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1765151619" id="1765151619"> <div class="dmRespColsWrapper" id="1934105833"> <div class="u_1369437151 dmRespCol small-12 large-2 medium-2" id="1369437151"> <div class="u_1747718597 graphicWidget" data-element-type="graphic" data-widget-type="graphic" id="1747718597" data-layout="graphic-style-3"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" id="1287870964" class="svg u_1287870964" data-icon-name="li-stopwatch"> <g> <path d="M87,29.8L76.4,19.2L67,28.7c-2.9-1.8-6.1-3.1-9.5-4V11.4h-15v13.4c-3.4,0.8-6.6,2.2-9.5,4l-9.5-9.5L13,29.8l9.5,9.5
+		c-3.1,4.9-4.9,10.7-4.9,17c0,17.9,14.5,32.4,32.4,32.4s32.4-14.5,32.4-32.4c0-6.2-1.8-12-4.9-17L87,29.8z M76.4,22.7l7.1,7
+		l-7.4,7.4c-2-2.7-4.4-5.1-7.1-7L76.4,22.7z M45,13.9h10v10.4c-1.6-0.3-3.3-0.4-5-0.4s-3.4,0.2-5,0.4V13.9z M16.5,29.8l7.1-7
+		l7.4,7.4c-2.7,2-5.1,4.4-7.1,7L16.5,29.8z M50,86.1c-16.5,0-29.9-13.4-29.9-29.9S33.5,26.3,50,26.3s29.9,13.4,29.9,29.9
+		S66.5,86.1,50,86.1z"></path> 
+ <path d="M51.2,54.1v-23h-2.5v23c-0.7,0.4-1.2,1.2-1.2,2.1c0,1.4,1.1,2.5,2.5,2.5s2.5-1.1,2.5-2.5C52.5,55.3,52,54.6,51.2,54.1z"></path> 
+ <rect x="48.8" y="74.9" width="2.5" height="6.4"></rect> 
+ <rect x="24.9" y="55" width="6.4" height="2.5"></rect> 
+ <rect x="68.7" y="55" width="6.4" height="2.5"></rect> 
+ <rect x="37.8" y="34.1" transform="matrix(0.8662 -0.4997 0.4997 0.8662 -13.4138 24.5093)" width="2.5" height="6.4"></rect> 
+ <rect x="59.7" y="72" transform="matrix(0.8661 -0.4999 0.4999 0.8661 -29.4242 40.542)" width="2.5" height="6.4"></rect> 
+ <rect x="27.9" y="65.9" transform="matrix(0.8663 -0.4996 0.4996 0.8663 -29.3782 24.506)" width="6.4" height="2.5"></rect> 
+ <rect x="65.8" y="44" transform="matrix(0.8658 -0.5004 0.5004 0.8658 -13.3759 40.5839)" width="6.4" height="2.5"></rect> 
+ <rect x="29.8" y="42.1" transform="matrix(0.4996 -0.8662 0.8662 0.4996 -23.6971 49.5626)" width="2.5" height="6.4"></rect> 
+ <rect x="67.7" y="64" transform="matrix(0.5002 -0.8659 0.8659 0.5002 -23.7108 93.3077)" width="2.5" height="6.4"></rect> 
+ <rect x="35.9" y="73.9" transform="matrix(0.5017 -0.8651 0.8651 0.5017 -45.533 71.2237)" width="6.4" height="2.5"></rect> 
+ <rect x="57.7" y="36" transform="matrix(0.4998 -0.8661 0.8661 0.4998 -1.7538 71.3991)" width="6.4" height="2.5"></rect> 
+</g> 
+</svg> 
+</div> 
+</div> 
+ <div class="u_1312755965 dmRespCol small-12 large-10 medium-10" id="1312755965"> <div class="u_1389494258 dmNewParagraph" data-element-type="paragraph" id="1389494258" style="transition:opacity 1s ease-in-out 0s;line-height:initial;" data-version="5"> <h4 class="size-18"><span class="font-size-18" style="color: var(--color_3); display: initial; font-weight: bold;">Simple pricing simple decisions</span></h4> 
+</div> 
+ <div class="u_1293099393 dmNewParagraph" data-element-type="paragraph" id="1293099393" style="transition: opacity 1s ease-in-out 0s;" data-version="5"><p class="text-align-left size-15"><span class="font-size-15" style="color: var(--color_4); display: initial;">Whether your sales happen in-store, online, or on-the-move, Payment Launch is committed to delivering end to end credit card processing solutions that perfectly fit your business.</span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1550990174" id="1550990174"> <div class="dmRespColsWrapper" id="1420744320"> <div class="dmRespCol large-12 medium-12 small-12" id="1155310255"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1123087523" data-styletopreserve="{" background-image":""}"=""><p class="text-align-left"><span style="font-weight: bold; display: unset;">Testimonials</span></p></div> 
+ <div class="u_1183636726 dmNewParagraph" id="1183636726" data-element-type="paragraph" style="transition: none 0s ease 0s; display: block; line-height: initial; text-align: center;" data-version="5"> <h3 class="text-align-left"><span style="font-weight: 700; display: initial;">Customers all over the world use Payment launch</span></h3> 
+</div> <div class="widget-f6ba52 u_1974326774 dmCustomWidget" data-lazy-load="false" data-title="" id="1974326774" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="f6ba52a1b66d4987903b87fdb476a9ce" data-widget-version="259" data-widget-config="eyJoaWRlRW1wdHlSZXZpZXciOmZhbHNlLCJoaWRlSW1hZ2UiOmZhbHNlLCJ0cmFuc1Jldmlld3MiOmZhbHNlLCJsb3dlc3RSYXRpbmciOiIzIiwic29ydEJ5IjoiZGVmYXVsdCIsImF1dG9wbGF5Ijp0cnVlLCJhdXRvcGxheURlbGF5IjoiMzAwMCIsImxvb3AiOmZhbHNlLCJwYWdpbmF0aW9uIjpmYWxzZSwibmF2aWdhdGlvbiI6ZmFsc2UsInBhZ2VTaXplIjoiMyIsInNsaWRlRG90cyI6dHJ1ZSwic2xpZGVBcnJvdyI6dHJ1ZSwiZGVza3RvcFNsaWRlc1BlclZpZXciOiIzIiwidGFibGV0U2xpZGVzUGVyVmlldyI6IjIiLCJtb2JpbGVTbGlkZXNQZXJWaWV3IjoiMSIsInNsaWRlSGVpZ2h0IjoiNzUiLCJoaWRlRW1wdHkiOmZhbHNlLCJ3aWRnZXRMYXlvdXQiOiJncmlkTGF5b3V0Iiwic3RhckNvbG9yIjoiI2ZmYmIwNiIsImxheW91dCI6ImNsYXNzaWMiLCJ0eXBlIjoic2xpZGVyIiwiaGlkZUhlYWRlciI6dHJ1ZSwic2hhZG93Ijp0cnVlfQ=="> <div class="widget-Loader-Container"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100"> <circle class="one" cx="50" cy="50" r="25"></circle> 
+ <circle class="two" cx="50" cy="50" r="25"></circle> 
+</svg> 
+</div> 
+ <div class="gr-Main-Container" style="display:none;"> <div class="gr-Header-Section"> <div class="gr-Title-Column"> <div class="gr-Image-Wrapper"><img src="admin/src/images/google.png" alt="Google Logo" onerror="handleImageLoadError(this)"> <span>Rating</span> 
+</div> 
+ <div class="gr-Title-Ratings"></div> 
+</div> 
+ <div class="gr-Button-Column"></div> 
+</div> 
+ <div class="swiper-wrapper"><!-- APPEND REVIEWS --></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1963107224 dmRespRow" style="text-align: center;" id="1963107224"> <div class="dmRespColsWrapper" id="1230413926"> <div class="u_1291244738 dmRespCol small-12 large-4 medium-4" id="1291244738"> <span id="1552891808"></span> 
+ <div class="u_1341566695 dmNewParagraph" id="1341566695" style="transition: opacity 1s ease-in-out; display: block;" data-element-type="paragraph" data-version="5"> <h3><span style="display: initial;">Accept Payments</span></h3> 
+</div> <div class="u_1841931019 dmDividerWrapper clearfix" id="1841931019" layout="divider-style-1" data-element-type="dDividerId" data-widget-version="2"><hr class="dmDivider" style="min-height: 2px; border:none; background:grey" id="1483583974"></div> 
+ <div class="u_1077430916 dmNewParagraph" id="1077430916" style="transition: opacity 1s ease-in-out; display: block;" data-version="5"><p><span style="font-weight: normal; color: var(--color_4); display: initial;">Payment solutions that fit your business.&nbsp;</span></p></div></div> 
+ <div class="u_1532661493 dmRespCol small-12 large-4 medium-4" id="1532661493"> <span id="1515364372"></span> 
+ <div class="u_1868001092 graphicWidget" data-widget-type="graphic" id="1868001092" data-element-type="graphic"> <a id="1739937657" class=""> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" id="1243531993" class="svg u_1243531993" data-icon-name="payment_credit_card_machine"> <path d="M13.69,89.15H42.5a2.87,2.87,0,0,0,2.87-2.87v-6h5.35a3.85,3.85,0,0,0,3.84-3.84V42.33a3.85,3.85,0,0,0-3.84-3.84H45.37V29.22a2.87,2.87,0,0,0-2.87-2.87H40.43v-10a5.55,5.55,0,0,0-5.54-5.54H21.31a5.55,5.55,0,0,0-5.54,5.54v10H13.69a2.87,2.87,0,0,0-2.87,2.87V86.28A2.87,2.87,0,0,0,13.69,89.15Zm37-48.76a2,2,0,0,1,1.94,1.94V76.46a2,2,0,0,1-1.94,1.94H45.37v-38Zm-38-11.17a1,1,0,0,1,1-1h2.07v3.47a.95.95,0,1,0,1.9,0V16.39a3.65,3.65,0,0,1,3.65-3.65H34.89a3.65,3.65,0,0,1,3.65,3.65V31.72a.95.95,0,1,0,1.9,0V28.25H42.5a1,1,0,0,1,1,1V86.28a1,1,0,0,1-1,1H13.69a1,1,0,0,1-1-1Z"></path> 
+ <path d="M40.43,43.08H15.76v12.6H40.43Zm-1.9,10.7H17.66V45H38.53Z"></path> 
+ <path d="M16.71,36.41H39.48a.95.95,0,0,0,0-1.9H16.71a.95.95,0,0,0,0,1.9Z"></path> 
+ <path d="M20.95,21.87h14.3a.95.95,0,0,0,0-1.9H20.95a.95.95,0,0,0,0,1.9Z"></path> 
+ <path d="M23.78,24.76a.95.95,0,0,0,0,1.9h8.64a.95.95,0,0,0,0-1.9Z"></path> 
+ <path d="M22.06,64.52H19.59a.95.95,0,1,0,0,1.9h2.47a.95.95,0,0,0,0-1.9Z"></path> 
+ <path d="M29.33,64.52H26.86a.95.95,0,0,0,0,1.9h2.47a.95.95,0,0,0,0-1.9Z"></path> 
+ <path d="M36.6,64.52H34.13a.95.95,0,0,0,0,1.9H36.6a.95.95,0,1,0,0-1.9Z"></path> 
+ <path d="M22.06,70.79H19.59a.95.95,0,1,0,0,1.9h2.47a.95.95,0,1,0,0-1.9Z"></path> 
+ <path d="M29.33,70.79H26.86a.95.95,0,0,0,0,1.9h2.47a.95.95,0,1,0,0-1.9Z"></path> 
+ <path d="M36.6,70.79H34.13a.95.95,0,1,0,0,1.9H36.6a.95.95,0,1,0,0-1.9Z"></path> 
+ <path d="M22.06,77.07H19.59a.95.95,0,1,0,0,1.9h2.47a.95.95,0,0,0,0-1.9Z"></path> 
+ <path d="M29.33,77.07H26.86a.95.95,0,1,0,0,1.9h2.47a.95.95,0,0,0,0-1.9Z"></path> 
+ <path d="M36.6,77.07H34.13a.95.95,0,1,0,0,1.9H36.6a.95.95,0,1,0,0-1.9Z"></path> 
+ <path d="M49,69.86a1,1,0,0,0,.95-.95v-19a.95.95,0,1,0-1.9,0v19A1,1,0,0,0,49,69.86Z"></path> 
+ <path d="M73.45,49.62a1,1,0,0,0,.95-.95V44.08a.95.95,0,0,0-1.9,0v4.59A1,1,0,0,0,73.45,49.62Z"></path> 
+ <path d="M73.45,58.3a1,1,0,0,0,.95-.95V52.76a.95.95,0,1,0-1.9,0v4.59A1,1,0,0,0,73.45,58.3Z"></path> 
+ <path d="M73.45,67A1,1,0,0,0,74.4,66V61.44a.95.95,0,1,0-1.9,0V66A1,1,0,0,0,73.45,67Z"></path> 
+ <path d="M73.45,75.66a1,1,0,0,0,.95-.95V70.12a.95.95,0,0,0-1.9,0v4.59A1,1,0,0,0,73.45,75.66Z"></path> 
+ <path d="M66.25,38.49a3.89,3.89,0,0,0-3.88,3.88v34a3.89,3.89,0,0,0,3.88,3.88h19a3.89,3.89,0,0,0,3.88-3.88v-34a3.89,3.89,0,0,0-3.88-3.88Zm-2,37.93v-34a2,2,0,0,1,2-2h1.14v38H66.25A2,2,0,0,1,64.26,76.42Zm23-34v34a2,2,0,0,1-2,2h-16v-38h16A2,2,0,0,1,87.28,42.37Z"></path> 
+ <path d="M80.19,75h3a1.74,1.74,0,0,0,1.73-1.73v-3a1.74,1.74,0,0,0-1.73-1.73h-3a1.74,1.74,0,0,0-1.73,1.73v3A1.74,1.74,0,0,0,80.19,75Zm.16-4.59H83v2.69H80.35Z"></path> 
+ <path d="M80.19,56.91h3a1.74,1.74,0,0,0,1.73-1.73V45.77A1.74,1.74,0,0,0,83.21,44h-3a1.74,1.74,0,0,0-1.73,1.73v9.41A1.74,1.74,0,0,0,80.19,56.91Zm.16-11H83V55H80.35Z"></path> 
+</svg> 
+</a> 
+</div> 
+ <div class="u_1559681208 dmNewParagraph" id="1559681208" style="display:block;line-height:initial;" data-element-type="paragraph" data-version="5"> <h4><span style="font-weight: bold; display: initial; color: var(--color_3);">In Person</span></h4> 
+</div> <div class="u_1584633534 dmNewParagraph" id="1584633534" style="transition: opacity 1s ease-in-out; display: block;" data-version="5"><p class="text-align-left"><span style="display: initial;"><br></span></p><p><span style="color: var(--color_4); display: initial;">Let our team of payment consultants give you insight and options we provide to make your life more simple. Terminals that fit your business.</span></p></div> <div class="u_1508358539 graphicWidget" data-widget-type="graphic" id="1508358539" data-element-type="graphic"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" id="1595725680" class="svg u_1595725680" data-icon-name="web_web_pages_arrow"> <path d="M17.14,37.84A.89.89,0,0,0,18,37V30.63h16.4V37a.89.89,0,0,0,1.78,0v-8.1h-20V37A.89.89,0,0,0,17.14,37.84Z"></path> 
+ <path d="M17.14,43.8H35.32a.89.89,0,0,0,0-1.78H17.14a.89.89,0,1,0,0,1.78Z"></path> 
+ <path d="M17.14,48.56H35.32a.89.89,0,1,0,0-1.78H17.14a.89.89,0,1,0,0,1.78Z"></path> 
+ <path d="M36.21,52.43a.89.89,0,0,0-.89-.89H17.14a.89.89,0,0,0,0,1.78H35.32A.89.89,0,0,0,36.21,52.43Z"></path> 
+ <path d="M86.06,64.22l-5.85-1.57V26.17H69.94V15.9H10.89v49H21.16V75.2H67.67L69.23,81l6.36-6.36L85,84.1,89.11,80,79.7,70.58ZM78.43,27.95V62.18L69.94,59.9v-32ZM68.16,17.68v5.38H12.66V17.68Zm-55.5,7.16h55.5V59.43l-5.09-1.36,1.36,5.09H12.66ZM22.94,73.42V64.93h42l2.28,8.49ZM86.6,80,85,81.59l-9.41-9.41-5.43,5.43-4.56-17,17,4.56-5.43,5.43Z"></path> 
+</svg> 
+</div> 
+ <div class="u_1708837858 dmNewParagraph" id="1708837858" style="display:block;line-height:initial;" data-element-type="paragraph" data-version="5"> <h4><span style="display: initial; color: var(--color_3); font-weight: bold;">On Your Website</span></h4> 
+</div> <div class="u_1830076489 dmNewParagraph" id="1830076489" style="transition: opacity 1s ease-in-out; display: block;" data-version="5"><p><span style="display: initial;">&nbsp;</span></p><p><span style="display: initial;">Selling products and services through your website or shopping cart? We provide your business with the best options and seamless integration.</span></p><p><span style="display: initial;">&nbsp;</span></p></div></div> 
+ <div class="u_1522251316 dmRespCol small-12 large-4 medium-4" id="1522251316"> <span id="1547473998"></span> 
+ <div class="u_1213407948 graphicWidget" data-widget-type="graphic" id="1213407948" data-element-type="graphic"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" id="1026818736" class="svg u_1026818736" data-icon-name="li-computer_screen"> <path d="M85.8,9.7H22c-3.4,0-6.1,2.8-6.1,6.1v51.6c0,3.4,2.8,6.1,6.1,6.1h18.4v9.8H29.3v2.5h49.1v-2.5H67.4v-9.8h18.4
+	c3.4,0,6.1-2.8,6.1-6.1V15.8C92,12.4,89.2,9.7,85.8,9.7z M22,12.1h63.9c2,0,3.7,1.7,3.7,3.7v43H18.3v-43
+	C18.3,13.8,19.9,12.1,22,12.1z M64.9,83.3H42.8v-9.8h22.1V83.3z M85.8,71.1H22c-2,0-3.7-1.7-3.7-3.7v-6.1h71.2v6.1
+	C89.5,69.4,87.8,71.1,85.8,71.1z"></path> 
+</svg> 
+</div> 
+ <div class="u_1529720917 dmNewParagraph" id="1529720917" style="display:block;line-height:initial;" data-element-type="paragraph" data-version="5"> <h4><span style="display: initial; color: var(--color_3); font-weight: bold;">On Your Computer</span></h4> 
+</div> <div class="u_1150781783 dmNewParagraph" id="1150781783" style="transition: opacity 1s ease-in-out; display: block;" data-version="5"><p class="text-align-left"><span style="display: initial;"><br></span></p><p><span style="display: initial;">Our virtual terminal will turn your computer into a credit card terminal. It&rsquo;s perfect for remote billing or taking credit cards over the phone.</span></p></div> <div class="u_1336794600 graphicWidget" data-widget-type="graphic" id="1336794600" data-element-type="graphic"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" id="1076176885" class="svg u_1076176885" data-icon-name="general_paper_document"> <path d="M63.35,87.25c-7.07,0-40.08-.5-40.41-.5H22v-74H77.49l0,1c0,2.15.82,52.62.44,58.58C77.42,80.83,71.14,87.25,63.35,87.25ZM24,84.76c5.57.08,33,.49,39.4.49,6.72,0,12.14-5.62,12.61-13.06.34-5.43-.32-50.19-.43-57.44H24Z"></path> 
+ <path d="M65,36.25H33.45a1,1,0,1,1,0-2H65a1,1,0,0,1,0,2Z"></path> 
+ <path d="M61.45,47.25h-28a1,1,0,1,1,0-2h28a1,1,0,0,1,0,2Z"></path> 
+ <path d="M55.45,58.25h-22a1,1,0,1,1,0-2h22a1,1,0,0,1,0,2Z"></path> 
+</svg> 
+</div> 
+ <div class="u_1081474327 dmNewParagraph" id="1081474327" style="display:block;line-height:initial;" data-element-type="paragraph" data-version="5"> <h4><span style="display: initial; font-weight: bold; color: var(--color_3);">By Invoice</span></h4> 
+</div> <div class="u_1366001771 dmNewParagraph" id="1366001771" style="transition: opacity 1s ease-in-out; display: block;" data-version="5"><p class="text-align-left"><span style="display: initial;"><br></span></p><p><span style="display: initial;">Our invoice software solution will allow your business to get paid fast. Easily send invoices, track payments, recurring payments, &amp; much more!</span></p></div></div> 
+</div> 
+</div> 
+ <div class="u_1491160021 dmRespRow" style="text-align: center;" id="1491160021"> <div class="dmRespColsWrapper" id="1494553930"> <div class="dmRespCol small-12 medium-12 large-12" id="1423274451"> <div class="u_1948733010 dmNewParagraph" data-element-type="paragraph" id="1948733010" style="transition:none 0s ease 0s;display:block;line-height:initial;" data-version="5"> <h1><span style="display: initial;">Amazing benefits</span></h1> 
+</div> <div class="dmRespRow fullBleedChanged fullBleedMode u_1036733442" id="1036733442"> <div class="dmRespColsWrapper" id="1968959758"> <div class="u_1197016983 dmRespCol small-12 large-7 medium-7" id="1197016983"> <div class="u_1419958698 dmNewParagraph" data-element-type="paragraph" id="1419958698" style="transition:none 0s ease 0s;display:block;line-height:initial;" data-version="5"><p class="text-align-left"><br></p><p class="text-align-left size-18 m-size-14"><span style="display: initial; color: var(--color_3); text-decoration: none; font-weight: bold;" class="font-size-18 m-font-size-14"><span class="ql-cursor">﻿</span>0% FEE Credit Card Processing</span></p><p class="text-align-left"><span style="display: initial; color: rgb(102, 102, 102); text-decoration: none;" class="font-size-15 m-font-size-20"><br></span></p><p class="text-align-left" style="color: var(--color_3); line-height: 2.6;"><span style="font-weight: 700; display: initial; color: var(--color_3);">Cash Discount Program</span></p><p style="color: var(--color_4); line-height: 2.6;"><span style="font-weight: inherit; display: initial; color: var(--color_4);">Unlimited Credit Card Processing</span></p><p style="color: var(--color_4); line-height: 2.6;"><span style="font-weight: inherit; display: initial; color: var(--color_4);">ONLY $25.00 a month.&nbsp;</span></p><p style="color: var(--color_4); line-height: 2.6;"><span style="font-weight: inherit; display: initial; color: var(--color_4);">SAVE $$$$</span></p><p class="text-align-left"><br></p></div> <a data-display-type="block" class="u_1662069905 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="cash-discount-program.html" data-element-type="dButtonLinkId" id="1662069905"> <span class="iconBg" id="1900725281"> <span class="icon hasFontIcon icon-star" id="1754956667"></span> 
+</span> 
+ <span class="text" id="1720282490">Learn More</span> 
+</a> 
+</div> 
+ <div class="u_1295578308 dmRespCol small-12 large-5 medium-5" id="1295578308"> <div class="u_1730568233 default dmShape" id="1730568233" dmle_extension="shape" data-element-type="shape" text-position="center_center" rounded-corners-shape="false" wr="true" captionpadding="10" icon="true" surround="true" adwords="" shape-text="R2V0IFN0YXJ0ZWQ=" shape-description="PHAgY2xhc3M9InJ0ZUJsb2NrIj5TY2hlZHVsZSBhIGNhbGwgdG9kYXk8L3A+" shape-image="" shape-type="shape6" show-text-on-shape="true" show-description-on-shape="true" shape-color="var(--color_1)" shape-show-shadow="true" border-color-shape="" show-background-overlay="false" overlay-color="#ffffff" image-position="xMidYMid" shape-keep-proportion="true" shape-layout="layout1" border-width-shape="0" overlay-opacity="50" link-attrs="e30="> <a data-link-id="shape-link-container" id="1997177551"> <div class="container-text container-padding center_center" id="1510324462"> <h3 class="shape-text" id="1978003967">Get Started</h3> 
+ <div class="shape-description" id="1188408826"> <p class="rteBlock" id="1938182080">Schedule a call today</p> 
+</div> 
+</div> 
+ <svg width="100%" height="100%" viewbox="0.00 0.00 100 100" class="shadow" id="1675227647"> <g> <path d="M85.1,12.3c-5.4-4.5-11.7-7.9-18.5-9.9c-4.2-1.3-8.4-2-12.8-2.3c-2.1-0.1-4.2-0.1-6.4,0c-2.8,0.1-5.5,0.4-8.3,0.9 			c-5.8,1-11.4,3.1-16.6,6c-6.9,3.7-12.7,9.2-16.9,15.9c-5.4,8.5-7.1,18.9-4.6,28.7c2,8.1,6.5,15.4,12.9,20.9 			c8,7,17.9,11.4,28.5,12.6c2.5,0.1,4.4,2.3,4.3,4.8c0,0,0,0,0,0c0,0.1,0,0.2,0,0.3c-0.1,1.6-0.3,3.3-0.6,4.9 			c-0.3,1.2-0.4,2.5-0.2,3.7c0,0.7,0.6,1.2,1.3,1.2h0.1c1-0.1,2-0.4,3-0.8c4.3-2,8.3-4.4,12.1-7.2c8.4-5.9,16.2-12.4,23.6-19.6 			c2.6-2.3,4.9-4.9,6.9-7.8c4.5-6.4,6.9-14,7-21.8c0-3.5-0.5-6.9-1.4-10.2C96.3,24.7,91.5,17.6,85.1,12.3z" style="fill:var(--color_1);"></path> 
+</g> 
+</svg> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1444208529" style="text-align: center;" id="1444208529"> <div class="dmRespColsWrapper" id="1155034736"> <div class="u_1234051079 dmRespCol small-12 medium-6 large-6" id="1234051079"> <div class="u_1731493205 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1731493205" style="transition: none 0s ease 0s; text-align: left; display: block;"> <h3><span style="display: initial; color: rgb(255, 255, 255);">Contact us</span></h3> 
+</div> 
+ <div class="u_1672919938 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1672919938" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="m-size-16 size-20" style="line-height: 1.5;"><span class="m-font-size-16 font-size-20" style="display: initial; color: rgb(255, 255, 255);">Still have questions? Let us help you</span></p><p style="line-height: 1.5;"><br></p><p class="m-size-16 size-20" style="line-height: 1.5;"><span class="m-font-size-16 font-size-20" style="display: initial; color: rgb(255, 255, 255);"><span class="m-font-size-16 font-size-20" style="display: initial; color: rgb(255, 255, 255);">Fill in the form or send an email meeting at&nbsp;</span> 
+</span><a href="mailto:activate@paymentlauch.com" runtime_url="mailto:activate@paymentlauch.com" type="email" class="m-font-size-16 font-size-20" style="display: initial; color: rgb(250, 250, 255);">activate@paymentlauch.com</a></p></div> 
+</div> 
+ <div class="u_1417183717 dmRespCol small-12 medium-6 large-6" id="1417183717"> <div class="u_1586359937 dmform default native-inputs" data-element-type="dContactUsRespId" captcha="true" data-captcha-position="bottomleft" id="1586359937" data-layout="layout-3" data-captcha-message="PHAgY2xhc3M9InJ0ZUJsb2NrIj5UaGlzIHNpdGUgaXMgcHJvdGVjdGVkIGJ5IHJlQ0FQVENIQS4gR29vZ2xlJiN4Mjc7cyA8c3BhbiBzdHlsZT0idGV4dC1kZWNvcmF0aW9uOnVuZGVybGluZSI+UHJpdmFjeSBQb2xpY3kgPC9zcGFuPmFuZCA8c3BhbiBzdHlsZT0idGV4dC1kZWNvcmF0aW9uOnVuZGVybGluZSI+VGVybXMgb2YgU2VydmljZTwvc3Bhbj4gYXBwbHkuPC9wPg==" data-require-captcha="true"> <h3 class="dmform-title dmwidget-title" id="1042454490"></h3> 
+ <div class="dmform-wrapper" id="1471552902" captcha-lang="en"> <form method="post" class="dmRespDesignRow" locale="ENGLISH" id="1273207456"> <div class="dmforminput required  small-12 dmRespDesignCol medium-12 large-12" id="1141519680"> <label for="1394665078" id="1279161319" class="" hide="true" data-dm-for="dmform-0">Full Name</label> 
+<input type="text" class="" name="dmform-0" id="1394665078" placeholder="Full name" data-placeholder-original="Full name"><input type="hidden" name="label-dmform-0" value="Full Name" id="1619152607" class=""></div> 
+ <div class="dmforminput required  small-12 dmRespDesignCol medium-12 large-12" id="1550432472"> <label for="1039629079" id="1880146136" class="" hide="true" data-dm-for="dmform-1">Phone number</label> 
+<input type="tel" name="dmform-1" placeholder="Phone number" id="1039629079" class="" data-placeholder-original="Phone number"><input type="hidden" name="label-dmform-1" value="Phone number" id="1990290010" class=""></div> 
+ <div class="dmforminput required  small-12 dmRespDesignCol medium-12 large-12" id="1443847430"> <label for="1669091766" id="1433128795" class="" hide="true" data-dm-for="dmform-2">Email</label> 
+<input type="email" name="dmform-2" placeholder="Email" id="1669091766" class="" data-placeholder-original="Email"><input type="hidden" name="label-dmform-2" value="Email" id="1769642446" class=""></div> 
+ <div class="dmforminput large-12 medium-12 dmRespDesignCol small-12" id="1708292358"> <label for="1819650894" id="1182682755" class="" hide="true" data-dm-for="dmform-3">Message</label> 
+ <textarea name="dmform-3" id="1819650894" class="" placeholder="Message" data-placeholder-original="Message"></textarea> 
+<input type="hidden" name="label-dmform-3" value="Message" id="1378361047"></div> 
+ <span id="1345359897" class="dmWidgetClear"></span> 
+ <span id="1313987597" class="dmWidgetClear"></span> 
+ <span id="1941168377" class="dmWidgetClear"></span> 
+ <span id="1778815661" class="dmWidgetClear"></span> 
+ <div class="dmformsubmit dmWidget R" id="1679699580"><input class="" name="submit" type="submit" id="1720637696" value="Send form"></div> 
+<input name="dmformsendto" type="hidden" value="O0wrseIfFLsiOadKU0RzK8KB+no0QPm6h6fMF6tcIpd0MzB1F5SXy/2HGz6vfqBkEKxVMv2u2nS4ty9RumwBQA==" id="1487747629" class="" data-dec="true"><input class="dmActionInput" type="hidden" name="action" value="/_dm/s/rt/widgets/dmform.submit.jsp" id="1458378992"><input name="dmformsubject" type="hidden" value="Contact Us Payment Launch" id="1237643287" class="" data-email-subject="Contact Us Payment Launch"><input name="dmformfrom" type="hidden" value="" id="1904957896"><input name="dmformsubmitparams" type="hidden" value="8mpKnCSiNQXK/d9M7IDrS21iaGO90EYxI8t47Xa5xYtDNT38ZcfUio3fJczgJtJtcrFEbc4I7LKA2XCsfpvaCC/6zdSpNJVLHUvEGM7njP6EtUTrwkZdOtHMd8vQLiwQ/tBgJN7y+X8lcnHSYouEoYyryUtvwSoJ659FaBGZjtxrosrUxtcz6AlXo8IvNGxqPjEt2GCsH/7W6/AHYP4DLpwrxoECUVENYRSsL9fmHZIDEJCSlrMvBEB6ULQU0OQ/uLcvUbpsAUA=" data-dec="true"><input name="page_uuid" type="hidden" value="99bfbb0a45a44fbaaf671bd64f40e87e"></form> 
+</div> 
+ <div class="dmform-success" style="display:none" id="1531871230"><p class="rteBlock">Thank you for contacting us, one of our payment consultants will reach out to you shortly.</p></div> 
+ <div class="dmform-error" style="display:none" id="1491247727"><p class="rteBlock">Oops, there was an error sending your message.</p><p class="rteBlock">Please try again later</p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="sticky-widgets-container-global" id="1742120456"></div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="dmRespRow fullBleedChanged fullBleedMode u_1534809366 mobile-columns-reversed" id="1534809366"> <div class="dmRespColsWrapper" id="1149782489"> <div class="u_1877932954 dmRespCol small-12 large-6 medium-6" id="1877932954"> <div class="u_1723669680 dmNewParagraph" data-element-type="paragraph" id="1723669680" style="transition:none 0s ease 0s;display:block;line-height:initial;" data-version="5"><p class="text-align-left size-16"><span class="font-size-16" style="color: var(--color_1); font-weight: 500; display: initial;">ー WE&rsquo;RE HERE TO HELP YOU</span></p></div> <div class="u_1753098379 dmNewParagraph" data-element-type="paragraph" id="1753098379" style="transition: none 0s ease 0s; display: block; line-height: initial;" data-version="5"> <h3 class="m-size-26 size-32"><span class="m-font-size-26 font-size-32" style="color: rgb(255, 255, 255); display: initial;">If you are new to accepting credit cards or are just looking for a partner you can trust, we are here for you</span></h3> 
+</div> <div class="dmNewParagraph u_1816532389" data-element-type="paragraph" id="1816532389" style="transition:opacity 1s ease-in-out 0s;line-height:initial;" data-version="5"><p><span style="display: initial; color: rgb(255, 255, 255);">Let's plan a time to discuss how we can help your business</span></p></div> 
+ <div class="u_1847520284 dmRespRow" id="1847520284"> <div class="dmRespColsWrapper" id="1185794754"> <div class="u_1653036637 dmRespCol small-12 medium-6 large-6" id="1653036637"> <a data-display-type="block" class="u_1639063776 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="contact.html" data-element-type="dButtonLinkId" id="1639063776" icon-name="icon-apple"> <span class="iconBg" id="1621167459"> <span class="icon hasFontIconstar hasFontIcon icon-apple" id="1902569746"></span> 
+</span> 
+ <span class="text" id="1534023726">Get a Free Consultation</span> 
+</a> 
+</div> 
+ <div class="u_1049909335 dmRespCol small-12 medium-6 large-6" id="1049909335"> <div data-element-type="spacer" class="dmSpacer" id="1589401095"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1777654510 dmRespCol small-12 large-6 medium-6" id="1777654510"> <div data-element-type="spacer" class="u_1649094084 dmSpacer" id="1649094084"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1399400778 dmRespRow dmSectionNoParallax" style="text-align: center;" id="1399400778" data-gallery-bg="eyJzbGlkZXMiOlsiaHR0cHM6Ly9pcnQtY2RuLm11bHRpc2NyZWVuc2l0ZS5jb20vbWQvdW5zcGxhc2gvZG1zM3JlcC9tdWx0aS9waG90by0xNTAyOTE5MDg4NzgzLTExYzg0NTQ1NWNiOS5qcGciXX0="> <div class="dmRespColsWrapper" id="1823567089"> <div class="u_1077024185 dmRespCol small-12 large-3 medium-3" id="1077024185"> <div class="u_1512076892 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1512076892"> <a href="index.htm" id="1469210321" file="false"><img src="499b3704/dms3rep/multi/opt/payment%20launch4-final-180w.png" id="1755597865" class="" data-dm-image-path="https://irp.cdn-website.com/499b3704/dms3rep/multi/payment+launch4-final.png" width="845" height="212" onerror="handleImageLoadError(this)"></a> 
+</div> 
+ <div class="u_1609226804 dmNewParagraph" data-element-type="paragraph" id="1609226804" style="transition:none;display:block;line-height:initial;" data-version="5"> <h5><span style="color: var(--color_3); display: initial;">Our expertise will help your business streamline all of your payment processing needs</span></h5> 
+ <h5 class="text-align-left"><span style="display: initial;"><br></span></h5> 
+</div></div> 
+ <div class="u_1992413430 dmRespCol small-12 large-3 medium-3" id="1992413430"> <div class="u_1484988018 dmNewParagraph" data-element-type="paragraph" id="1484988018" style="line-height:initial;" data-version="5"> <h5 class="text-align-left size-15"><span class="font-size-15" style="color: var(--color_4); font-weight: 700; display: initial;">Contact us</span><span style="display: initial;"><br></span></h5> 
+</div> <div class="u_1303702915 dmNewParagraph" data-element-type="paragraph" id="1303702915" style="transition:opacity 1s ease-in-out;line-height:initial;" data-version="5"> <h5 style="line-height: 2.4;"><span class="" style="display: initial; color: var(--color_3);"><span style="display: initial; color: var(--color_3);">Email:</span> 
+</span><a href="mailto:activate@paymentlaunch.com" runtime_url="mailto:activate@paymentlaunch.com" type="email" style="display: initial; color: var(--color_2);">activate@paymentlaunch.com</a><span class="m-font-size-13 font-size-16" style="display: initial; color: var(--color_3);"><br></span></h5> 
+ <h5 style="line-height: 2.4;"><span class="" style="display: initial; color: var(--color_3);"><span style="display: initial; color: var(--color_3);">Phone:</span> 
+</span><a href="tel:727-420-2198" runtime_url="tel:727-420-2198" type="call" style="display: initial; color: var(--color_2);">727-420-2198</a></h5> 
+ <h5 style="line-height: 2.4;"><span style="display: initial; color: var(--color_3);">United States</span></h5> 
+</div></div> 
+ <div class="u_1399642028 dmRespCol small-12 large-3 medium-3" id="1399642028"> <div class="dmNewParagraph" data-element-type="paragraph" id="1725422899" style="transition:opacity 1s ease-in-out;line-height:initial;" data-version="5"> <h5 class="size-15"><span class="font-size-15" style="display: initial; font-weight: 700; color: var(--color_3);">Menu</span><span style="display: initial;"><span class="ql-cursor">﻿</span></span></h5> 
+</div> <nav class="u_1787690367 unifiednav_vertical effect-text-fill main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_4" layout-sub="" data-show-vertical-sub-items="HOVER" id="1787690367" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://irp-cdn.multiscreensite.com/md/dmtmpl/5d5e38ed-97f3-47f1-87a8-5cdfcc6b6809/dms3rep/multi/desktop/logo-02.svg" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="index.htm" class="unifiednav__item  dmNavItemSelected  dmUDNavigationItem_010101845532  " target="" data-target-page-alias="" data-auto="selected-page"> <span class="nav-item-text " data-link-text="
+         PAYMENT LAUNCH
+        " data-auto="page-text-style">PAYMENT LAUNCH<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="credit-card-processing.html" class="unifiednav__item  dmUDNavigationItem_010101723297  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         CREDIT CARD PROCESSING
+        " data-auto="page-text-style">CREDIT CARD PROCESSING<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="credit-card-processing/point-of-sale.html" class="unifiednav__item  dmUDNavigationItem_010101699637  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           POINT OF SALE
+          " data-auto="page-text-style">POINT OF SALE<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="credit-card-processing/hardware/terminals.html" class="unifiednav__item  dmUDNavigationItem_010101840258  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           TERMINALS
+          " data-auto="page-text-style">TERMINALS<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="accept-payments/virtual-terminal-for-credit-card-processing.html" class="unifiednav__item  dmUDNavigationItem_010101111442  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           PAYMENT GATEWAY
+          " data-auto="page-text-style">PAYMENT GATEWAY<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="accept-payments/invoice-payments.html" class="unifiednav__item  dmUDNavigationItem_010101542897  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           MOBILE
+          " data-auto="page-text-style">MOBILE<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="cash-discount-program.html" class="unifiednav__item  dmUDNavigationItem_010101767391  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         CASH DISCOUNT PROGRAM
+        " data-auto="page-text-style">CASH DISCOUNT PROGRAM<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="credit-card-updater.html" class="unifiednav__item  dmUDNavigationItem_01010139112  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         CREDIT CARD UPDATER
+        " data-auto="page-text-style">CREDIT CARD UPDATER<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="payment-processing-resources-credit-card-processing-ach-processing.html" class="unifiednav__item  dmUDNavigationItem_010101447605  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         RESOURCES
+        " data-auto="page-text-style">RESOURCES<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="contact.html" class="unifiednav__item  dmUDNavigationItem_010101567797  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         CONTACT US
+        " data-auto="page-text-style">CONTACT US<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+ <div class="u_1386141616 dmRespCol small-12 large-3 medium-3" id="1386141616"> <div class="u_1131799532 align-center text-align-center dmSocialHub" id="1131799532" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="http://linkedin.com/" target="_blank" dm_dont_rewrite_url="true" aria-label="linkedin" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Linkedin&apos;)"> <span class="dmSocialLinkedin icon-linkedin oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="float"></span> 
+</a> 
+ <a href="https://instagram.com/paymentlaunch" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="float"></span> 
+</a> 
+ <a href="https://facebook.com/" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="float"></span> 
+</a> 
+ <a href="https://twitter.com/" target="_blank" dm_dont_rewrite_url="true" aria-label="twitter" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Twitter&apos;)"> <span class="dmSocialTwitter dm-social-icons-twitter oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="float"></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1530030108" style="text-align: center;" id="1530030108"> <div class="dmRespColsWrapper" id="1830376740"> <div class="dmRespCol small-12 medium-6 large-6" id="1751076525"> <div class="dmNewParagraph" data-element-type="paragraph" id="1160474855" style="transition:opacity 1s ease-in-out;line-height:initial;" data-version="5"> <h5 class="size-15 m-text-align-center"><span class="font-size-15" style="color: var(--color_4); font-weight: 300; display: initial;">&copy; All rights reserved</span></h5> 
+</div></div> 
+ <div class="dmRespCol small-12 medium-6 large-6" id="1829049469"> <div class="dmNewParagraph u_1239926040" data-element-type="paragraph" id="1239926040" style="transition: opacity 1s ease-in-out 0s; line-height: initial; text-align: right;" data-version="5"> <h5 class="text-align-right size-15 m-text-align-center"><span class="font-size-15" style="color: var(--color_4); font-weight: 300; display: initial;">Paymentlauch.com</span></h5> 
+</div></div> 
+</div> 
+</div> 
+</div> 
+ <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+    </div>
+</div>
+<!--  Add full CSS and Javascript before the close tag of the body if needed -->
+
+
+
+
+<!-- Google Fonts Include -->
+
+<!-- loadCSS function fonts.jsp-->
+
+
+
+<link rel="preload" href="fonts/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Prata:ital,wght@0,400&family=Cardo:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Amiko:ital,wght@0,400;0,600;0,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;subset=latin-ext&amp;display=swap" as="style" fetchpriority="low" onload="loadCSS(this)"><!-- RT CSS Include d-css-runtime-desktop-one-package-structured-global-->
+<link rel="preload" as="style" fetchpriority="low" onload="loadCSS(this)" href="mnlt/production/4135/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-structured-global.min.css">
+
+<!-- End of RT CSS Include -->
+
+<link rel="preload" href="WIDGET_CSS/b4b0d5056f70fec010ddf677ad8b39b2.css" id="widgetCSS" as="style" fetchpriority="low" onload="loadCSS(this)">
+
+<!-- Support `img` size attributes -->
+<style>img[width][height] {
+  height: auto;
+}</style>
+
+<!-- Support showing sticky element on page only -->
+<style>
+  body[data-page-alias="home"] #dm [data-show-on-page-only="home"] {
+    display: block !important;
+  }
+</style>
+
+<!-- This is populated in Ajax navigation -->
+<style id="pageAdditionalWidgetsCss" type="text/css">
+</style>
+
+
+
+
+<!-- Site CSS -->
+<link rel="preload" href="499b3704/files/499b3704_withFlex_1.min.css?v=592" id="siteGlobalCss" as="style" fetchpriority="low" onload="loadCSS(this)">
+
+
+
+<style id="customWidgetStyle" type="text/css">
+
+</style>
+<style id="innerPagesStyle" type="text/css">
+    
+</style>
+
+
+<style id="additionalGlobalCss" type="text/css">
+</style>
+
+<!-- Page CSS -->
+<link rel="preload" href="499b3704/files/499b3704_home_withFlex_1.min.css?v=592" id="homeCssLink" as="style" fetchpriority="low" onload="loadCSS(this)">
+
+<style id="pagestyle" type="text/css">
+    
+</style>
+
+<style id="pagestyleDevice" type="text/css">
+    
+</style>
+
+<!-- Flex Sections CSS --><style id="globalFontSizeStyle" type="text/css">
+    .font-size-36, .size-36, .size-36 > font { font-size: 36px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-15, .size-15, .size-15 > font { font-size: 15px !important; }.font-size-20, .size-20, .size-20 > font { font-size: 20px !important; }.font-size-32, .size-32, .size-32 > font { font-size: 32px !important; }
+</style>
+<style id="pageFontSizeStyle" type="text/css">
+</style>
+
+<!-- ========= JS Section ========= -->
+
+<script>
+    var isWLR = true;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "ENGLISH"
+    window.isSitePreview = false;
+</script>
+<script>
+    window.customWidgetsFunctions["f6ba52a1b66d4987903b87fdb476a9ce~259"] = function (element, data, api) {
+        let actionLink = "https://googlereviews.api-files.com/admin/php/actions.php";
+let create = new Create();
+let siteID = data.siteId;
+let device = data.device;
+let headerHeight = $('.dmHeaderContainer').css("position") == "fixed" ? parseFloat($('.dmHeaderContainer').outerHeight()) : 0;
+let scrollTo = $(element).offset().top - headerHeight - 30;
+let noReviewText = "No Reviews Yet!";
+let starIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="width: 25px; height: auto;">
+                    <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                </svg>`;
+
+let reviewList = data.config.reviewList;
+let emptyReview = data.config.emptyReview;
+let hideEmptyReview = data.config.hideEmptyReview;
+let hideImage = data.config.hideImage ? 'hideImage' : '';
+let hideHeader = data.config.hideHeader;
+let shadow = data.config.shadow;
+let starColor = data.config.starColor;
+
+let layout = data.config.layout;
+let type = data.config.type;
+
+// Filter Options
+let lowestRating = parseFloat(data.config.lowestRating);
+let sortBy = data.config.sortBy ? data.config.sortBy : "default";
+
+let transReviews = data.config.transReviews;
+
+// Slider Options
+let autoplay = data.config.autoplay;
+let autoplayDelay = data.config.autoplayDelay;
+let loop = data.config.loop;
+let pagination = data.config.pagination;
+let navigation = data.config.navigation;
+let desktopSlidesPerView = data.config.desktopSlidesPerView;
+let tabletSlidesPerView = data.config.tabletSlidesPerView;
+let mobileSlidesPerView = data.config.mobileSlidesPerView;
+
+// Pagination Options
+let desktopPageSize = parseInt(data.config.desktopPageSize);
+let tabletPageSize = parseInt(data.config.tabletPageSize);
+let mobilePageSize = parseInt(data.config.mobilePageSize);
+
+// Card Options
+let cardDesktop = data.config.cardDesktop
+let cardTablet = data.config.cardTablet
+let cardMobile = data.config.cardMobile
+
+// List Options
+let defaultShown = data.config.defaultShown;
+let buttonAlignment = data.config.buttonAlignment;
+
+// Read More
+let desktopCollapsedLine = data.config.desktopCollapsedLine;
+let tabletCollapsedLine = data.config.tabletCollapsedLine;
+let mobileCollapsedLine = data.config.mobileCollapsedLine;
+
+// Schema.org Markup
+// let schemaMarkup = data.config.schemaMarkup;
+let schemaMarkup = true;
+let ballonBackground = data.config.ballonBackground;
+let slidesPerView, pageSize, cardPerRow, collapsedLine, activeLocation, reviewsLength, rating_average;
+
+switch (device) {
+	case 'desktop':
+		slidesPerView = desktopSlidesPerView;
+		pageSize = desktopPageSize;
+		cardPerRow = cardDesktop;
+		break;
+	case 'tablet':
+		slidesPerView = tabletSlidesPerView;
+		pageSize = tabletPageSize;
+		cardPerRow = cardTablet;
+		break;
+	default:
+		slidesPerView = mobileSlidesPerView;
+		pageSize = mobilePageSize;
+		cardPerRow = cardMobile;
+}
+
+//CREATE MULTIPLE LINK SOURCE CSS
+cssLibrary('fontAwesomeSource', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+cssLibrary('paginationCss', 'https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css');
+cssLibrary('swiperCSS', 'https://unpkg.com/swiper/swiper-bundle.min.css');
+
+
+dmAPI.runOnReady('init', function () {
+	dmAPI.loadScript('https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.0.2/readmore.js', function () {
+		dmAPI.loadScript('https://unpkg.com/swiper/swiper-bundle.min.js', function () {
+			dmAPI.loadScript('https://irt-cdn.multiscreensite.com/8914113fe39e47bcb3040f2b64f71b02/files/uploaded/paginates.min.js', function () {
+				dmAPI.loadScript('https://cdnjs.cloudflare.com/ajax/libs/luxon/3.0.3/luxon.min.js', function () {
+
+					// GET BUSINESS DETAILS FOR PLACE ID
+					let businessDetailsOption = {
+						action: "Fetch Account Owner Details",
+						tableName: "Site Widgets",
+						columnName: "Site Name",
+						keyword: siteID
+					}
+
+					let checkDetails = action(businessDetailsOption);
+					checkDetails.then(resp => {
+						activeLocation = JSON.parse(resp).response.records[0].fields['Active Location'];
+						let companyDetails = JSON.parse(resp).response.records[0].fields['Company Details'];
+						let splitCompanyDetails = companyDetails.split("~");
+						let fixedCompanyDetails = splitCompanyDetails.map((i, index) => {
+							let afterDescription = i.substring(i.indexOf(`","address"`));
+							let rawDescription = i.substring(i.indexOf("description") + 14).replace(afterDescription, "");
+							let formattedDescription = rawDescription.replaceAll('"', '\\"');
+							let fixedDescription = i.replace(rawDescription, formattedDescription);
+							return fixedDescription;
+						});
+
+						let activeCompany = fixedCompanyDetails.map(i => JSON.parse(i));
+						let activeCompanyList = reviewButton(activeCompany);
+
+						$(element).find('div.gr-Button-Column').html(activeCompanyList);
+
+						let numButton = $(element).find("div.gr-Buttons-Wrapper a").length > 5 ? $(element).find("div.gr-Buttons-Wrapper").css({
+							"overflow-y": "scroll"
+						}) : '';
+					});
+
+					// GET REVIEWS FROM ACTIVE LOCATION
+					let options = {
+						action: "Get Reviews",
+						tableName: "Site Widgets",
+						columnName: "Site Name",
+						keyword: siteID
+					};
+
+					let getReviews = action(options);
+					getReviews.then((response, request) => {
+						let resp = JSON.parse(response).response;
+						if (request == "success") {
+							if (resp.length >= 1) {
+								userReviews(response)
+								schemaMarkup && schema(resp)
+								
+								$("div.gr-Rate-Star.rate-1 svg:nth-child(-n+1), div.gr-Rate-Star.rate-2 svg:nth-child(-n+2), div.gr-Rate-Star.rate-3 svg:nth-child(-n+3), div.gr-Rate-Star.rate-4 svg:nth-child(-n+4), div.gr-Rate-Star.rate-5 svg:nth-child(-n+5)").css("fill", starColor);
+							} else {
+								if (data.inEditor) {
+									$(element).find('.gr-Main-Container').html(`<div class="gr-Section-NoResults">
+																						<i class="fas fa-exclamation-circle"></i>
+																						<div class="gr-NoResults-Text">${noReviewText}</div>
+																					</div>`);
+								} else {
+									setTimeout(preloader(), 3000);
+								}
+							}
+						} else {
+							if (data.inEditor) {
+								$(element).find('.gr-Main-Container').html(`<div class="gr-Section-NoResults">
+																					<i class="fas fa-exclamation-circle"></i>
+																					<div class="gr-NoResults-Text">Error on Data Structure</div>
+																				</div>`);
+							} else {
+								setTimeout(preloader(), 3000);
+							}
+						}
+					});
+					
+					$(element).find('div.ballon div.gr-Rate-Wrapper').css({
+                    	"background-color": `${ballonBackground}`
+                    });
+                    
+                    $(element).find('div.ballon div.gr-Arrow-Container').css({
+                    	"border-top-color": `${ballonBackground}`
+                    })
+
+					if (shadow && layout !== 'ballon') $(element).find("div.gr-Main-Container").addClass("swiper-shadow");
+
+					hideHeader && $(element).find(".gr-Header-Section").hide();
+
+					$('div.swiper div div.swiper-slide').mouseenter(function () {
+						$(this).css({
+							"cursor": "grab"
+						})
+					}).mouseleave(function () {
+						$(this).css({
+							"cursor": "default"
+						})
+					}).mousedown(function () {
+						$(this).css({
+							"cursor": "grabbing"
+						})
+					})
+
+				});
+			});
+		});
+	});
+});
+
+function reviewButton(items) {
+	const removeDup = removeDuplicatedKey(items, 'placeID');
+	// const removeDup = removeDuplicates(items.map(i => locationDetails = JSON.parse(i)), 'placeID');
+	if (removeDup.length > 1) {
+		return `<nav>
+                    <label for="touch">
+                        <span>Write a review</span>
+                    </label>               
+                    <input type="checkbox" id="touch"> 
+                    <div class="gr-Buttons-Wrapper">
+                        ${createButton(removeDup)}
+                    </div>
+                </nav>`;
+	} else {
+		return createButton(removeDup);
+	}
+}
+
+function createButton(removeDup) {
+	return removeDup.map(function (i) {
+		if (!activeLocation.includes(i.locationName)) return '';
+		return `<a class="gr-Location-Button" href="https://search.google.com/local/writereview?placeid=${i.placeID}" target="_blank">
+                    <div class="gr-Location-Name">
+                        <p>${i.locationName}</p>
+                    </div>
+				</a>`;
+	}).join('');
+}
+
+function userReviews(response) {
+	let raw_reviews = JSON.parse(response).response;
+	if (!raw_reviews) {
+		$(element).find('.gr-Main-Container').html(`
+			<div class="gr-Section-NoResults">
+				<i class="fas fa-exclamation-circle"></i>
+				<div class="gr-NoResults-Text">${noReviewText}</div>
+			</div>
+		`);
+		$(element).find(".widget-Loader-Container").hide();
+		$(element).find(".gr-Main-Container").show();
+	}
+
+	let reviews = raw_reviews.filter(i => {
+// 		let comment = i.comment ? i.comment : i.review ? i.review.comment : "";
+		let review = i.original_review ? i.original_review : i.review ? i.translated_review : "";
+
+		if (hideEmptyReview == true) {
+			if (!review) return
+		}
+
+		let userRating = i.starRating ? create.numRate(i.starRating) : create.numRate(i.review.starRating);
+		return userRating >= lowestRating;
+	});
+
+	reviewsLength = reviews.length;
+
+	let totalRating = raw_reviews.map((i) => {
+		return create.numRate(i.review ? i.review.starRating : i.starRating);
+	});
+
+	rating_average = totalRating.reduce((a, b) => {
+		return a + b;
+	}) / totalRating.length;
+
+	$(element).find('.gr-Title-Ratings').html(`<span>Average</span>: ${rating_average.toFixed(2)} rating out of ${totalRating.length} reviews`);
+
+	if (Object.keys(JSON.parse(response).response).length <= 0) {
+		$(element).find('.googleReview-Section-Results').html(`
+				<div class="googleReview-Section-NoResults">
+					<svg width="50px" height="50px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g id="#000000ff">
+                        <path opacity="1.00" d=" M 121.40 21.55 C 144.36 20.07 167.74 26.29 186.87 39.09 C 208.00 53.06 223.90 74.76 230.69 99.18 C 237.74 124.07 235.30 151.53 223.84 174.73 C 213.09 196.82 194.47 214.96 172.09 225.10 C 149.20 235.61 122.52 237.52 98.35 230.43 C 73.57 223.33 51.69 206.82 37.92 185.04 C 24.72 164.44 19.09 139.17 22.15 114.90 C 24.97 91.29 36.12 68.81 53.09 52.16 C 71.17 34.17 95.91 23.02 121.40 21.55 M 124.28 75.36 C 119.98 76.88 117.11 81.38 117.34 85.91 C 117.36 103.61 117.27 121.32 117.38 139.02 C 117.41 144.57 122.43 149.43 127.97 149.31 C 133.53 149.45 138.58 144.60 138.61 139.03 C 138.71 121.02 138.70 103.01 138.62 85.01 C 138.70 77.99 130.76 72.65 124.28 75.36 M 124.43 160.66 C 117.68 162.72 115.14 171.98 119.67 177.31 C 124.42 183.66 136.01 181.83 138.08 173.98 C 141.17 166.05 132.32 157.36 124.43 160.66 Z" />
+                        </g>
+                    </svg>
+					<div class="googleReview-NoResults-Text">${noReviewText}</div>
+				</div>`);
+		$(element).find(".widget-Loader-Container").hide();
+		$(element).find(".gr-Main-Container").show();
+		return;
+	}
+
+	let reviewsDOM = create.layoutDOM(reviews);
+	$(element).find('.swiper-wrapper').html(reviewsDOM);
+
+	if (type == "slider") {
+		$(element).find(".gr-Main-Container").addClass("swiper");
+		const collapseDescription = setTimeout(readMoreDescription, 100);
+
+		if (navigation && type == "slider") {
+			$(element).find(".gr-Main-Container").append(`<div class="swiper-button-next"></div><div class="swiper-button-prev"></div>`);
+		}
+
+		if (pagination && type == "slider") {
+			$(element).find(".gr-Main-Container").append(`<div class="swiper-pagination"></div>`);
+		}
+
+		const swiper = new Swiper('.swiper', {
+			loop,
+			slidesPerView,
+			spaceBetween: 20,
+			autoplay: {
+				delay: autoplayDelay,
+				disableOnInteraction: true,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				dynamicBullets: true,
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		})
+
+		if (!autoplay) swiper.autoplay.stop()
+
+	} else if (type == "list") {
+		$(element).find(".gr-Main-Container").addClass("list");
+		$(element).find(".gr-Main-Container").append(`<div class="swiper-load-button"><div class="swiper-load-more">Show More</div><div class="swiper-load-less">Show Less</div></div>`);
+		$(element).find("div.gr-Text-Description").removeClass('text-ellipsis');
+		// const collapseDescription = setTimeout(readMoreDescription, 100);
+
+		if (buttonAlignment == 'right') {
+			$(element).find('div.swiper-load-button div').css({
+				"margin-right": "0"
+			});
+		}
+
+		if (buttonAlignment == 'left') {
+			$(element).find('div.swiper-load-button div').css({
+				"margin-left": "0"
+			});
+		}
+
+		loadMoreLess();
+
+	} else {
+		$(element).find(".gr-Main-Container").addClass("grid");
+		$(element).find(".gr-Main-Container").pagination({
+			dataSource: reviews,
+			pageSize,
+			callback: function (data, pagination) {
+				let structure = data.length != 0 ? create.layoutDOM(data) : `
+					<div class="googleReview-Section-NoResults">
+						<svg width="50px" height="50px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg">
+							<g id="#000000ff">
+							<path opacity="1.00" d=" M 121.40 21.55 C 144.36 20.07 167.74 26.29 186.87 39.09 C 208.00 53.06 223.90 74.76 230.69 99.18 C 237.74 124.07 235.30 151.53 223.84 174.73 C 213.09 196.82 194.47 214.96 172.09 225.10 C 149.20 235.61 122.52 237.52 98.35 230.43 C 73.57 223.33 51.69 206.82 37.92 185.04 C 24.72 164.44 19.09 139.17 22.15 114.90 C 24.97 91.29 36.12 68.81 53.09 52.16 C 71.17 34.17 95.91 23.02 121.40 21.55 M 124.28 75.36 C 119.98 76.88 117.11 81.38 117.34 85.91 C 117.36 103.61 117.27 121.32 117.38 139.02 C 117.41 144.57 122.43 149.43 127.97 149.31 C 133.53 149.45 138.58 144.60 138.61 139.03 C 138.71 121.02 138.70 103.01 138.62 85.01 C 138.70 77.99 130.76 72.65 124.28 75.36 M 124.43 160.66 C 117.68 162.72 115.14 171.98 119.67 177.31 C 124.42 183.66 136.01 181.83 138.08 173.98 C 141.17 166.05 132.32 157.36 124.43 160.66 Z" />
+							</g>
+						</svg>
+						<div class="googleReview-NoResults-Text">${noReviewText}</div>
+					</div>`;
+				$(element).find('div.swiper-wrapper').html(structure);
+				const collapseDescription = setTimeout(readMoreDescription, 100);
+				$(element).find('div.gr-Main-Container.grid div.swiper-wrapper').css({'grid-template-columns': `repeat(${cardPerRow}, 1fr)`})
+			},
+			afterPageOnClick: function () {
+				window.scrollTo({
+					top: scrollTo,
+					behavior: 'smooth'
+				});
+			},
+			afterNextOnClick: function () {
+				window.scrollTo({
+					top: scrollTo,
+					behavior: 'smooth'
+				});
+			},
+			afterPreviousOnClick: function () {
+				window.scrollTo({
+					top: scrollTo,
+					behavior: 'smooth'
+				});
+			},
+			afterPaging: function () {
+				$('.googleReview-Panel-Item').hide().fadeIn();
+			}
+		});
+	}
+
+	switch (layout) {
+		case 'postcard':
+			$(element).find(".swiper-wrapper").addClass("postcard");
+			break;
+		case 'ballon':
+			$(element).find(".swiper-wrapper").addClass("ballon");
+			break;
+		default:
+			$(element).find(".swiper-wrapper").addClass("classic");
+	}
+
+	setTimeout(preloader(), 3000);
+
+}
+
+function Create() {
+	this.layoutDOM = (obj) => {
+		let key = sortBy == "NtoO" || sortBy == "OtoN" ? "createTime" : "starRating";
+
+		if (sortBy) {
+			obj.sort((a, b) => {
+				let sort_a = a[key] ? this.numRate(a[key]) : this.numRate(a.review[key]);
+				let sort_b = b[key] ? this.numRate(b[key]) : this.numRate(b.review[key]);
+				switch (sortBy) {
+					case "LtoH":
+						return sort_a < sort_b ? -1 : 1;
+					case "HtoL":
+						return sort_a > sort_b ? -1 : 1;
+					case "OtoN":
+						return sort_a < sort_b ? -1 : 1;
+					case "NtoO":
+						return sort_a > sort_b ? -1 : 1;
+					default:
+						return obj;
+				}
+			});
+		}
+
+		let noData = `<div class="gr-Section-NoResults">
+							<i class="fas fa-exclamation-circle"></i>
+							<div class="gr-NoResults-Text">${obj.length} result found.</div>
+						</div>`;
+		return obj.length != 0 ? create.structure(obj) : noData;
+	}
+
+	this.structure = (obj) => {
+		return obj.map(i => {
+			let displayName = i.displayName ? i.displayName : i.review.displayName;
+			let defaultImage = `https://via.placeholder.com/150.png?text=${displayName.charAt(0)}`;
+			let reviewsText = transReviews ? i.translated_review : i.original_review;
+ 			// let comment = i.comment ? i.comment : i.review ? i.review.comment : "";
+			let userRating = i.starRating ? this.numRate(i.starRating) : this.numRate(i.review.starRating);
+			let profilePhotoUrl = i.profilePhotoUrl ? i.profilePhotoUrl : i.review.profilePhotoUrl;
+			let createTime = i.createTime ? i.createTime : i.review.createTime;
+			let DateTime = luxon.DateTime;
+			let friendlyDate = DateTime.fromISO(createTime).toLocaleString(DateTime.DATE_FULL);
+			let newDate = DateTime.fromISO(createTime).toRelative();
+
+			return `<div class="swiper-slide gr-Section-Slide">
+						<div>
+							<div class="gr-Img-Wrapper ${hideImage}">
+								<img src="${profilePhotoUrl ? i.profilePhotoUrl : defaultImage}" alt="${displayName}'s Image" draggable="false">
+							</div>
+							<div class="gr-Info-Wrapper">
+								<div class="gr-Info-Text">
+									<div class="gr-Text-Name">${displayName}</div>
+									<div class="gr-Text-Date" title="${friendlyDate}">${newDate}</div>
+								</div>
+							</div>
+							<div class="gr-Rate-Wrapper">
+								<div class="gr-Rate-Star rate-${userRating}">
+								    ${starIcon}${starIcon}${starIcon}${starIcon}${starIcon}
+								</div>
+								<div class="gr-Arrow-Container"></div>
+								<div class="gr-Text-Description text-ellipsis">${reviewsText ? reviewsText : ''}</div>
+							</div>
+						</div>
+					</div>`;
+		}).join(""); //<div class="gr-Text-Description text-ellipsis">${reviewsText ? reviewsText : ''}</div>  ||  <div class="gr-Text-Description text-ellipsis">${comment ? comment.replace('(Translated by Google) ','') :""}</div>
+		//<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+	};
+
+	this.numRate = (str) => {
+		let rates = ['ZERO', 'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE'];
+		if (!rates.includes(str)) {
+			return new Date(str);
+		}
+		return rates.indexOf(str);
+	};
+}
+
+function schema(resp) {
+
+	let schemaData = ''
+    resp.reverse().slice(0, 1).map(i => {
+        let addressRegion, postalCode, streetAddress, phoneNumber;
+        let splitCompanyDetails = i.company_details.split("~");
+        splitCompanyDetails.filter(j => {
+            let data = JSON.parse(j);
+            if (data.locationName == i.active_location) {
+                addressRegion = data.regionCode
+                postalCode = data.PostalCode
+                streetAddress = data.Street
+                phoneNumber = data.phoneNumber
+            }
+        })
+    
+    schemaData = `
+            {
+                "@context": "https://schema.org/",
+                "@type": "Review",
+                "itemReviewed": {
+                    "@type": "Organization",
+                    "image": "",
+                    "name": "${i.active_location}",
+                    "servesCuisine": "",
+                    "priceRange": "",
+                    "telephone": "${phoneNumber}",
+                    "address" :{
+                        "@type": "PostalAddress",
+                        "streetAddress": "${streetAddress}",
+                        "addressLocality": "",
+                        "addressRegion": "",
+                        "postalCode": "${postalCode}",
+                        "addressCountry": "${addressRegion}"
+                    }
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "${create.numRate(i.starRating)}"
+                },
+                "name": "${i.original_review}",
+                "author": {
+                    "@type": "Person",
+                    "name": "${i.displayName}"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": ""
+                }
+            }
+        `
+    })
+    
+    const script = document.createElement('script')
+    script.setAttribute('type', 'application/ld+json')
+    script.textContent = schemaData
+    $(element).append(script)
+}
+
+function loadMoreLess() {
+
+	// let defaultShown = 3; //3 || 6 || 9
+	$(`div.swiper-wrapper div.gr-Section-Slide:lt(${defaultShown})`).show();
+	$('div.swiper-load-less').hide();
+
+	$('div.swiper-load-more').on('click', function (e) {
+
+		e.preventDefault();
+		// $('div.swiper-load-less').show();
+
+		shown = $('div.swiper-wrapper div.gr-Section-Slide:visible').length + 3;
+		
+		if (shown < reviewsLength) {
+			$('div.swiper-wrapper div.gr-Section-Slide:lt(' + shown + ')').show();
+		} else {
+			$('div.swiper-wrapper div.gr-Section-Slide:lt(' + shown + ')').show();
+			$('div.swiper-load-more').hide();
+			$('div.swiper-load-less').show();
+		}
+
+		$('html,body').animate({
+			scrollTop: $(this).offset().top
+		}, 1000)
+	})
+	// .on('mouseup', function () {
+	// 	const collapseDescription = setTimeout(readMoreDescription, 100);
+	// })
+
+	$('div.swiper-load-less').on('click', function (e) {
+
+		e.preventDefault();
+		// const collapseDescription = setTimeout(readMoreDescription, 100);
+		$(`div.swiper-wrapper div.gr-Section-Slide:lt(${defaultShown})`).show();
+		$('div.swiper-load-more').show();
+
+		// if (shown >= reviewsLength) {
+		// 	$('div.swiper-load-more').hide()
+		// 	$(this).show()
+		// } else {
+		// 	$('div.swiper-load-more').show()
+		// 	$(this).hide();
+		// }
+
+		$('html,body').animate({
+			scrollTop: $(this).offset().top
+		}, 1000)
+	})
+
+}
+
+function readMoreDescription() {
+	let textHeightArr = [];
+
+	$(element).find("div.gr-Text-Description").each((index, element) => {
+		let textHeight = $(element).height();
+		textHeightArr.push(textHeight);
+	})
+
+	let collapsedHeight = textHeightArr.reduce(function (accumulatedValue, currentValue) {
+		return Math.max(accumulatedValue, currentValue);
+	});
+
+	$(element).find("div.ballon div div.gr-Rate-Wrapper").css({
+		"min-height": `${collapsedHeight + 104.5}px`
+	});
+
+	$(element).find("div.gr-Text-Description").removeClass('text-ellipsis');
+
+	$(element).find('div.gr-Text-Description').readmore({
+		speed: 500,
+		collapsedHeight,
+		moreLink: '<div class="gr-Text-ReadMore"><span class="text">Read More</span></div>',
+		lessLink: '<div class="gr-Text-ReadMore"><span class="text">Read Less</span></div>',
+		embedCSS: true,
+		startOpen: false
+	});
+}
+
+function cssLibrary(id, href) {
+	if (!document.getElementById(id)) {
+		var head = document.getElementsByTagName('head')[0];
+		var link = document.createElement('link');
+		link.id = id;
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = href;
+		link.crossOrigin = 'anonymous';
+		head.appendChild(link);
+	}
+}
+
+function action(data) {
+	return $.ajax({
+		url: actionLink,
+		method: "POST",
+		data: JSON.stringify(data)
+	});
+}
+
+function getParameterByName(name, url) {
+	if (!url) url = window.location.href;
+	name = name.replace(/[\[\]]/g, '\\$&');
+	var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+		results = regex.exec(url);
+	if (!results) return null;
+	if (!results[2]) return '';
+	return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+function removeDuplicates(array, key) {
+	return array.reduce(function (arr, item) {
+		const removed = arr.filter(function (i) {
+			return i[key] !== item[key];
+		});
+		return [...removed, item];
+	}, []);
+}
+
+function removeDuplicatedKey(arr, key) {
+	return [...new Map(arr.map(item => [item[key], item])).values()]
+}
+
+function preloader() {
+	$(element).find('div.widget-Loader-Container').fadeOut().remove()
+	$(element).find('div.gr-Main-Container').fadeIn()
+}
+    };
+</script>
+<script>
+    window.customWidgetsFunctions["7ebf92fcfe734a44a1911cd164200ec0~288"] = function (element, data, api) {
+        /* * Mega Menu
+
+* Aug 2020 
+* Version 1.0.2
+
+*Upon purchase of this widget, you acquire the right to use it; you're not actually 
+acquiring the widget itself.TheCamel.co is the owner of the intellectual property of this widget.
+The widget is for use only, it is not to be on sold, lent, rented, given away, gifted you can’t 
+even put it in your will. It is for use for your sites only on the dashboard we install the item in.
+
+*Kindly refer to our Terms and Conditions for more info - http://www.thecamel.co/terms-and-conditions
+*/
+
+const site_name = data.siteId;
+
+const widgetId = data.id;
+
+let showHome = data.config.showHome;
+let ComponentAppend = new ComponentStructure();
+let navPos = data.config.navPos;
+let useDivider = data.config.useDivider;
+let divideStyle = data.config.dividerStyle;
+
+let device = data.device;
+let showSubNavTitle = data.config.showSubNavTitle;
+let navHover = data.config.navHover;
+let isSticky = data.config.isSticky;
+let showComArrow = data.config.showComArrow;
+
+let isMultiLang = window.Parameters.IsSiteMultilingual;
+let current_lang = isMultiLang ? window.Parameters.translatedPageUrl:"";// ex: /fr-ca || /en || ""
+let is_main_lang = isMultiLang && window.Parameters.translatedPageUrl == "";
+let is_home = window.Parameters.InitialPageAlias == "home" || window.Parameters.InitialPageAlias == current_lang.split("/")[1];
+
+let current_language = window.Parameters.translatedPageUrl == "" ? "" : `${window.Parameters.translatedPageUrl.split("/")[1]}`;
+
+let markup = getMenu_[site_name](); //getMenu_[site_name](); // defaultNav
+
+createMegaMenu(markup);
+
+isSticky == true ? $(element).attr('data-element-type', 'onelinksmenu') : '';
+
+// treat the widget's row as a navigation row
+(isSticky) ? $(element).parents('.dmRespRow').toggleClass('mini-header-hide-row mini-header-show-row') : $(element).parents('.dmRespRow').removeClass('mini-header-show-row');
+
+function createMegaMenu(arrObj) { // DO NOT COPY FROM dashboard.js
+  if (!arrObj) {
+    $(element).find('.meganav-container').html(`<li class="nomarkup">Mega Menu Widget has been removed from the App Store.</li>`);
+    return
+  }
+  if (arrObj == "Click here to setup Mega Menu Widget" || arrObj == "Setup Mega Menu Widget") {
+    $(element).find('.meganav-container').html(`<div class="mega-menu-setup">${arrObj}</div>`);
+    return
+  }
+  let menuObj = typeof arrObj == "string" ? JSON.parse(arrObj) : arrObj;
+
+  $(element).find('.meganav-container').html("");
+  let navCreated = menuObj.map((obj, index) => {
+    let new_path;
+    let locale_url = obj['url'+current_language] || obj['url'+current_language] == "" ? obj['url'+current_language] : obj.url;
+
+    let itemLink = window.location.href.includes(data.siteId) && locale_url !== "" ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+    // https://webbuilder.localsearch.com.au/site/9c6609d8/residential?preview=true&insitepreview=true&dm_device=desktop
+    
+    let pathName = isActive(locale_url);
+    
+    let title_lang = obj['title'+current_language] ? obj['title'+current_language]:obj.title;
+    if (locale_url.includes("http") || locale_url == "") {
+      itemlink = locale_url;
+    } 
+    let isNoComponent = obj.components.length;
+    
+    
+    let navMenuStructure = `
+            ${useDivider && !showHome ? dividerStyle(divideStyle) : useDivider && showHome ? dividerStyle(divideStyle) : ''}
+            <li class="meganav-container__navlink-container ${isNoComponent == 0 ? 'noComponent' : 'hasComponent'} ${showComArrow ? "arrowShow" : ""}" data-menu="${index}">
+            ${locale_url !== "" ? `<a href="${itemLink}" class="meganav-container__navlink ${navHover} ${pathName ? 'activeNav' : ''}" target="${obj.newTab ? '_blank' : ''}">${title_lang}</a>` : `<span class="meganav-container__navlink ${pathName ? 'activeNav' : ''} ${navHover}">${title_lang}</span>`}
+                <div class="meganav-container__navlink-component-wrapper">
+                    <div class="meganav-container__navlink-component-container ${obj.orientation == 'Horizontal' ? obj.orientation : 'Vertical'} ${isNoComponent == 0 ? 'hidden' : ''}">
+                        ${ComponentAppend.structure(obj)}
+                    </div>
+                </div>
+            </li>`;
+    $(element).find('.meganav-container').append(navMenuStructure);
+    if (showHome) {
+      $(element).find('.meganav__divider:first-child').show();
+    } else {
+      $(element).find('.meganav__divider:first-child').hide();
+    }
+  });
+
+}
+
+function ComponentStructure() {
+    this.structure = function (data) {
+        return data.components.map((arr, compIndex) => {
+            let objKey = Object.keys(arr);
+            return this[objKey] === undefined ? this.empty_component() : this[objKey](arr[objKey], compIndex);
+        }).join("");
+    };
+    this.empty_component = function () {
+        return '';
+    };
+    this.componentTemplate = function (index, compIndex) {
+        let component = `
+        <div class="widget-builder__nav-components-wrapper widget-builder_links-list-card-theme" data-index="${index}">
+            <div class="widget-builder_nav-component-label widget-builder_links-list-title-theme">
+                <div class="widget-builder__accordion-btn" data-index="${index}" data-accordion="menu"></div>
+                <div class="widget-builder__accordion-icon-wrapper">
+                    <i class="fas fa-caret-right widget-builder__accordion-icon active"></i>
+                </div>
+                <div class="widget-builder__component-picker-wrapper">
+                    <select name="componentpicker" class="componentpicker widget-builder_input-title-field-theme" data-index="${index}" data-compindex="${compIndex}">
+                        <option value="free_text">Free Text</option>
+                        <option value="click_to_call">Click to Call</option>
+                        <option value="social_media">Social Media</option>
+                        <option value="contact_info">Contact Information</option>
+                        <option value="custom_button">Custom Buttons</option>
+                        <optgroup label="Multiple Sub Navigations">
+                            <option value="multi_sub_nav">Sub Navigation</option>
+                            <option value="ext_nav">Extended Sub Navigation</option>
+                            <option value="grid">Grid Columns</option>
+                        </optgroup>
+                        <optgroup label="Visual Media">
+                            <option value="thumbnail">Thumbnail</option>
+                            <option value="video">Video</option>
+                            <option value="stacked_images">Image Gallery</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="widget-builder__component-input-label">Component</div>
+                <div class="widget-builder_delete-navlink-btn-wrapper" title="Delete" data-accordion="comp">
+                    <i class="widget-builder_delete-navlink-btn fa fa-trash-alt" data-index="${index}" data-compindex="${compIndex}"></i>
+                </div>
+            </div>
+        </div>`;
+
+        return component;
+    };
+    this.free_text = function (text) {
+        let free_text = text['free_text' + current_language] ? text['free_text' + current_language] : text.free_text;
+        let textStructure = `
+            <div class="meganav-container__text meganav_container__component-spacing">
+                ${free_text}
+            </div>`;
+        return textStructure;
+    };
+    this.thumbnail = function (thumbnail) {
+        let locale_url = thumbnail['url'+current_language] ? thumbnail['url'+current_language] : `${thumbnail.url=="/home" ? "": `/${current_language}${thumbnail.url.replace(/_/g, "-")}`}`;
+        let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+        let link = `href="${itemLink || itemLink == "" ? itemLink : thumbnail.url}"`;
+        if (locale_url.includes("http") || thumbnail['url'+current_language] == "") {
+          link = `href="${thumbnail['url'+current_language] ? thumbnail['url'+current_language] : thumbnail.url}"`;
+        } 
+        let img_src = thumbnail['img_src' + current_language] ? thumbnail['img_src' + current_language] : thumbnail.img_src;
+        let alt = thumbnail['alt' + current_language] ? thumbnail['alt' + current_language] : thumbnail.alt;
+        let newTab = thumbnail['newTab' + current_language] ? thumbnail['newTab' + current_language] : thumbnail.newTab;
+        let thumbnailStructure = `
+            <div class="meganav-container__thumbnail-image meganav_container__component-spacing">
+                <a ${link !== 'href=""' ? link :""} class="meganav-container__thumbnail-image-wrapper" ${newTab == true ? 'target="_blank"' : ''}>             
+                    <img src="${img_src ? img_src : ""}" alt="${alt ? alt :""}">
+                </a>
+            </div>`;
+        return thumbnailStructure;
+    };
+    this.grid = function (items) {
+        let title_lang = items['title' + current_language] ? items['title' + current_language] : items.title;
+        let columnSize = items.columnSize;
+        let defaultWidth = items.defaultWidth;
+        let itemsList = items.grid_nav_list.map((i) => {
+            let title = i['title' + current_language] ? i['title' + current_language] : i.title;
+            let locale_url = i['url'+current_language] ? i['url'+current_language] : `${i.url=="/home" ? "": `/${current_language}${i.url.replace(/_/g, "-")}`}`;
+            
+            let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+            let link = `href="${itemLink || itemLink == "" ? itemLink : i.url}"`;
+            if (locale_url.includes("http") || i['url'+current_language] == "") {
+              link = `href="${i['url'+current_language] ? i['url'+current_language] : i.url}"`;
+            } 
+            let short_desc = i['short_desc' + current_language] ? i['short_desc' + current_language] : i.short_desc;
+            let icon = i['icon' + current_language] ? i['icon' + current_language] : i.icon;
+            return `
+                <a ${link !== 'href=""' ? link : ''} class="meganav-container__grid-sub-nav-wrapper horizontal" target="${i.newTab ? '_blank' : ''}">
+                    <div class="meganav-container__grid-sub-nav-icon">
+                        ${i.hideIcon ? '':`<img src="${icon ? icon : ""}" alt="">`}
+                        <div class="meganav-container__grid-sub-nav-link-title">${title ? title : ""}</div>
+                    </div>
+                    ${short_desc ? `<div class="meganav-container__grid-sub-nav-description">${short_desc}</div>` : ''}
+                </a>`;
+        }).join('');
+
+        let itemsNavStructure = `
+        <div class="meganav-container__grid-sub-nav-container meganav_container__component-spacing">
+            <div class="meganav-container__grid-sub-nav-title ${title_lang ? "" : "noTitle"}">${title_lang ? title_lang : 'Title'}</div>
+            <div class="meganav-container__grid-sub-nav-items ${items.topIcon ? 'meganav-container-grid-top-icons':''}" data-size="${columnSize}" style="width:${`${defaultWidth ? defaultWidth : 0}px`}">
+                ${itemsList}
+            </div>
+        </div>`;
+        return itemsNavStructure;
+    };
+    this.stacked_images = function (images) {
+        let title_lang = images['title' + current_language] ? images['title' + current_language] : images.title;
+        let defaultWidth = images.defaultWidth;
+
+        let imagesList = images.stack_nav_list.map((i) => {
+            let title = i['title' + current_language] ? i['title' + current_language] : i.title;
+            let locale_url = i['url'+current_language] ? i['url'+current_language] : `${i.url=="/home" ? "": `/${current_language}${i.url.replace(/_/g, "-")}`}`;
+            let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+            let link = `href="${itemLink || itemLink == "" ? itemLink : i.url}"`;
+            if (locale_url.includes("http") || i['url'+current_language] == "") {
+              link = `href="${i['url'+current_language] ? i['url'+current_language] : i.url}"`;
+            } 
+            let img_src = `${i['img_src' + current_language] ? i['img_src' + current_language] : i.img_src}"`;
+            let short_desc = i['short_desc' + current_language] ? i['short_desc' + current_language] : i.short_desc;
+            let imageNavListStructure = `
+                <a ${link !== 'href=""' ? link : ''} class="meganav-container__stack-sub-nav-wrapper horizontal ${i.topImage ? "meganav-container__stack-sub-nav-wrapper-topimage":""}" target="${i.newTab ? '_blank' : ''}">
+                    ${!i.hideIcon ? `<div class="meganav-container__stack-sub-nav-image">${img_src ? `<img src="${img_src}" alt="${title}">` : ''}</div>` : ""}
+                    <div class="meganav-container__services-content meganav-container__stack-sub-nav-content">
+                        <div class="meganav-container__stack-sub-nav-link-title">${title ? title : ''}</div>
+                        ${short_desc ? `<div class="meganav-container__stack-sub-nav-description">${short_desc}</div>` : ''}
+                    </div>
+                </a>`;
+            return imageNavListStructure;
+        }).join('');
+        let imageNavStructure = `
+        <div class="meganav-container__stack-sub-nav-container meganav_container__component-spacing" style="width:${`${defaultWidth}px`}">
+            <div class="meganav-container__stack-sub-nav-title ${title_lang ? "" : "noTitle"}">${title_lang ? title_lang: 'Title'}</div>
+            ${imagesList}
+        </div>`;
+        return imageNavStructure;
+    };
+    this.multi_sub_nav = function (subNav) {
+        let title_lang = subNav['title' + current_language] ? subNav['title' + current_language] : subNav.title;
+        let subnavList = subNav.nav_list.map((i) => {
+            let title = i['title' + current_language] ? i['title' + current_language] : i.title;
+            let locale_url = i['url'+current_language] ? i['url'+current_language] : `${i.url=="/home" ? "": `/${current_language}${i.url.replace(/_/g, "-")}`}`;
+            let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+            let link = `href="${itemLink || itemLink == "" ? itemLink : i.url}"`;
+            if (locale_url.includes("http") || i['url'+current_language] == "") {
+              link = `href="${i['url'+current_language] ? i['url'+current_language] : i.url}"`;
+            } 
+            let icon = i['icon' + current_language] ? i['icon' + current_language] : i.icon;
+            let short_desc = i['short_desc' + current_language] ? i['short_desc' + current_language] : i.short_desc;
+            let navListStructure = `
+                <a ${link !== 'href=""' ? link : ''} class="meganav-container__multi-sub-nav-wrapper horizontal" target="${i.newTab ? '_blank' : ''}">
+                    ${!i.hideIcon ? `<div class="meganav-container__multi-sub-nav-icon">${icon.includes("http") ? `<img src="${icon}" alt="">` : icon}</div>` : ""}
+                    <div class="meganav-container__services-content meganav-container__multi-sub-nav-content">
+                        <div class="meganav-container__multi-sub-nav-link-title">${title ? title : ''}</div>
+                        ${short_desc? `<div class="meganav-container__multi-sub-nav-description">${short_desc}</div>` : ''}
+                    </div>
+                    <div class="meganav-container__inner-sub-nav-content"  style='display:${i.inner_nav ? "block":"none"}'>
+                        ${i.inner_nav ? createInnerNav(i.inner_nav) : ''}
+                    </div>
+                </a>`;
+            return navListStructure;
+        }).join('');
+
+        function createInnerNav(innerNav) {
+            return '';
+            // TODO
+            // return innerNav.map(i => {
+            //     return `<a href="${i.link}">${i.title}</a>`;
+            // }).join('');
+        }
+        let subNavStructure = `
+        <div class="meganav-container__multi-sub-nav-container meganav_container__component-spacing">
+            <div class="meganav-container__multi-sub-nav-title ${title_lang ? "" : "noTitle"}">${title_lang ? title_lang : 'Title'}</div>
+            ${subnavList}
+        </div>`;
+        return subNavStructure;
+    };
+    this.ext_nav = function (extNav) {
+        let title_lang = extNav['title' + current_language] ? extNav['title' + current_language] : extNav.title;
+        let img_src = extNav['img_src' + current_language] ? extNav['img_src' + current_language] : extNav.img_src;
+        let alt = extNav['alt' + current_language] ? extNav['alt' + current_language] : extNav.alt;
+        let order = extNav.order;
+        let extNavList = extNav.ext_nav_list.map((i) => {
+            let title = i['title' + current_language] ? i['title' + current_language] : i.title;
+            let locale_url = i['url'+current_language] ? i['url'+current_language] : `${i.url=="/home" ? "": `/${current_language}${i.url.replace(/_/g, "-")}`}`;
+            let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+            let link = `href="${itemLink || itemLink == "" ? itemLink : i.url}"`;
+            if (locale_url.includes("http") || i['url'+current_language] == "") {
+              link = `href="${i['url'+current_language] ? i['url'+current_language] : i.url}"`;
+            } 
+            let icon = i['icon' + current_language] ? i['icon' + current_language] : i.icon;
+            let img_src = i['img_src' + current_language] ? i['img_src' + current_language] : i.img_src;
+            let short_desc = i['short_desc' + current_language] ? i['short_desc' + current_language] : i.short_desc;
+            let navListStructure = `            
+            <a ${link !== 'href=""' ?link : ''} class="meganav-container__ext-nav-wrapper horizontal" data-img="${img_src ?img_src : extNav.img_src}" target="${i.newTab ? '_blank' : ''}">
+                ${!i.hideIcon ? `<div class="meganav-container__ext-nav-icon">${icon.includes("http") ? `<img src="${icon}" alt="">` : icon}</div>` : ""}
+                <div class="meganav-container__services-content meganav-container__ext-nav-content">
+                    <div class="meganav-container__ext-nav-link-title">${title ? title :""}</div>
+                    ${short_desc ? `<div class="meganav-container__ext-nav-description">${short_desc}</div>` : ''}
+                </div>
+            </a>`;
+            return navListStructure;
+        }).join('');
+        let extNavStructure = `
+        <div class="meganav-container__ext-nav-main-container meganav_container__component-spacing ${order}">
+            <div class="meganav-container__ext-nav-image meganav_container__ext-nav-inner-spacing">
+                <img src="${img_src}" alt="${alt}">
+            </div>
+            <div class="meganav-container__ext-nav-container meganav_container__ext-nav-inner-spacing">
+                <div class="meganav-container__ext-nav-title">${title_lang ? title_lang :""}</div>
+                ${extNavList}
+            </div>
+        </div>`;
+        return extNavStructure;
+    };
+    this.social_media = function (social) {
+        let title_lang = social['title' + current_language] ? social['title' + current_language] : social.title;
+        let orientation = social['orientation' + current_language] ? social['orientation' + current_language] : social.orientation;
+        let socialList = social.social_lists.map((i) => {
+            let locale_url = i['url'+current_language] ? i['url'+current_language] : `${i.url=="/home" ? "": `/${current_language}${i.url.replace(/_/g, "-")}`}`;
+            let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+            let link = `href="${itemLink|| itemLink == "" ? itemLink : i.url}"`;
+            if (locale_url.includes("http") || i['url'+current_language] == "") {
+              link = `href="${i['url'+current_language] ? i['url'+current_language] : i.url}"`;
+            } 
+            let social_type = `${i['social_type' + current_language] ? i['social_type' + current_language] : i.social_type}`;
+            let socialListStructure = `
+                    <a ${link!== "" ? link:""} class="meganav-container__contact-social-list" target="${i.newTab ? '_blank' : ''}">
+                        ${socialIcon(social_type)}
+                    </a>`;
+            return socialListStructure;
+        }).join('');
+        let socialStructure = `
+            <div class="meganav-container__contact-social-media meganav_container__component-spacing ${orientation == "Horizontal" ?orientation : "Vertical"}">
+                <div class="meganav-container__contact-social-title">
+                    ${title_lang ? title_lang : ''}
+                </div>
+                <div class="meganav-container__contact-social-list">
+                    ${socialList}
+                </div>
+            </div>`;
+        return socialStructure;
+    };
+    this.contact_info = function (contactInfo) {
+        let title_lang = contactInfo['title' + current_language] ? contactInfo['title' + current_language] : contactInfo.title;
+        let phone = contactInfo['phone' + current_language] ? contactInfo['phone' + current_language] : contactInfo.phone;
+        let address = contactInfo['address' + current_language] ? contactInfo['address' + current_language] : contactInfo.address;
+        let email = contactInfo['email' + current_language] ? contactInfo['email' + current_language] : contactInfo.email;
+        let contactInfoStructure = `
+            <div class="meganav-container__contact-info-wrapper meganav_container__component-spacing">
+                    <div class="meganav-container__contact-title">
+                       ${title_lang ? title_lang : ''}
+                    </div>
+                    ${address ? `<a href="https://www.google.com/maps?q=${address.split(' ').join('+')}" class="meganav-container__contact-location" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i>
+                        ${address}</a>` : ''}
+                     ${phone ? `<a href="tel:${phone}" class="meganav-container__contact-phone">
+                        <i class="fas fa-phone-alt"></i>${phone}</a>`: ''}
+                    ${email ?`<a href="mailto:${email}" class="meganav-container__contact-email">
+                        <i class="far fa-envelope"></i>${email}</a>`: ''}
+                </div>`;
+        return contactInfoStructure;
+    };
+    this.custom_button = function (customBtn) {
+        let title_lang = customBtn['label' + current_language] ? customBtn['label' + current_language] : customBtn.label;
+        let locale_url = customBtn['url'+current_language] ? customBtn['url'+current_language] : `${customBtn.url=="/home" ? "": `/${current_language}${customBtn.url.replace(/_/g, "-")}`}`;
+        let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+        let link = `href="${itemLink || itemLink == ""? itemLink : customBtn.url}"`;
+        if (locale_url.includes("http") || customBtn['url'+current_language] == "") {
+          link = `href="${customBtn['url'+current_language] ? customBtn['url'+current_language] : customBtn.url}"`;
+        } 
+        let buttonStructure = `
+        <a ${link !== 'href=""' ? link : ""} class="meganav-container__contact-btn meganav_container__component-spacing" target="${customBtn.newTab ? '_blank' : ''}">
+            ${title_lang ? title_lang : ''}
+        </a>`;
+        return buttonStructure;
+    };
+    this.video = function (video) {
+        let video_src = video['vid_src' + current_language] ? video['vid_src' + current_language] : video.vid_src;
+        let img_src = video['img_src' + current_language] ? video['img_src' + current_language] : video.img_src;
+        let popup = video.popup;
+        let vidSrc = video_src.substr(video_src.indexOf("v=") + 2);
+        let videoStructure = `<div class="meganav-container__video-container meganav_container__component-spacing">
+                                <div class="meganav-container__video-wrapper ${popup ? 'videoPopup' : ''}" target="_blank">
+                                    <img src="${img_src ? img_src : ""}" class="meganav-container__video-thumbnail">
+                                    <iframe src="https://www.youtube.com/embed/${vidSrc}?rel=0&amp;showinfo=0" frameborder="0"
+                                        allow="autoplay; encrypted-media" allowfullscreen class="meganav-container__video"></iframe>
+                                </div>
+                            </div>`;
+        return videoStructure;
+    };
+    this.click_to_call = function (ctc) {
+        let title_lang = ctc['title' + current_language] ? ctc['title' + current_language] : ctc.title;
+        let desc = ctc['description' + current_language] ? ctc['description' + current_language] : ctc.description;
+        let label = ctc['btn_label' + current_language] ? ctc['btn_label' + current_language] : ctc.btn_label;
+        let locale_url = ctc['btn_url'+current_language] ? ctc['btn_url'+current_language] : `${ctc.btn_url=="/home" ? "": `/${current_language}${ctc.btn_url.replace(/_/g, "-")}`}`;
+        let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+        let link = `href="${itemLink ? itemLink : ctc.btn_url}"`;
+        if (locale_url.includes("http") || ctc['url'+current_language] == "") {
+          link = `href="${ctc['btn_url'+current_language] ? ctc['btn_url'+current_language] : ctc.btn_url}"`;
+        } 
+        let ctcStructure = `
+            <div class="meganav-container__ctc-container meganav_container__component-spacing">
+                ${title_lang ? `<span class="meganav-container__ctc-title meganav-container__ctc-wrapper">${title_lang}</span>` : ''}
+                ${desc ? `<span class="meganav-container__ctc-description meganav-container__ctc-wrapper">${desc}</span>` : ''}
+                ${label ? `<a ${link !== "" ? link :""} class="meganav-container__ctc-btn meganav-container__ctc-wrapper">${label}</a>` : ''}
+            </div>`;
+        return ctcStructure;
+    };
+}
+
+// ? Hover Behavior - Front End JS
+$('.widget-layout-result').on('mouseenter', '.meganav-container__navlink-container', function () {
+
+  $('.meganav-container__navlink-component-container').stop().hide();
+  let elem = $(this).find(".meganav-container__navlink-component-container");
+  elem.fadeIn(0, function () {
+    if (elem.hasClass('Horizontal')) {
+      elem.css('display', 'flex');
+    }
+  });
+
+  let rect = this.getBoundingClientRect();
+  let windowWidth = $(window).outerWidth();
+  let excess = (rect.left + (elem.outerWidth() / 2)) - windowWidth;
+  let isOverFlow = (rect.left + (elem.outerWidth() / 2)) > windowWidth;
+  let left = !isOverFlow ? `-${(elem.outerWidth() / 2)}px` : `-${(elem.outerWidth() / 2) + (excess * 2)}px`;
+
+
+  elem.css("margin-left", left);
+  $(this).find(".meganav-container__navlink-component-container.Vertical").css({
+    "left": `${left}`,
+    "margin-left": "50%"
+  });
+
+  let isShort = $(this).find(".meganav-container__navlink-component-container").offset().left < 0;
+  if (isShort) {
+    left = "-" + rect.left + "px";
+    elem.css("margin-left", left);
+    $(this).find(".meganav-container__navlink-component-container.Vertical").css({
+      "left": `${left}`,
+      "margin-left": "50%"
+    });
+  }
+
+}).on('mouseleave', '.meganav-container__navlink-container', function () {
+  $('.meganav-container__navlink-component-container').stop().hide();
+});
+
+$('.widget-layout-result .meganav-container__navlink-container').on('mouseleave', function () {
+  $(this).find('.meganav-container__navlink-component-wrapper').css({ 'pointer-events': 'none' });
+});
+
+$('.widget-layout-result .meganav-container__navlink-container').on('mouseenter', function () {
+  $(this).find('.meganav-container__navlink-component-wrapper').css({ 'pointer-events': 'auto' });
+});
+
+// Extended Sub Navigation Hover
+$(element).find(".widget-layout-result").on("mouseenter", ".meganav-container__ext-nav-wrapper", function () {
+  let elem = $(this);
+  let imgElem = $(this).parent().parent().find(".meganav-container__ext-nav-image img");
+  let storeDefaultImg = $(this).parent().parent().find(".meganav-container__ext-nav-image img").attr("src");
+  imgElem.attr("data-default", storeDefaultImg);
+  let newImageSrc = elem.attr("data-img");
+  imgElem.attr("src", newImageSrc && newImageSrc !== "" ? newImageSrc : storeDefaultImg);
+}).on("mouseleave", ".meganav-container__ext-nav-wrapper", function () {
+  let imgElem = $(this).parent().parent().find(".meganav-container__ext-nav-image img");
+  let defaultImg = $(this).parent().parent().find(".meganav-container__ext-nav-image img").attr("data-default");
+  imgElem.attr("src", defaultImg);
+});
+
+// ? Open Video Popup
+$(element).find('.widget-layout-result').on('click', '.meganav-container__video-wrapper.videoPopup', function () {
+  let videourl = $(this).find("iframe").attr("src");
+  let video = videourl.substr(videourl.indexOf('?v=') + 3)
+  let popupStructure = `
+    <div class="meganav-container__video-popup-container">
+        <div class="meganav-container__video-popup-wrapper">
+            <div class="meganav-container__video-popup-close-btn"><i class="far fa-times-circle"></i></div>
+            <iframe src="https://www.youtube.com/embed/${video}?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="meganav-container__video-popup"></iframe>
+        </div>
+    </div>`;
+  $(element).find('.widget-layout-result').append(popupStructure);
+  $('html').css({ 'overflow': 'hidden' });
+});
+
+// ? Close Video Popup
+$(element).find('.widget-layout-result').on('click', '.meganav-container__video-popup-close-btn', function () {
+  $(element).find('.meganav-container__video-popup-container').remove();
+  $('html').css({ 'overflow': 'auto' });
+});
+
+function socialIcon(socialType) {
+  if (socialType === 'Instagram') {
+    return '<i class="fab fa-instagram"></i>';
+  }
+  if (socialType === 'Facebook') {
+    return '<i class="fab fa-facebook-square"></i>';
+  }
+  if (socialType === 'Twitter') {
+    return '<i class="fab fa-twitter-square"></i>';
+  }
+  if (socialType === 'Youtube') {
+    return '<i class="fab fa-youtube"></i>';
+  }
+  if (socialType === 'Pinterest') {
+    return '<i class="fab fa-pinterest"></i>';
+  }
+  if (socialType === 'Vimeo') {
+    return '<i class="fab fa-vimeo-v"></i>';
+  }
+  if (socialType === 'Linkedin') {
+    return '<i class="fab fa-linkedin-in"></i>';
+  }
+  if (socialType === 'Reddit') {
+    return '<i class="fab fa-reddit-square"></i>';
+  }
+  if (socialType === 'Snapchat') {
+    return '<i class="fab fa-snapchat-ghost"></i>';
+  }
+  if (socialType === 'Tripadvisor') {
+    return '<i class="fab fa-tripadvisor"></i>';
+  }
+}
+
+function isActive(url) { //     /tr/reviews
+    if(url == "") return false;
+    let sitePathName = window.location.pathname.replace(`/site/${data.siteId}`, '').split('/'); // /home ---> ["/home"]
+    let path = sitePathName[1] ? sitePathName[1] : "home"; // home /nl
+    let url_link = url.split('/')[1] ? url.split('/')[1] : "home"; // home
+    if(!is_main_lang && isMultiLang && !is_home){
+        path = sitePathName[2] ? sitePathName[2] : current_language; // tr
+        url_link = url.split('/')[2] ? url.split('/')[2] : current_language; // tr
+    }
+    if(!is_main_lang && sitePathName.length !== 2 && url === "/"+current_language) return false;
+    return path == url_link// /tr/about-us, /tr/services, /tr/services/investments
+}
+
+function dividerStyle(style) {
+  if (style == "slash") {
+    return `<li class="meganav__divider">/</li>`;
+  }
+  if (style == "pipe") {
+    return `<li class="meganav__divider">|</li>`;
+  }
+  if (style == "colon") {
+    return `<li class="meganav__divider">:</li>`;
+  }
+  if (style == "middot") {
+    return `<li class="meganav__divider">·</li>`;
+  }
+  if (style == "space") {
+    return `<li class="meganav__divider"> </li>`;
+  }
+}
+
+function doAjax(settings) {
+  return new Promise((res, rej) => $.ajax(settings).done(a => res(a)))
+}
+
+
+const cssId = 'fontAwesomeSource';
+if (!document.getElementById(cssId)) {
+  var head = document.getElementsByTagName('head')[0];
+  var link = document.createElement('link');
+  link.id = 'fontAwesomeSource';
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css';
+  link.integrity = 'sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==';
+  link.crossOrigin = 'anonymous';
+  head.appendChild(link);
+}
+
+    };
+</script>
+<script type="text/javascript">
+
+    var d_version = "production_4135";
+    var build = "2024-01-31T13_55_00";
+    window['v' + 'ersion'] = d_version;
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        window.assetsCacheQueryParam = "?version=2024-01-31T13_55_00";
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            } else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+</script>
+
+<!-- Load jQuery -->
+    <script type="text/javascript" id='d-js-jquery' src="libs/jquery/jquery-3.7.0.min.js"></script>
+    <!-- End Load jQuery -->
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+
+
+<script>
+    var _jquery = window.$;
+
+    var jqueryAliases = ['$', 'jquery', 'jQuery'];
+
+    jqueryAliases.forEach((alias) => {
+        Object.defineProperty(window, alias, {
+            get() {
+                return _jquery;
+            },
+            set() {
+                console.warn("Trying to over-write the global jquery object!");
+            }
+        });
+    });
+    window.jQuery.migrateMute = true;
+</script>
+<script>
+    window.cookiesNotificationMarkupPreview = 'null';
+</script>
+
+<!-- HEAD RT JS Include -->
+<script id='d-js-params'>
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.opencage.token"] = '319e14f32bcce967ba55cd263478796d';
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] =false;
+    rtCommonProps["common.resources.dist.cdn"] =true;
+    rtCommonProps["common.build.dist.folder"] = 'production/4135';
+    rtCommonProps["common.resources.cdn.host"] = 'https://static.cdn-website.com';
+    rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/4135';
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] =true;
+    rtCommonProps["feature.flag.runtime.photoswipe.fix"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.respectCssAnimationProps.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"] =true;
+    rtCommonProps["feature.flag.runOnReadyNewTask"] =true;
+
+    
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'here';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] =160;
+    rtCommonProps["images.sizes.mobile"] =640;
+    rtCommonProps["images.sizes.tablet"] =1280;
+    rtCommonProps["images.sizes.desktop"] =1920;
+    rtCommonProps["modules.resources.cdn"] =true;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+    rtCommonProps["facebook.api.version"] = '7.0';
+    rtCommonProps["feature.flag.runtime.inp.threshold"] =150;
+    rtCommonProps["feature.flag.performance.logs"] =true;
+    rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+    rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+
+    // feature flags that's used out of runtime module (in  legacy files)
+    rtCommonProps["site.runtime.video.background.ssr"] =true;
+
+    // no usages
+    rtCommonProps["run.imageCount.script.enabled"] =false;
+
+    window.rtFlags = {};
+    rtFlags["unsuspendEcwidStoreOnRuntime.enabled"] =true;
+    rtFlags["keyboard.navigation.enabled"] =true;
+    rtFlags["scripts.widgetCount.enabled"] =true;
+    rtFlags["maps.cookiebot.enabled"] =true;
+    rtFlags["ecom.ecwid.categoryPage.modifyLinks"] = true;
+    rtFlags["ecom.ecwidNewUrlStructure.enabled"] = false;
+    rtFlags["ecom.ecwid.old.store.fix.scrolling.enabled"] = true;
+    rtFlags["ecom.ecwid.old.store.fix.facebook.share"] = true;
+    rtFlags["ecom.ecwid.fallBackInCaseLinksNotFound.enabled"] = true;
+    rtFlags["feature.flag.photo.gallery.exact.size"] =false;
+    rtFlags["new.store.fix.ecwid.back.bug"] =true;
+    rtFlags["facebook.runtime.widgets.upgrade"] =true;
+    rtFlags["ecom.ecwid.solve.url.modifications"] = true;
+    rtFlags["ecom.ecwid.configOptions"] = true;
+    rtFlags["geocode.search.localize"] =false;
+    rtFlags["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] =false;
+    rtFlags["site.contact.form.fix.for.attribute"] =true;
+    rtFlags["contact.form.date.format.enabled"] = true;
+    rtFlags["twitter.heightLimit.enabled"] = true;
+</script>
+<script src="mnlt/production/4135/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js" id="d-js-core"></script>
+<!-- End of HEAD RT JS Include -->
+<script src="mnlt/production/4135/_dm/s/rt/dist/scripts/d-js-jquery-migrate.min.js"></script>
+<script>
+
+$(window).bind("orientationchange", function (e) {
+    $.layoutManager.initLayout();
+    
+});
+$(document).resize(function () {
+    
+});
+</script>
+<script type="text/javascript" id="d_track_campaign">
+(function() {
+ 	var campaign = (/utm_campaign=([^&]*)/).exec(window.location.search);
+
+ 	if (campaign && campaign != null && campaign.length > 1) {
+ 		campaign = campaign[1];
+ 		document.cookie = "_dm_rt_campaign=" + campaign + ";expires=" + new Date().getTime() + 24*60*60*1000 + ";domain=" + window.location.hostname + ";path=/";
+ 	}
+}());
+</script>
+<script type="text/javascript">
+  var _dm_gaq = {};
+  var _gaq = _gaq || [];
+  var _dm_insite = [];
+</script>
+
+  <script async="" src="gtag/js-1?id=G-V8XJYYNPS3"></script>
+	<script type="text/javascript" id="d_track_ga">
+	  _dm_gaq.siteAlias = '499b3704';
+	  _dm_gaq.systemAggregatedGaqID = '';
+	  _dm_gaq.externalGaqID = 'G-V8XJYYNPS3';
+	  _dm_gaq.gaAggregatedEventAttributes = {
+		  'site_alias':  _dm_gaq.siteAlias,
+		  'product': 'DM_DIRECT',
+		  'plan': 'BUSINESS_PLUS',
+		  'dfooter': 'false',
+		  'sitetype': '1',
+		  'pwaEnabled': 'true'
+	  }
+
+	  _dm_gaq.pushEvent = function(trackingId, event, category, label, value, additionalParams = {}) {
+	  	  const eventProps = {
+			  send_to: trackingId,
+			  event_category: category,
+			  event_label: label,
+			  value,
+			  ...additionalParams,
+			  ...(trackingId === _dm_gaq.systemAggregatedGaqID
+					  ? _dm_gaq.gaAggregatedEventAttributes : {})
+		  };
+		  gtag('event', event, eventProps);
+	  }
+
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+	  function pushInsiteImpressions(id) {
+		  _dm_insite.forEach((rule) => {
+			  _dm_gaq.pushEvent(id, 'insite_impression', 'insite', rule.ruleType + '__' + rule.ruleId);
+		  });
+	  }
+
+	if(_dm_gaq.systemAggregatedGaqID){
+		// track aggregated account
+		gtag('config', '', {
+			'send_page_view': false,
+			'anonymize_ip': true,
+			'transport_type': 'beacon',
+			'custom_map': {'dimension1': 'site_alias', 'dimension2': 'product', 'dimension3': 'dFooter', 'dimension4': 'sitetype'}
+		});
+		gtag('set', 'developer_id.dMDU5Nj', true);
+
+		_dm_gaq.pushEvent('', 'page_view');
+		pushInsiteImpressions(_dm_gaq.systemAggregatedGaqID);
+	}
+
+	if(_dm_gaq.externalGaqID && _dm_gaq.externalGaqID!= '') {
+		gtag('config', 'G-V8XJYYNPS3', {
+			'send_page_view': false,
+			'anonymize_ip': true,
+			'transport_type': 'beacon',
+			'linker': {
+				'domains': ['paymentlaunch.com']
+			}
+		});
+		_dm_gaq.pushEvent('G-V8XJYYNPS3', 'page_view');
+		pushInsiteImpressions(_dm_gaq.externalGaqID);
+	}
+
+  </script>
+<script type="text/javascript" id="d_track_sp">
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+window.dmsnowplow  = window.snowplow;
+
+dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+  appId: '499b3704'
+});
+
+dmsnowplow('trackPageView');
+_dm_insite.forEach((rule) => {
+	// Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+	// the tracking is in popup.js
+	if (rule.actionName !== "popup") {
+		dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+	}
+	window?.waitForDeferred?.('dmAjax', () => {
+		$.DM.events.trigger('event-ruleTriggered', {value: rule});
+	});
+});
+</script>
+   <div style="display:none;" id="P6iryBW0Wu"></div>
+
+<!-- photoswipe markup -->
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="fb-root" data-locale="en"></div>
+<!-- Alias: 499b3704 -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization">
+	window?.waitForDeferred?.('dmAjax', () => {
+		// Collects client data and updates cookies used by smart sites
+		window.expireDays = 365;
+		window.visitLength = 30 * 60000;
+		$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), window.expireDays);
+			setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+	});
+</script>
+
+
+
+
+<div id="swh-bd98317512a147f996089c64b770a2ec"><div data-wrapper-source="appstore">
+<script>
+  (function(s,q,u,e,a,k,y){s._sqSettings={site_id:'499b3704'};
+    e=q.getElementsByTagName('head')[0];
+    a=q.createElement('script');
+    a.src=u+s._sqSettings.site_id;
+    e.appendChild(a);
+  })(window,document,'https://cdn.squeaky.ai/g/1.0.0/script.js?');
+</script>
+ </div></div>
+<div id="swh-ea3bb8ec4f8e49b383bbedcf5a7046b1"><div data-wrapper-source="appstore"> <script>
+(function(d) {
+  if(self != parent) {
+    var $el = d.createElement('script')
+    $el.setAttribute('src', 'https://siteseer.io/widget/websitebuilder.js')
+    $el.setAttribute('defer', true)
+    d.body.appendChild($el)
+  }
+})(document)
+</script> </div></div>
+<div id="swh-90037ec29d34424297e1f94f46e7d7cd">
+                            <script>
+                                const getMenu_ = {};
+                                getMenu_['499b3704'] = function(){
+                                    return [{"title":"Card Updater","url":"/credit-card-updater","orientation":"Horizontal","newTab":false,"type":"blank","components":[]},{"title":"Credit Card Processing","url":"/credit-card-processing","orientation":"Horizontal","newTab":false,"type":"blank","components":[{"grid":{"name":"Grid Columns","title":"","defaultWidth":"600","columnSize":2,"topIcon":false,"orientation":"Vertical","grid_nav_list":[{"hideIcon":false,"icon":"https://lirp.cdn-website.com/499b3704/dms3rep/multi/opt/Point-of-sale-640w.png","title":"Point of Sale","url":"/credit-card-processing/point-of-sale","newTab":false,"short_desc":"Discover our unique solutions, transparent pricing, and customer-first approach tailored for all business needs"},{"hideIcon":false,"icon":"https://lirp.cdn-website.com/499b3704/dms3rep/multi/opt/Credit-Card-Terminal-640w.png","title":"Terminals","url":"/credit-card-processing/hardware/terminals","newTab":false,"short_desc":"Discover our unique solutions, transparent pricing, and customer-first approach tailored for all business needs"},{"hideIcon":false,"icon":"https://lirp.cdn-website.com/499b3704/dms3rep/multi/opt/Credit-Card-640w.png","title":"Payment Gateway","url":"/accept-payments/virtual-terminal-for-credit-card-processing","newTab":false,"short_desc":"Discover our unique solutions, transparent pricing, and customer-first approach tailored for all business needs"},{"hideIcon":false,"icon":"https://lirp.cdn-website.com/499b3704/dms3rep/multi/opt/Capital-640w.png","title":"Mobile","url":"/accept-payments/invoice-payments","newTab":false,"short_desc":"Discover our unique solutions, transparent pricing, and customer-first approach tailored for all business needs"}]}}]},{"title":"Cash Discount Program","url":"/cash-discount-program","orientation":"Horizontal","newTab":false,"type":"blank","components":[]}]
+                                } 
+                            </script></div>
+<div id="swh-9a411deff3e34ec59383a9a61e01924a"><script>dmAPI.loadScript('https://analytics.sitewit.com/ddmarketing-plugin.js?klid=1036671495');</script></div><!--  Site Wide Html Markup -->
+</body>
+</html>
